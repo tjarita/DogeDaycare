@@ -1,4 +1,5 @@
 ﻿using Abp.EntityFramework;
+using System.Data.Entity;
 
 namespace DogeDaycare.EntityFramework
 {
@@ -8,6 +9,12 @@ namespace DogeDaycare.EntityFramework
 
         //Example:
         //public virtual IDbSet<User> Users { get; set; }
+
+        public virtual IDbSet<Animals.Animal> Animals { get; set; }
+        public virtual IDbSet<Appointments.Appointment> Appointments { get; set; }
+        public virtual IDbSet<Humans.Person> Persons{ get; set; }
+
+
 
         /* NOTE: 
          *   Setting "Default" to base class helps us when working migration commands on Package Manager Console.

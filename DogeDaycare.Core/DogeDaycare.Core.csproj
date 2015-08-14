@@ -75,8 +75,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animals\Animal.cs" />
+    <Compile Include="Animals\IAnimal.cs" />
+    <Compile Include="Animals\IAnimalRepository.cs" />
+    <Compile Include="Animals\Species.cs" />
+    <Compile Include="Appointments\Appointment.cs" />
+    <Compile Include="Appointments\IAppointment.cs" />
+    <Compile Include="Appointments\IAppointmentRepository.cs" />
     <Compile Include="DogeDaycareConsts.cs" />
     <Compile Include="DogeDaycareCoreModule.cs" />
+    <Compile Include="Humans\IPersonRepository.cs" />
+    <Compile Include="Humans\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

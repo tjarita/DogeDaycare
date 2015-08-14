@@ -93,6 +93,14 @@
   <ItemGroup>
     <Compile Include="EntityFramework\DogeDaycareDbContext.cs" />
     <Compile Include="EntityFramework\Repositories\DogeDaycareRepositoryBase.cs" />
+    <Compile Include="Migrations\201508080637173_initial.cs" />
+    <Compile Include="Migrations\201508080637173_initial.Designer.cs">
+      <DependentUpon>201508080637173_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508080802096_initial2.cs" />
+    <Compile Include="Migrations\201508080802096_initial2.Designer.cs">
+      <DependentUpon>201508080802096_initial2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DogeDaycareDataModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -106,6 +114,17 @@
       <Project>{17298ea0-af73-4f30-b6f1-2066100d7d74}</Project>
       <Name>DogeDaycare.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201508080637173_initial.resx">
+      <DependentUpon>201508080637173_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508080802096_initial2.resx">
+      <DependentUpon>201508080802096_initial2.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
