@@ -384,3 +384,57 @@ DEBUG 2015-08-10 21:43:17,310 [1    ] Abp.Localization.LocalizationManager     -
 DEBUG 2015-08-10 21:43:17,319 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
 DEBUG 2015-08-10 21:43:17,339 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: DogeDaycare
 DEBUG 2015-08-10 21:43:17,339 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-08-13 22:03:41,668 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-08-13 22:03:43,684 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2015-08-13 22:03:43,686 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.6.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-13 22:03:43,687 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.6.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-13 22:03:43,688 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.6.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-13 22:03:43,688 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.6.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-13 22:03:43,688 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.6.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-13 22:03:43,688 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.6.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-13 22:03:43,688 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.DogeDaycareApplicationModule, DogeDaycare.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-13 22:03:43,688 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.DogeDaycareCoreModule, DogeDaycare.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-13 22:03:43,688 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.DogeDaycareDataModule, DogeDaycare.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-13 22:03:43,688 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.Web.DogeDaycareWebModule, DogeDaycare.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-13 22:03:43,688 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.DogeDaycareWebApiModule, DogeDaycare.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-13 22:03:43,691 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2015-08-13 22:03:45,430 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes defines auto mapping attributes
+DEBUG 2015-08-13 22:03:47,239 [1    ] Default                                  - Dynamic web api controller is created for type 'DogeDaycare.Animals.IAnimalAppService' with service name 'app/animal'.
+DEBUG 2015-08-13 22:03:48,008 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2015-08-13 22:03:48,012 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2015-08-13 22:03:48,022 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: DogeDaycare
+DEBUG 2015-08-13 22:03:48,023 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-08-14 21:43:47,091 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-08-14 21:43:49,199 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2015-08-14 21:43:49,202 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.6.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-14 21:43:49,204 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.6.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-14 21:43:49,204 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.6.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-14 21:43:49,204 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.6.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-14 21:43:49,204 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.6.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-14 21:43:49,204 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.6.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-14 21:43:49,204 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.DogeDaycareApplicationModule, DogeDaycare.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-14 21:43:49,204 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.DogeDaycareCoreModule, DogeDaycare.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-14 21:43:49,204 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.DogeDaycareDataModule, DogeDaycare.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-14 21:43:49,205 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.Web.DogeDaycareWebModule, DogeDaycare.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-14 21:43:49,205 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.DogeDaycareWebApiModule, DogeDaycare.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-14 21:43:49,209 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2015-08-14 21:43:50,949 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes defines auto mapping attributes
+DEBUG 2015-08-14 21:43:52,634 [1    ] Default                                  - Dynamic web api controller is created for type 'DogeDaycare.Animals.IAnimalAppService' with service name 'app/animal'.
+DEBUG 2015-08-14 21:43:53,429 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2015-08-14 21:43:53,434 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2015-08-14 21:43:53,468 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: DogeDaycare
+DEBUG 2015-08-14 21:43:53,469 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-08-14 21:48:14,928 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-08-14 21:48:16,893 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2015-08-14 21:48:16,895 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.6.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-14 21:48:16,897 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.6.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-14 21:48:16,897 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.6.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-14 21:48:16,897 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.6.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-14 21:48:16,897 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.6.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-14 21:48:16,897 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.6.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-14 21:48:16,897 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.DogeDaycareApplicationModule, DogeDaycare.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-14 21:48:16,897 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.DogeDaycareCoreModule, DogeDaycare.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-14 21:48:16,898 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.DogeDaycareDataModule, DogeDaycare.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-14 21:48:16,898 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.Web.DogeDaycareWebModule, DogeDaycare.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-14 21:48:16,898 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.DogeDaycareWebApiModule, DogeDaycare.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-08-14 21:48:16,900 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.

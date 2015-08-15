@@ -92,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntityFramework\DogeDaycareDbContext.cs" />
+    <Compile Include="EntityFramework\Repositories\AnimalRepository.cs" />
     <Compile Include="EntityFramework\Repositories\DogeDaycareRepositoryBase.cs" />
     <Compile Include="Migrations\201508080637173_initial.cs" />
     <Compile Include="Migrations\201508080637173_initial.Designer.cs">

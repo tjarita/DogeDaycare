@@ -22,7 +22,7 @@ namespace DogeDaycare.EntityFramework
          *   pass connection string name to base classes. ABP works either way.
          */
         public DogeDaycareDbContext()
-            : base("Default")
+            : base("DogeDaycare")
         {
 
         }

@@ -13,9 +13,7 @@ namespace DogeDaycare.Animals
         public virtual Guid IdOwner { get; set; }
         public virtual Guid IdAnimal { get; set; }
         public virtual DateTime RegisteredTime { get; set; }
-        public void bark(){Name = "bark";}
-
-
+        
         public Animal()
         {
             RegisteredTime = DateTime.Now;

@@ -12,8 +12,5 @@ namespace DogeDaycare.Humans
     {
         public virtual Guid IdPerson { get; set; }
         public virtual string Name { get; set; }
-
-
-
     }
 }
