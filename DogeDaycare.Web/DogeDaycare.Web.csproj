@@ -21,6 +21,7 @@
     <IISExpressUseClassicPipelineMode />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -196,21 +197,27 @@
     <Content Include="Abp\Framework\styles\utils\ie10fix.css" />
     <Content Include="App\Main\app.js" />
     <Content Include="App\Main\images\abp-logo.png" />
+    <Content Include="App\Main\images\doge-god.jpg" />
     <Content Include="App\Main\main.css">
       <DependentUpon>main.less</DependentUpon>
     </Content>
     <Content Include="App\Main\main.min.css">
       <DependentUpon>main.css</DependentUpon>
     </Content>
+    <Content Include="App\Main\views\admin\admin.js" />
+    <Content Include="App\Main\views\animal\animal.list.cshtml" />
+    <Content Include="App\Main\views\animal\animallist.js" />
+    <Content Include="App\Main\views\animal\animal.new.js" />
     <Content Include="App\Main\views\layout\header.js" />
     <Content Include="App\Main\views\layout\layout.js" />
     <Content Include="App\Main\views\home\home.js" />
     <Content Include="App\Main\views\about\about.js" />
+    <Content Include="App\Main\views\person\person.js" />
     <Content Include="Content\bootstrap-cosmo.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap-paper.css" />
+    <Content Include="Content\bootstrap-paper.min.css" />
     <Content Include="Content\flags\famfamfam-flags.css" />
     <Content Include="Content\flags\famfamfam-flags.png" />
     <Content Include="Content\font-awesome.css" />
@@ -256,14 +263,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Icon.png" />
-    <Content Include="Localization\DogeDaycare\DogeDaycare-zh-CN.xml" />
-    <Content Include="Localization\DogeDaycare\DogeDaycare.tr.xml" />
-    <Content Include="Localization\DogeDaycare\DogeDaycare.xml" />
+    <Content Include="Localization\DogeDaycare\DogeDaycare.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App\Main\main.less" />
     <Content Include="App\Main\views\layout\layout.cshtml" />
     <Content Include="App\Main\views\home\home.cshtml" />
     <Content Include="App\Main\views\about\about.cshtml" />
-    <Content Include="App\Main\web.config" />
+    <Content Include="App\Main\web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="log4net.config" />
     <Content Include="App\Main\views\layout\header.cshtml" />
     <Content Include="fonts\fontawesome-webfont.woff" />
@@ -1072,6 +1081,13 @@
     <Content Include="Scripts\i18n\angular-locale_zh.js" />
     <Content Include="Scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\i18n\angular-locale_zu.js" />
+    <Content Include="App\Main\views\admin\admin.cshtml" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="App\Main\views\animal\animal.new.cshtml" />
+    <Content Include="App\Main\views\animal\animal.js" />
+    <Content Include="App\Main\views\animal\animal.cshtml" />
+    <Content Include="App\Main\views\person\person.cshtml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
@@ -1102,7 +1118,9 @@
     <Content Include="Scripts\sweetalert\sweet-alert.min.js" />
     <Content Include="Scripts\toastr.js" />
     <Content Include="Scripts\toastr.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>

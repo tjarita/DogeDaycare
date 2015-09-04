@@ -21,14 +21,58 @@ namespace DogeDaycare.Web
                         url: "#/",
                         icon: "fa fa-home"
                         )
-                ).AddItem(
+                )
+                
+                .AddItem(
                     new MenuItemDefinition(
                         "About",
                         new LocalizableString("About", DogeDaycareConsts.LocalizationSourceName),
                         url: "#/about",
                         icon: "fa fa-info"
                         )
-                );
+                )
+
+                .AddItem(
+                    new MenuItemDefinition(
+                        "Admin",
+                        new LocalizableString("Admin", DogeDaycareConsts.LocalizationSourceName),
+                        url: "#/admin",
+                        icon: "fa fa-gears "
+                        )
+                        .AddItem(new MenuItemDefinition(
+                            "Animals",
+                            new LocalizableString("AnimalAdminDashboard", DogeDaycareConsts.LocalizationSourceName),
+                            url: "#/animal",
+                            icon: "fa fa-paw"
+                            //, requiredPermissionName: ""
+                            )
+                        )
+                        .AddItem(new MenuItemDefinition(
+                            "Persons",
+                            new LocalizableString("PersonAdminDashboard", DogeDaycareConsts.LocalizationSourceName),
+                            url: "#/person",
+                            icon: "fa fa-user"
+                            //, requiredPermissionName: ""
+                            )
+                        )
+                //.AddItem(new MenuItemDefinition(
+                //    "AnimalSearch",
+                //    new LocalizableString("AnimalSearch", DogeDaycareConsts.LocalizationSourceName),
+                //    url:"#/animal",
+                //    icon: "fa fa-search"
+                //    //, requiredPermissionName: ""
+                //    )
+                //)
+                //.AddItem(new MenuItemDefinition(
+                //    "AnimalAdd",
+                //    new LocalizableString("AnimalAdd", DogeDaycareConsts.LocalizationSourceName),
+                //    url: "#/animal",
+                //    icon: "fa fa-plus"
+                //    //, requiredPermissionName: ""
+                //    )
+                //)
+                )
+                ;
         }
     }
 }

@@ -15,9 +15,7 @@ namespace DogeDaycare.Web
         public override void PreInitialize()
         {
             //Add/remove languages for your application
-            Configuration.Localization.Languages.Add(new LanguageInfo("en", "English", "famfamfam-flag-england", true));
-            Configuration.Localization.Languages.Add(new LanguageInfo("tr", "Türkçe", "famfamfam-flag-tr"));
-            Configuration.Localization.Languages.Add(new LanguageInfo("zh-CN", "简体中文", "famfamfam-flag-cn"));
+            Configuration.Localization.Languages.Add(new LanguageInfo("en", "English", "famfamfam-flag-us", true));
 
             //Add/remove localization sources here
             Configuration.Localization.Sources.Add(

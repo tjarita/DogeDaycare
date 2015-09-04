@@ -15,7 +15,7 @@ namespace DogeDaycare.Web
                 new StyleBundle("~/Bundles/App/vendor/css")
                     .Include(
                         "~/Content/themes/base/all.css",
-                        "~/Content/bootstrap-cosmo.min.css",
+                        "~/Content/bootstrap-paper.min.css",
                         "~/Content/toastr.min.css",
                         "~/Scripts/sweetalert/sweet-alert.css",
                         "~/Content/flags/famfamfam-flags.css",
