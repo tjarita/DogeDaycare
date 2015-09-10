@@ -5,15 +5,9 @@ namespace DogeDaycare.EntityFramework
 {
     public class DogeDaycareDbContext : AbpDbContext
     {
-        //TODO: Define an IDbSet for each Entity...
-
-        //Example:
-        //public virtual IDbSet<User> Users { get; set; }
-
         public virtual IDbSet<Animals.Animal> Animals { get; set; }
         public virtual IDbSet<Appointments.Appointment> Appointments { get; set; }
-        public virtual IDbSet<Humans.Person> Persons{ get; set; }
-
+        public virtual IDbSet<Persons.Person> Persons{ get; set; }
 
 
         /* NOTE: 
@@ -22,7 +16,7 @@ namespace DogeDaycare.EntityFramework
          *   pass connection string name to base classes. ABP works either way.
          */
         public DogeDaycareDbContext()
-            : base("DogeDaycare")
+            : base("Default")
         {
 
         }

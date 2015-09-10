@@ -6,6 +6,7 @@ using System.Web.Routing;
 using Abp.Localization;
 using Abp.Localization.Sources.Xml;
 using Abp.Modules;
+using Abp.Localization.Sources;
 
 namespace DogeDaycare.Web
 {
@@ -14,18 +15,7 @@ namespace DogeDaycare.Web
     {
         public override void PreInitialize()
         {
-            //Add/remove languages for your application
-            Configuration.Localization.Languages.Add(new LanguageInfo("en", "English", "famfamfam-flag-us", true));
-
-            //Add/remove localization sources here
-            Configuration.Localization.Sources.Add(
-                new XmlLocalizationSource(
-                    DogeDaycareConsts.LocalizationSourceName,
-                    HttpContext.Current.Server.MapPath("~/Localization/DogeDaycare")
-                    )
-                );
-
-            //Configure navigation/menu
+            Configuration.Localization.IsEnabled = false;
             Configuration.Navigation.Providers.Add<DogeDaycareNavigationProvider>();
         }
 

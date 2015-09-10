@@ -92,8 +92,8 @@
     <Compile Include="Appointments\IAppointmentRepository.cs" />
     <Compile Include="DogeDaycareConsts.cs" />
     <Compile Include="DogeDaycareCoreModule.cs" />
-    <Compile Include="Humans\IPersonRepository.cs" />
-    <Compile Include="Humans\Person.cs" />
+    <Compile Include="Persons\IPersonRepository.cs" />
+    <Compile Include="Persons\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

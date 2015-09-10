@@ -14,7 +14,7 @@ namespace DogeDaycare
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
 
             DynamicApiControllerBuilder
-                .ForAll<IApplicationService>(typeof(DogeDaycareApplicationModule).Assembly, "daycare")
+                .ForAll<IApplicationService>(Assembly.GetAssembly(typeof(DogeDaycareApplicationModule)), "dogedaycare")
                 .Build();
         }
     }

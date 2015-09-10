@@ -17,7 +17,7 @@ namespace DogeDaycare.Web
                 .AddItem(
                     new MenuItemDefinition(
                         "Home",
-                        new LocalizableString("HomePage", DogeDaycareConsts.LocalizationSourceName),
+                        new LocalizableString("Home Page", DogeDaycareConsts.LocalizationSourceName),
                         url: "#/",
                         icon: "fa fa-home"
                         )
@@ -41,7 +41,7 @@ namespace DogeDaycare.Web
                         )
                         .AddItem(new MenuItemDefinition(
                             "Animals",
-                            new LocalizableString("AnimalAdminDashboard", DogeDaycareConsts.LocalizationSourceName),
+                            new LocalizableString("Animal Admin Dashboard", DogeDaycareConsts.LocalizationSourceName),
                             url: "#/animal",
                             icon: "fa fa-paw"
                             //, requiredPermissionName: ""
@@ -49,7 +49,7 @@ namespace DogeDaycare.Web
                         )
                         .AddItem(new MenuItemDefinition(
                             "Persons",
-                            new LocalizableString("PersonAdminDashboard", DogeDaycareConsts.LocalizationSourceName),
+                            new LocalizableString("Person Admin Dashboard", DogeDaycareConsts.LocalizationSourceName),
                             url: "#/person",
                             icon: "fa fa-user"
                             //, requiredPermissionName: ""

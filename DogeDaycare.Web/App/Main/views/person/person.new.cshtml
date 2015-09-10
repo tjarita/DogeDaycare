@@ -1,0 +1,25 @@
+﻿<div class="container-fluid" ng-controller="app.views.person.new as vm">
+    @*<div class="row">*@
+        <h3 class="panel-title">
+            New User Registration
+        </h3>
+
+        <form id="NewPersonForm" class="form-horizontal">
+            <div class="form-group">
+                <label for="PersonName" class="col-sm-2 control-label">User Name</label>
+                <div class="col-sm-10">
+                    <input ng-model="vm.person.name" type="text" class="form-control" id="PersonName" placeholder="Name" />
+                </div>
+            </div>
+            @*<div class="form-group">
+                <label for="OwnerName" class="col-sm-2 control-label">Owner Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="OwnerName" placeholder="Name" />
+                </div>
+            </div>*@
+
+            <button ng-click="vm.savePerson()"  type="submit" class="btn btn-primary">Register</button>
+        </form>
+    @*</div>*@
+</div>
+

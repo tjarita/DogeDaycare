@@ -8,6 +8,8 @@
     <text name="AnimalAdminDashboard" value="Animal Dashboard"></text>
     <text name="PersonAdminDashboard" value="User Dashboard"></text>
     <text name="WelcomeMessage" value="Welcome to DogeDaycare!" />
+    <text name="InternalServerError" value="An internal error occurred during your request!" />
+    <text name="ValidationError" value="Your request is not valid!" />
     <text name="Home_ThisIsATemplate" value="This project template is a starting point to develop web applicatins using..." />
     <text name="Home_AspNetDescription" value="ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that enables a clean separation of concerns and that gives you full control over markup for enjoyable, agile development." />
     <text name="Home_AspNetBoilerplateDescription" value="ASP.NET Boilerplate is a framework to build web based applications with best practices and most popular tools." />

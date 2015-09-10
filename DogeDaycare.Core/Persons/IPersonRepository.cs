@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DogeDaycare.Humans
+namespace DogeDaycare.Persons
 {
     public interface IPersonRepository : IRepository<Person,Guid>
     {
         List<Person> GetAllPeople();
+        void InsertPerson(Person person);
     }
 }

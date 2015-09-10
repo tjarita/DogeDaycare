@@ -44,13 +44,16 @@
                     .state('animal.new', {
                         url: '/new',
                         templateUrl: '/App/Main/views/animal/animal.new.cshtml',
-                        //menu: 'Animals' //Matches to name of 'AnimalAdd' menu in DogeDaycareNavigationProvider
                     })
                 .state('person', {
                     url: '/person',
                     templateUrl: '/App/Main/views/person/person.cshtml',
                     menu: 'Persons' //Matches to name of 'AnimalAdd' menu in DogeDaycareNavigationProvider
                 })
+                    .state('person.new', {
+                        url: '/new',
+                        templateUrl: '/App/Main/views/person/person.new.cshtml',
+                    })
             ;
         }
     ]);

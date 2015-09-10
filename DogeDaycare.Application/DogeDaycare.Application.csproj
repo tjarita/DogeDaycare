@@ -101,7 +101,10 @@
     <Compile Include="Animals\IAnimalAppService.cs" />
     <Compile Include="DogeDaycareApplicationModule.cs" />
     <Compile Include="DogeDaycareAppServiceBase.cs" />
-    <Compile Include="Humans\IPersonAppService.cs" />
+    <Compile Include="Persons\Dtos\CreatePersonInput.cs" />
+    <Compile Include="Persons\Dtos\PersonDto.cs" />
+    <Compile Include="Persons\IPersonAppService.cs" />
+    <Compile Include="Persons\PersonAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
