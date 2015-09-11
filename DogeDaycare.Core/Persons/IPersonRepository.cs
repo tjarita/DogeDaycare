@@ -10,6 +10,5 @@ namespace DogeDaycare.Persons
     public interface IPersonRepository : IRepository<Person,Guid>
     {
         List<Person> GetAllPeople();
-        void InsertPerson(Person person);
     }
 }

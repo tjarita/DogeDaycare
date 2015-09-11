@@ -1,4 +1,5 @@
 ﻿using Abp.Application.Services;
+using AutoMapper;
 using DogeDaycare.Animals;
 using DogeDaycare.Persons.Dtos;
 using System;
@@ -11,13 +12,23 @@ namespace DogeDaycare.Persons
 {
     public class PersonAppService : ApplicationService, IPersonAppService
     {
-        private IAnimalRepository _animalRepository;
-        private IPersonRepository _personRepository;
+        private readonly IAnimalRepository _animalRepository;
+        private readonly IPersonRepository _personRepository;
 
         public PersonAppService(IAnimalRepository animalRepository, IPersonRepository personRepository)
         {
             _animalRepository = animalRepository;
             _personRepository = personRepository;
+        }
+
+        public GetPersonsOutput GetAllPersons()
+        {
+            var persons = _personRepository.GetAll().ToList();
+
+            return new GetPersonsOutput
+            {
+                Persons = Mapper.Map<List<PersonDto>>(persons)
+            };
         }
 
         public void CreatePerson(CreatePersonInput input)
@@ -27,8 +38,6 @@ namespace DogeDaycare.Persons
             Person person = new Person() { Name = input.Name };
 
             _personRepository.Insert(person);
-            //_personRepository.InsertPerson(person);
         }
-
     }
 }

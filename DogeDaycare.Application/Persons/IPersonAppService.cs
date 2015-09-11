@@ -10,9 +10,7 @@ namespace DogeDaycare.Persons
 {
     public interface IPersonAppService : IApplicationService
     {
-
+        GetPersonsOutput GetAllPersons();
         void CreatePerson(CreatePersonInput input);
-
-
     }
 }

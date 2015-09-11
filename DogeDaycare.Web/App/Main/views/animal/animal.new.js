@@ -1,14 +1,28 @@
 ﻿(function () {
     var controllerId = 'app.views.animal.new';
     angular.module('app').controller(controllerId, [
-        '$scope', 'abp.services.dogedaycare.animal',
-        function ($scope, animalService) {
+        '$scope', '$location','abp.services.dogedaycare.animal', 'abp.services.dogedaycare.person',
+        function ($scope, $location, animalService, personService) {
             var vm = this;
             //About logic...
 
-            vm.localize = abp.localization.getSource('DogeDaycare');
+            vm.animal = {
+                name: '',
+                owner: null
+            };
 
+            personService.getAllPersons().success(function (data) {
+                vm.persons = data.persons;
+            });
 
+            vm.saveAnimal = function () {
+                abp.ui.setBusy(null,
+                    animalService.createAnimal(vm.animal
+                    ).success(function(){
+                        abp.notify.info('Animal Registered');
+                        $location.path('/person');
+                    }));
+            };
         }
     ]);
 })();

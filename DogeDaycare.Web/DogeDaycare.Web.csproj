@@ -206,7 +206,7 @@
     </Content>
     <Content Include="App\Main\views\admin\admin.js" />
     <Content Include="App\Main\views\animal\animal.list.cshtml" />
-    <Content Include="App\Main\views\animal\animallist.js" />
+    <Content Include="App\Main\views\animal\animal.list.js" />
     <Content Include="App\Main\views\animal\animal.new.js" />
     <Content Include="App\Main\views\layout\header.js" />
     <Content Include="App\Main\views\layout\layout.js" />

@@ -102,6 +102,7 @@
     <Compile Include="DogeDaycareApplicationModule.cs" />
     <Compile Include="DogeDaycareAppServiceBase.cs" />
     <Compile Include="Persons\Dtos\CreatePersonInput.cs" />
+    <Compile Include="Persons\Dtos\GetPersonsOutput.cs" />
     <Compile Include="Persons\Dtos\PersonDto.cs" />
     <Compile Include="Persons\IPersonAppService.cs" />
     <Compile Include="Persons\PersonAppService.cs" />

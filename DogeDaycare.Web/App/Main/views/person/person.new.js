@@ -12,10 +12,7 @@
                 name: ''
             };
 
-
             vm.savePerson = function () {
-                //window.alert("hi");
-                //personService.createPerson(vm.person);
                 abp.ui.setBusy(null,
                 personService.createPerson(
                         vm.person
@@ -23,7 +20,6 @@
                             abp.notify.info('Person registered');
                             $location.path('/animal');
                         }));
-                //window.alert("hi");
             };
         }
     ]);

@@ -41,7 +41,7 @@ namespace DogeDaycare.Web
                         )
                         .AddItem(new MenuItemDefinition(
                             "Animals",
-                            new LocalizableString("Animal Admin Dashboard", DogeDaycareConsts.LocalizationSourceName),
+                            new LocalizableString("Animal Dashboard", DogeDaycareConsts.LocalizationSourceName),
                             url: "#/animal",
                             icon: "fa fa-paw"
                             //, requiredPermissionName: ""
@@ -49,28 +49,12 @@ namespace DogeDaycare.Web
                         )
                         .AddItem(new MenuItemDefinition(
                             "Persons",
-                            new LocalizableString("Person Admin Dashboard", DogeDaycareConsts.LocalizationSourceName),
+                            new LocalizableString("Person Dashboard", DogeDaycareConsts.LocalizationSourceName),
                             url: "#/person",
                             icon: "fa fa-user"
                             //, requiredPermissionName: ""
                             )
                         )
-                //.AddItem(new MenuItemDefinition(
-                //    "AnimalSearch",
-                //    new LocalizableString("AnimalSearch", DogeDaycareConsts.LocalizationSourceName),
-                //    url:"#/animal",
-                //    icon: "fa fa-search"
-                //    //, requiredPermissionName: ""
-                //    )
-                //)
-                //.AddItem(new MenuItemDefinition(
-                //    "AnimalAdd",
-                //    new LocalizableString("AnimalAdd", DogeDaycareConsts.LocalizationSourceName),
-                //    url: "#/animal",
-                //    icon: "fa fa-plus"
-                //    //, requiredPermissionName: ""
-                //    )
-                //)
                 )
                 ;
         }
