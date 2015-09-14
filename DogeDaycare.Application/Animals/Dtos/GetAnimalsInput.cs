@@ -11,7 +11,6 @@ namespace DogeDaycare.Animals.Dtos
     public class GetAnimalsInput : IInputDto
     {
         [Required]
-        public Guid? IdOwner { get; set; }
-
+        public Guid IdOwner { get; set; }
     }
 }

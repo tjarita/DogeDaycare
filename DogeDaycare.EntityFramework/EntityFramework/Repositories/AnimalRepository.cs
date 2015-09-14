@@ -15,12 +15,13 @@ namespace DogeDaycare.EntityFramework.Repositories
 
         }
 
-        public List<Animal> GetAllPetsPerOwner(Guid? IdOwner)
+        public List<Animal> GetAllPetsPerOwner(Guid? owner)
         {
             var query = GetAll();
-            if (IdOwner.HasValue)
-                query.Where(animal => animal.IdOwner == IdOwner.Value);
 
+            if(owner.HasValue)
+                query.Where(animal => animal.Owner.Id == owner);
+            
             return query
                 .OrderByDescending(animal => animal.RegisteredTime)
                 .ToList();

@@ -15,7 +15,7 @@ namespace DogeDaycare.Migrations
         protected override void Seed(DogeDaycare.EntityFramework.DogeDaycareDbContext context)
         {
             Persons.Person toshiki = new Persons.Person() { Name = "Toshiki" };
-            Animals.Animal sachi = new Animals.Animal() { Name = "Sachi", Owner = toshiki, IdOwner = toshiki.Id };
+            Animals.Animal sachi = new Animals.Animal() { Name = "Sachi", Owner = toshiki};
             context.Persons.Add(toshiki);
             context.Animals.Add(sachi);
 
