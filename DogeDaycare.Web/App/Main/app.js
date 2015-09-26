@@ -45,6 +45,10 @@
                         url: '/new',
                         templateUrl: '/App/Main/views/animal/animal.new.cshtml',
                     })
+                    .state('animal.list', {
+                        url: '/list',
+                        templateUrl: '/App/Main/views/animal/animal.list.cshtml',
+                    })
                 .state('person', {
                     url: '/person',
                     templateUrl: '/App/Main/views/person/person.cshtml',

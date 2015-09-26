@@ -6,25 +6,25 @@
     </div>
     <div class="row">
         <form id="NewAnimalForm" class="form-horizontal">
-            <div class="form-group">
-                <div class="col-md-2">
-                    <label for="AnimalName" class="control-label">Animal Name</label>
-                </div>
+
+            <div class="form-group form-group-sm">
+                <label for="AnimalName" class="col-md-2 control-label">Name</label>
                 <div class="col-md-10">
-                    <input ng-model="vm.animal.name" type="text" class="form-control" id="AnimalName" placeholder="Name" />
+                    <input ng-model="vm.animal.name" type="text" class="form-control" id="AnimalName" placeholder="Animal Name" />
                 </div>
             </div>
-            <div class="form-group">
-                <div class="col-md-2">
-                    <label for="AssignedOwner" class="control-label">Select Owner</label>
-                </div>
+
+            <div class="form-group form-group-sm">
+                <label for="AssignedOwner" class="col-md-2 control-label">Owner</label>
                 <div class="col-md-10">
-                    <select id="AssignedOwner" class="form-control" ng-model="vm.animal.IdOwner" ng-options="person.id as person.name for person in vm.persons"></select>
+                    <select ng-model="vm.animal.IdOwner" ng-options="person.id as person.name for person in vm.persons" multiple="multiple" id="AssignedOwner" class="form-control" ></select>
                 </div>
             </div>
+
             <div class="col-md-2 col-md-offset-5">
                 <button ng-click="vm.saveAnimal()" type="submit" class="btn btn-primary">Register</button>
             </div>
+
         </form>
     </div>
 

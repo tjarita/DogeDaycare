@@ -8,9 +8,9 @@ namespace DogeDaycare.Animals
 {
     public enum Species
     {
-        Dog = 0,
-        Cat = 1,
-        Rabbit = 2,
-        Rat = 3
+        Dog,
+        Cat,
+        Rabbit,
+        Rat
     }
 }

@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace DogeDaycare.Animals
 {
+    /// <summary>
+    /// Core animal model
+    /// </summary>
     [Table("Animals")]
     public class Animal : Entity<Guid>
     {

@@ -94,6 +94,7 @@
     <Compile Include="DogeDaycareCoreModule.cs" />
     <Compile Include="Persons\IPersonRepository.cs" />
     <Compile Include="Persons\Person.cs" />
+    <Compile Include="Persons\PersonDesignationEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

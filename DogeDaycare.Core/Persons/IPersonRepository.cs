@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace DogeDaycare.Persons
 {
+    /// <summary>
+    /// Repository holding persons. Used for custom queries that IReposity doesn't cover.
+    /// </summary>
     public interface IPersonRepository : IRepository<Person,Guid>
     {
         List<Person> GetAllPeople();
