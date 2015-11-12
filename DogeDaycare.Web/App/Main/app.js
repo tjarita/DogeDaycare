@@ -7,7 +7,8 @@
         'ui.router',
         'ui.bootstrap',
         'ui.jq',
-        'abp'
+        'abp',
+        'ngTable'
     ]);
 
     //Configuration for Angular UI routing.
@@ -45,9 +46,9 @@
                         url: '/new',
                         templateUrl: '/App/Main/views/animal/animal.new.cshtml',
                     })
-                    .state('animal.list', {
-                        url: '/list',
-                        templateUrl: '/App/Main/views/animal/animal.list.cshtml',
+                    .state('animal.search', {
+                        url: '/search',
+                        templateUrl: '/App/Main/views/animal/animal.search.cshtml',
                     })
                 .state('person', {
                     url: '/person',

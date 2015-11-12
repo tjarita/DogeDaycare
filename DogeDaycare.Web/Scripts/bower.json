@@ -1,0 +1,20 @@
+{
+  "name": "DogeDaycare",
+  "version": "0.0.1",
+  "homepage": "https://github.com/tjarita/DogeDaycare",
+  "authors": [
+    "tarita <tarita141@gmail.com>"
+  ],
+  "description": "Web application to help manage a dog boarding or dog walking business.",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {}
+}

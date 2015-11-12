@@ -52,12 +52,17 @@ namespace DogeDaycare.Web
                         "~/Scripts/angular-ui/ui-bootstrap-tpls.min.js",
                         "~/Scripts/angular-ui/ui-utils.min.js",
 
+                        "~/Scripts/dirPagination.js",
+                        "~/Scripts/bower_components/ng-table/dist/ng-table.js",
+
                         "~/Abp/Framework/scripts/abp.js",
                         "~/Abp/Framework/scripts/libs/abp.jquery.js",
                         "~/Abp/Framework/scripts/libs/abp.toastr.js",
                         "~/Abp/Framework/scripts/libs/abp.blockUI.js",
                         "~/Abp/Framework/scripts/libs/abp.spin.js",
                         "~/Abp/Framework/scripts/libs/angularjs/abp.ng.js"
+
+
                     )
                 );
 

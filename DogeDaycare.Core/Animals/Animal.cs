@@ -1,5 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using DogeDaycare.Persons;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -17,7 +18,9 @@ namespace DogeDaycare.Animals
     public class Animal : Entity<Guid>
     {
         public virtual string Name { get; set; }
-        public virtual Person Owner { get; set; }
+        //Marked JsonIgnore to avoid Entity Framework's lazy load serialization.
+        [JsonIgnore]
+        public Person Owner { get; set; }
         public virtual DateTime RegisteredTime { get; set; }
         
         public Animal()

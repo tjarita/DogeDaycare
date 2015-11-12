@@ -92,6 +92,7 @@
     <Compile Include="Appointments\IAppointmentRepository.cs" />
     <Compile Include="DogeDaycareConsts.cs" />
     <Compile Include="DogeDaycareCoreModule.cs" />
+    <Compile Include="Persons\Address.cs" />
     <Compile Include="Persons\IPersonRepository.cs" />
     <Compile Include="Persons\Person.cs" />
     <Compile Include="Persons\PersonDesignationEnum.cs" />
@@ -101,6 +102,7 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

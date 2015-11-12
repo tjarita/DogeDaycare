@@ -13,7 +13,9 @@ namespace DogeDaycare.Persons
     public class Person : Entity<Guid>
     {
         public virtual string Name { get; set; }
-        public virtual List<Animals.Animal> Pets { get; set; }
+        //public Address Address { get; set; }
+
+        public ICollection<Animals.Animal> Pets { get; set; }
 
         public Person()
         {

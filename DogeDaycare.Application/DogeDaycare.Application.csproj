@@ -98,6 +98,7 @@
     <Compile Include="Animals\Dtos\CreateAnimalInput.cs" />
     <Compile Include="Animals\Dtos\GetAnimalsInput.cs" />
     <Compile Include="Animals\Dtos\GetAnimalsOutput.cs" />
+    <Compile Include="Animals\Dtos\SearchAnimalsInput.cs" />
     <Compile Include="Animals\IAnimalAppService.cs" />
     <Compile Include="DogeDaycareApplicationModule.cs" />
     <Compile Include="DogeDaycareAppServiceBase.cs" />

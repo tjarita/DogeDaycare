@@ -18,7 +18,8 @@
                         vm.person
                         ).success(function () {
                             abp.notify.info('Person registered');
-                            $location.path('/animal');
+                            $location.path('/person');
+                            $scope.$apply();
                         }));
             };
         }
