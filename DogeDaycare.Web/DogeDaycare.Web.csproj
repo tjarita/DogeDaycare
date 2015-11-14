@@ -1200,6 +1200,7 @@
     <Content Include="Scripts\bower_components\ng-table\RELEASING.md" />
     <Content Include="Scripts\bower_components\ng-table\test\.jsbeautifyrc" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <None Include="Scripts\jquery-2.1.0-vsdoc.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />

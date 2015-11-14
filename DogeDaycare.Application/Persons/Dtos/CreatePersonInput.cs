@@ -1,10 +1,5 @@
 ﻿using Abp.Application.Services.Dto;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DogeDaycare.Persons.Dtos
 {
@@ -14,6 +9,14 @@ namespace DogeDaycare.Persons.Dtos
     public class CreatePersonInput : IInputDto
     {
         [Required]
-        public string Name { get; set; }
+        public string FName { get; set; }
+        public string NickName { get; set; }
+        [Required]
+        public string LName { get; set; }
+        [Required]
+        public string Email { get; set; }
+        [Required]
+        public string Phone { get; set; }
+
     }
 }

@@ -33,9 +33,16 @@ namespace DogeDaycare.Persons
 
         public void CreatePerson(CreatePersonInput input)
         {
-            Logger.Info("Registering a person named" + input.Name);
+            Logger.Info("Registering a person : " + input.FName + "  " + input.LName);
 
-            Person person = new Person() { Name = input.Name };
+            Person person = new Person()
+            {
+                FName = input.FName,
+                NickName = input.NickName,
+                LName = input.LName,
+                Email = input.Email,
+                Phone = input.Phone
+            };
 
             _personRepository.Insert(person);
         }

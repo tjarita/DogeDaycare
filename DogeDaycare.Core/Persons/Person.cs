@@ -12,9 +12,14 @@ namespace DogeDaycare.Persons
     [Table("Persons")]
     public class Person : Entity<Guid>
     {
-        public virtual string Name { get; set; }
+        public virtual string FName { get; set; }
+        public virtual string NickName { get; set; }
+        public virtual string LName { get; set; }
+        public virtual string Email { get; set; }
+        public virtual string Phone { get; set; }
+        //public virtual int Gender { get; set; }
+        //public virtual DateTime Birthday { get; set; }
         //public Address Address { get; set; }
-
         public ICollection<Animals.Animal> Pets { get; set; }
 
         public Person()

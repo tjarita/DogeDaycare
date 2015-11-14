@@ -6,14 +6,47 @@
     </div>
     <div class="row">
         <form id="NewPersonForm" class="form-horizontal">
+            @* First Name *@
             <div class="form-group">
-                <div class="col-md-2">
-                    <label for="PersonName" class="control-label">User Name</label>
-                </div>
-                <div class="col-md-9">
-                    <input ng-model="vm.person.name" type="text" class="form-control" id="PersonName" placeholder="Name" />
+                <label for="FName" class="col-md-2 control-label">First Name</label>
+                <div class="col-md-10">
+                    <input ng-model="vm.person.fname" type="text" class="form-control" id="FName" placeholder="First Name" />
                 </div>
             </div>
+            @* NickName *@
+            <div class="form-group">
+                <label for="NickName" class="col-md-2 control-label">NickName</label>
+                <div class="col-md-10">
+                    <input ng-model="vm.person.nickname" type="text" class="form-control" id="NickName" placeholder="NickName" />
+                </div>
+            </div>
+             @* Last Name *@ 
+            <div class="form-group">
+                <label for="LName" class="col-md-2 control-label">Last Name</label>
+                <div class="col-md-10">
+                    <input ng-model="vm.person.lname" type="text" class="form-control" id="LName" placeholder="Last Name" />
+                </div>
+            </div>
+            @* Email *@
+            <div class="form-group">
+                <label for="Email" class="col-md-2 control-label">Email</label>
+                <div class="col-md-10">
+                    <input ng-model="vm.person.email" type="email" class="form-control" id="Email" placeholder="Email" />
+                </div>
+            </div>
+            @* Phone *@
+            <div class="form-group">
+                <label for="Phone" class="col-md-2 control-label">Phone</label>
+                <div class="col-md-10">
+                    <input ng-model="vm.person.phone" type="tel" class="form-control" id="Phone" placeholder="Phone" />
+                </div>
+            </div>
+            @* Gender *@
+            @* Birthday *@
+            @* Address *@
+
+
+
             <div class="col-md-2 col-md-offset-5">
                 <button ng-click="vm.savePerson()" type="submit" class="btn btn-primary">Register</button>
             </div>

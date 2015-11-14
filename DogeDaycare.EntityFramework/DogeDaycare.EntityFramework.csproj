@@ -103,6 +103,10 @@
     <Compile Include="Migrations\201509140608319_remove IdOwner.Designer.cs">
       <DependentUpon>201509140608319_remove IdOwner.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201511140524055_Add more information to Person.cs" />
+    <Compile Include="Migrations\201511140524055_Add more information to Person.Designer.cs">
+      <DependentUpon>201511140524055_Add more information to Person.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DogeDaycareDataModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -126,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201509140608319_remove IdOwner.resx">
       <DependentUpon>201509140608319_remove IdOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511140524055_Add more information to Person.resx">
+      <DependentUpon>201511140524055_Add more information to Person.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

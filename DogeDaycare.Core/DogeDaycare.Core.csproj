@@ -86,13 +86,14 @@
     <Compile Include="Animals\Animal.cs" />
     <Compile Include="Animals\IAnimal.cs" />
     <Compile Include="Animals\IAnimalRepository.cs" />
-    <Compile Include="Animals\Species.cs" />
+    <Compile Include="Animals\Enumerators\Species.cs" />
     <Compile Include="Appointments\Appointment.cs" />
     <Compile Include="Appointments\IAppointment.cs" />
     <Compile Include="Appointments\IAppointmentRepository.cs" />
     <Compile Include="DogeDaycareConsts.cs" />
     <Compile Include="DogeDaycareCoreModule.cs" />
     <Compile Include="Persons\Address.cs" />
+    <Compile Include="Persons\Enumerators\Genders.cs" />
     <Compile Include="Persons\IPersonRepository.cs" />
     <Compile Include="Persons\Person.cs" />
     <Compile Include="Persons\PersonDesignationEnum.cs" />
