@@ -1,0 +1,43 @@
+﻿<div class="container-fluid" ng-controller="app.views.animal.search as vm">
+    <div class="row">
+        <h3 class="panel-title" style="margin-bottom:10px">
+            Animal Search
+        </h3>
+    </div>
+    <div class="row">
+        <!-- #region SearchParameters -->
+        <form id="AnimalSearchForm" class="form-horizontal">
+            @*Animal Name*@
+            <div class="form-group form-group-sm">
+                <label for="AnimalName" class="col-md-2 control-label">Animal Name</label>
+                <div class="col-md-9">
+                    <input ng-model="searchTerms.name" id="AnimalName" ng-disabled="AnimalNameCheck" type="search" class="form-control" placeholder="Animal Name" />
+                </div>
+            </div>
+            @*Owner Name*@
+            <div class="form-group form-group-sm">
+                <label for="OwnerName" class="col-md-2 control-label">Owner Name</label>
+                <div class="col-md-9">
+                    <input ng-model="searchTerms.owner.name" id="OwnerName" ng-disabled="OwnerNameCheck" type="search" class="form-control" placeholder="Owner Name" />
+                </div>
+            </div>
+            <!-- #endregion -->
+        </form>
+    </div>
+    <br />
+
+    <div class="row">
+        <table ng-table="animalsTable" class="table table-striped">
+            <tr ng-repeat="animal in data">
+                <td data-title="'Name'" sortable="'name'">
+                    {{animal.name}}
+                </td>
+                <td data-title="'ID'">
+                    {{animal.id}}
+                </td>
+            </tr>
+        </table>
+
+
+    </div>
+</div>

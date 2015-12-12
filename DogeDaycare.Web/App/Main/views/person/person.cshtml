@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -7,17 +6,25 @@
 </head>
 <body>
     <div class="col-md-8 col-md-offset-2">
-
-        <nav role="navigation">
-            <ul class="nav nav-tabs nav-justified">
-                <li><a href="#/person"><i class="glyphicon glyphicon-home"></i> Home</a></li>
-                <li><a href="#/person/new"><i class="glyphicon glyphicon-plus"></i> Register</a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-search"></i> Search</a></li>
-            </ul>
-        </nav>
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <div ui-view></div>
+        <div class="row text-center">
+            <h3>
+                <i class="fa fa-user fa-lg"></i>
+                &nbsp;User Maintenance
+            </h3>
+        </div>
+        <br />
+        <div class="panel panel-default" ng-controller="app.views.person as vm">
+            <nav id="person_nav" role="navigation">
+                <ul class="nav nav-tabs nav-justified" role="tablist">
+                    <li role="presentation"><a href="#/person">     <i class="glyphicon glyphicon-home">  </i> Home</a></li>
+                    <li role="presentation"><a href="#/person/new"> <i class="glyphicon glyphicon-plus">  </i> Register</a></li>
+                    <li role="presentation"><a href="#">            <i class="glyphicon glyphicon-search"></i> Search</a></li>
+                </ul>
+            </nav>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div ui-view></div>
+                </div>
             </div>
         </div>
     </div>

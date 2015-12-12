@@ -4,12 +4,11 @@
         '$scope', '$location', 'abp.services.dogedaycare.person',
         function ($scope, $location, personService) {
             var vm = this;
-
             vm.person = {
                 NickName: '',
-            //    Gender: '',
-            //    Birthday: '',
-            //    Address
+                //    Gender: '',
+                //    Birthday: '',
+                //    Address
             };
 
             vm.savePerson = function () {
