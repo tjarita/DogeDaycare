@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -22,6 +23,7 @@
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
     <UseGlobalApplicationHostFile />
+    <TypeScriptToolsVersion>1.7</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -213,7 +215,9 @@
     <Content Include="App\Main\views\home\home.js" />
     <Content Include="App\Main\views\about\about.js" />
     <Content Include="App\Main\views\person\person.js" />
+    <Content Include="App\Main\views\person\person.search.js" />
     <Content Include="Content\bootstrap-cosmo.min.css" />
+    <Content Include="Content\bootstrap-cyborg.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap-paper.css" />
@@ -326,70 +330,6 @@
     <Content Include="Content\toastr.less" />
     <Content Include="Abp\Framework\styles\abp.less" />
     <Content Include="Abp\Framework\styles\abp.css.map" />
-    <Content Include="Scripts\bower_components\ng-table\.gitignore" />
-    <Content Include="Scripts\bower_components\ng-table\changelog.js" />
-    <Content Include="Scripts\bower_components\ng-table\dist\ng-table.css" />
-    <Content Include="Scripts\bower_components\ng-table\dist\ng-table.js" />
-    <Content Include="Scripts\bower_components\ng-table\dist\ng-table.min.css" />
-    <Content Include="Scripts\bower_components\ng-table\dist\ng-table.min.js" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\css\app.css" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\js\app.js" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-animate\angular-animate.js" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-animate\angular-animate.min.js" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-animate\index.js" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-aria\angular-aria.js" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-aria\angular-aria.min.js" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-aria\index.js" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-messages\angular-messages.js" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-messages\angular-messages.min.js" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-messages\index.js" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-route\angular-route.js" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-route\angular-route.min.js" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-route\index.js" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular\angular-csp.css" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular\angular.js" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular\angular.min.js" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular\index.js" />
-    <Content Include="Scripts\bower_components\ng-table\docs\config.js" />
-    <Content Include="Scripts\bower_components\ng-table\docs\processors\componentsData.js" />
-    <Content Include="Scripts\bower_components\ng-table\docs\processors\indexPage.js" />
-    <Content Include="Scripts\bower_components\ng-table\docs\processors\nav-data.template.js" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\api-index.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\constants.template.js" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\content.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\get-started.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\index.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\ngdoc\api\api.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\ngdoc\api\componentGroup.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\ngdoc\api\directive.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\ngdoc\api\filter.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\ngdoc\api\function.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\ngdoc\api\input.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\ngdoc\api\module.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\ngdoc\api\object.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\ngdoc\api\parameters.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\ngdoc\api\provider.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\ngdoc\api\service.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\ngdoc\api\type.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\ngdoc\base.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\ngdoc\lib\events.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\ngdoc\lib\macros.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\ngdoc\lib\methods.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\ngdoc\lib\params.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\ngdoc\lib\properties.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\ngdoc\lib\returns.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\ngdoc\lib\this.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\ngdoc\nav.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\docs\template\ngdoc\overview.template.html" />
-    <Content Include="Scripts\bower_components\ng-table\Gruntfile.js" />
-    <Content Include="Scripts\bower_components\ng-table\gulpfile.js" />
-    <Content Include="Scripts\bower_components\ng-table\karma.conf.js" />
-    <Content Include="Scripts\bower_components\ng-table\test\filtersSpec.js" />
-    <Content Include="Scripts\bower_components\ng-table\test\ngTableDefaultGetDataSpec.js" />
-    <Content Include="Scripts\bower_components\ng-table\test\tableControllerSpec.js" />
-    <Content Include="Scripts\bower_components\ng-table\test\tableDynamicSpec.js" />
-    <Content Include="Scripts\bower_components\ng-table\test\tableParamsSpec.js" />
-    <Content Include="Scripts\bower_components\ng-table\test\tableSpec.js" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular-touch.min.js.map" />
     <Content Include="Scripts\angular-sanitize.min.js.map" />
@@ -1158,47 +1098,7 @@
     <None Include=".bin\git.cmd" />
     <None Include=".bin\node.cmd" />
     <Content Include="Scripts\bower.json" />
-    <Content Include="Scripts\bower_components\ng-table\.bower.json" />
-    <Content Include="Scripts\bower_components\ng-table\.bowerrc" />
-    <Content Include="Scripts\bower_components\ng-table\.editorconfig" />
-    <Content Include="Scripts\bower_components\ng-table\.jshintrc" />
-    <Content Include="Scripts\bower_components\ng-table\.travis.yml" />
-    <Content Include="Scripts\bower_components\ng-table\bower.json" />
-    <Content Include="Scripts\bower_components\ng-table\CHANGELOG.md" />
-    <Content Include="Scripts\bower_components\ng-table\CONTRIBUTING.md" />
-    <Content Include="Scripts\bower_components\ng-table\dist\ng-table.less" />
-    <Content Include="Scripts\bower_components\ng-table\dist\ng-table.min.js.map" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-animate\.bower.json" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-animate\angular-animate.min.js.map" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-animate\bower.json" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-animate\package.json" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-animate\README.md" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-aria\.bower.json" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-aria\angular-aria.min.js.map" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-aria\bower.json" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-aria\package.json" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-aria\README.md" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-messages\.bower.json" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-messages\angular-messages.min.js.map" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-messages\bower.json" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-messages\package.json" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-messages\README.md" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-route\.bower.json" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-route\angular-route.min.js.map" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-route\bower.json" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-route\package.json" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular-route\README.md" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular\.bower.json" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular\angular.min.js.gzip" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular\angular.min.js.map" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular\bower.json" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular\package.json" />
-    <Content Include="Scripts\bower_components\ng-table\docs\app\vendor\angular\README.md" />
-    <Content Include="Scripts\bower_components\ng-table\LICENSE" />
-    <Content Include="Scripts\bower_components\ng-table\package.json" />
-    <Content Include="Scripts\bower_components\ng-table\README.md" />
-    <Content Include="Scripts\bower_components\ng-table\RELEASING.md" />
-    <Content Include="Scripts\bower_components\ng-table\test\.jsbeautifyrc" />
+    <Content Include="App\Main\views\person\person.search.cshtml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <None Include="Scripts\jquery-2.1.0-vsdoc.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
@@ -1267,6 +1167,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
+    <Folder Include="Scripts\bower_components\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DogeDaycare.Application\DogeDaycare.Application.csproj">
@@ -1286,11 +1187,18 @@
       <Name>DogeDaycare.WebApi</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>

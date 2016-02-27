@@ -9,7 +9,7 @@
             // CreateAnimalInput object
             vm.animal = {
                 name: '',
-                IdOwner: null
+                //IdOwner: null
             };
 
             personService.getAllPersons().success(function (data) {

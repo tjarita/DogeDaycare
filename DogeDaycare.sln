@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{DFA48E27-7D53-4955-A722-3D91A7119BE7}"
 	ProjectSection(SolutionItems) = preProject
@@ -19,6 +19,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogeDaycare.Web", "DogeDaycare.Web\DogeDaycare.Web.csproj", "{897F6FD8-6F90-48E4-95A5-B4429B896205}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogeDaycare.WebApi", "DogeDaycare.WebApi\DogeDaycare.WebApi.csproj", "{5EB52D3D-09FD-463A-B02A-8D9856BD3724}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogeDaycare.ApplicationTests", "DogeDaycare.ApplicationTests\DogeDaycare.ApplicationTests.csproj", "{60EB5B48-75AD-4DE5-B5E3-16A91143D68A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +48,10 @@ Global
 		{5EB52D3D-09FD-463A-B02A-8D9856BD3724}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EB52D3D-09FD-463A-B02A-8D9856BD3724}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EB52D3D-09FD-463A-B02A-8D9856BD3724}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60EB5B48-75AD-4DE5-B5E3-16A91143D68A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60EB5B48-75AD-4DE5-B5E3-16A91143D68A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60EB5B48-75AD-4DE5-B5E3-16A91143D68A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60EB5B48-75AD-4DE5-B5E3-16A91143D68A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

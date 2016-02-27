@@ -22,7 +22,7 @@ namespace DogeDaycare.Web
                         icon: "fa fa-home"
                         )
                 )
-                
+
                 .AddItem(
                     new MenuItemDefinition(
                         "About",
@@ -39,23 +39,27 @@ namespace DogeDaycare.Web
                         url: "#/admin",
                         icon: "fa fa-gears "
                         )
-                        .AddItem(new MenuItemDefinition(
-                            "Animals",
-                            new LocalizableString("Animal Maintenance", DogeDaycareConsts.LocalizationSourceName),
-                            url: "#/animal",
-                            icon: "fa fa-paw"
-                            //, requiredPermissionName: ""
-                            )
-                        )
-                        .AddItem(new MenuItemDefinition(
-                            "Persons",
-                            new LocalizableString("User Maintenance", DogeDaycareConsts.LocalizationSourceName),
-                            url: "#/person",
-                            icon: "fa fa-user"
-                            //, requiredPermissionName: ""
-                            )
-                        )
+                        //.AddItem(new MenuItemDefinition(
+                        //    "Animals",
+                        //    new LocalizableString("Animal Maintenance", DogeDaycareConsts.LocalizationSourceName),
+                        //    url: "#/animal",
+                        //    icon: "fa fa-paw"
+                        //    //, requiredPermissionName: ""
+                        //    )
+                        //)
+
                 )
+
+                .AddItem(new MenuItemDefinition(
+                "Persons",
+                new LocalizableString("User Maintenance", DogeDaycareConsts.LocalizationSourceName),
+                url: "#/person",
+                icon: "fa fa-user"
+                //, requiredPermissionName: ""
+                )
+                )
+
+
                 ;
         }
     }

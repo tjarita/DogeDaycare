@@ -11,6 +11,7 @@ namespace DogeDaycare.Persons
     public interface IPersonAppService : IApplicationService
     {
         GetPersonsOutput GetAllPersons();
+        GetPersonsOutput SearchForPerson(SearchPersonDto input);
         void CreatePerson(CreatePersonInput input);
     }
 }

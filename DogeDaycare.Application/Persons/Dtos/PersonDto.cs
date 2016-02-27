@@ -11,8 +11,8 @@ namespace DogeDaycare.Persons.Dtos
     [AutoMapFrom(typeof(Person))]
     public class PersonDto : EntityDto<Guid>
     {
-        public Guid IdPerson { get; set; }
-        public string Name { get; set; }
+        public string FName { get; set; }
+        public string LName { get; set; }
         //public List<Animals.Animal> Pets { get; set; }
 
     }

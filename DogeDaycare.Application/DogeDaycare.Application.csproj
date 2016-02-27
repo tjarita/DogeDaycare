@@ -104,6 +104,7 @@
     <Compile Include="Persons\Dtos\CreatePersonInput.cs" />
     <Compile Include="Persons\Dtos\GetPersonsOutput.cs" />
     <Compile Include="Persons\Dtos\PersonDto.cs" />
+    <Compile Include="Persons\Dtos\SearchPersonDto.cs" />
     <Compile Include="Persons\IPersonAppService.cs" />
     <Compile Include="Persons\PersonAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

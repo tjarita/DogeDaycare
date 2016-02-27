@@ -15,11 +15,15 @@ namespace DogeDaycare.Web
                 new StyleBundle("~/Bundles/App/vendor/css")
                     .Include(
                         "~/Content/themes/base/all.css",
-                        "~/Content/bootstrap-paper.min.css",
+                        "~/Content/bootstrap-cyborg.css",
+                        //"~/Content/bootstrap-paper.css",
+                        //"~/Content/bootstrap.min.css",
                         "~/Content/toastr.min.css",
                         "~/Scripts/sweetalert/sweet-alert.css",
                         "~/Content/flags/famfamfam-flags.css",
-                        "~/Content/font-awesome.min.css"
+                        "~/Content/font-awesome.min.css",
+
+                        "~/Scripts/bower_components/ag-grid/dist/ag-grid.css"
                     )
                 );
 
@@ -44,25 +48,30 @@ namespace DogeDaycare.Web
                         "~/Scripts/others/spinjs/spin.js",
                         "~/Scripts/others/spinjs/jquery.spin.js",
 
-                        "~/Scripts/angular.min.js",
-                        "~/Scripts/angular-animate.min.js",
-                        "~/Scripts/angular-sanitize.min.js",
-                        "~/Scripts/angular-ui-router.min.js",
-                        "~/Scripts/angular-ui/ui-bootstrap.min.js",
-                        "~/Scripts/angular-ui/ui-bootstrap-tpls.min.js",
-                        "~/Scripts/angular-ui/ui-utils.min.js",
+                        "~/Scripts/angular.js",
+                        "~/Scripts/angular-animate.js",
+                        "~/Scripts/angular-sanitize.js",
+                        "~/Scripts/angular-ui-router.js",
+                        "~/Scripts/angular-ui/ui-bootstrap.js",
+                        "~/Scripts/angular-ui/ui-bootstrap-tpls.js",
+                        "~/Scripts/angular-ui/ui-utils.js",
 
-                        "~/Scripts/dirPagination.js",
-                        "~/Scripts/bower_components/ng-table/dist/ng-table.js",
+                        //"~/Scripts/angular.min.js",
+                        //"~/Scripts/angular-animate.min.js",
+                        //"~/Scripts/angular-sanitize.min.js",
+                        //"~/Scripts/angular-ui-router.min.js",
+                        //"~/Scripts/angular-ui/ui-bootstrap.min.js",
+                        //"~/Scripts/angular-ui/ui-bootstrap-tpls.min.js",
+                        //"~/Scripts/angular-ui/ui-utils.min.js",
 
                         "~/Abp/Framework/scripts/abp.js",
                         "~/Abp/Framework/scripts/libs/abp.jquery.js",
                         "~/Abp/Framework/scripts/libs/abp.toastr.js",
                         "~/Abp/Framework/scripts/libs/abp.blockUI.js",
                         "~/Abp/Framework/scripts/libs/abp.spin.js",
-                        "~/Abp/Framework/scripts/libs/angularjs/abp.ng.js"
+                        "~/Abp/Framework/scripts/libs/angularjs/abp.ng.js",
 
-
+                        "~/Scripts/bower_components/ag-grid/dist/ag-grid.js"
                     )
                 );
 

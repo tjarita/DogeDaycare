@@ -19,7 +19,7 @@
             <div class="form-group form-group-sm">
                 <label for="AssignedOwner" class="col-md-2 control-label">Owner</label>
                 <div class="col-md-9">
-                    <select ng-model="vm.animal.IdOwner" ng-options="person.id as person.name for person in vm.persons" id="AssignedOwner" class="form-control" style="line-height:normal" ></select>
+                    <select ng-model="vm.animal.IdOwner" ng-options="person.id as (person.fName + ' ' + person.lName) for person in vm.persons" id="AssignedOwner" class="form-control" style="line-height:normal" ></select>
                 </div>
             </div>
 

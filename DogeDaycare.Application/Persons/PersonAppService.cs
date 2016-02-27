@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace DogeDaycare.Persons
@@ -31,6 +32,37 @@ namespace DogeDaycare.Persons
             };
         }
 
+        public GetPersonsOutput SearchForPerson(SearchPersonDto input)
+        {
+            Logger.Info("Searching for person with properties : " + input.FName + ", " + input.LName);
+            Regex firstName = new Regex(input.FName, RegexOptions.IgnoreCase);
+            Regex lastName = new Regex(input.LName, RegexOptions.IgnoreCase);
+
+
+            var persons = _personRepository
+                .GetAll()
+                .Select(person => new { person.Id, person.FName, person.LName })
+                .AsEnumerable();
+
+            var resultIDs = persons
+                .Where(person =>    firstName.IsMatch(person.FName) && 
+                                    lastName.IsMatch(person.LName))
+                .Select(person => person.Id)
+                .ToList();
+
+            var results = _personRepository
+                .GetAll()
+                .Where(person => resultIDs.Contains(person.Id))
+                .ToList();
+
+            return new GetPersonsOutput
+            {
+                Persons = Mapper.Map<List<PersonDto>>(results)
+            };
+                            
+        }
+
+
         public void CreatePerson(CreatePersonInput input)
         {
             Logger.Info("Registering a person : " + input.FName + "  " + input.LName);
@@ -38,8 +70,8 @@ namespace DogeDaycare.Persons
             Person person = new Person()
             {
                 FName = input.FName,
-                NickName = input.NickName,
                 LName = input.LName,
+                NickName = input.NickName,
                 Email = input.Email,
                 Phone = input.Phone
             };
