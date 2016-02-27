@@ -3,8 +3,8 @@
     var app = angular.module('app');
 
     app.controller(controllerId, [
-    '$scope', '$location', '$filter', 'abp.services.dogedaycare.animal', 'abp.services.dogedaycare.person',
-    function ($scope, $location, $filter, animalService, personService) {
+    '$scope', '$location', '$filter', 'abp.services.dogedaycare.animal', 'abp.services.dogedaycare.person', 'personMaintenanceContext',
+    function ($scope, $location, $filter, animalService, personService, personMaintenanceContext) {
         var vm = this;
 
         $(document).ready(function () {
@@ -18,10 +18,9 @@
 
         $scope.results;
 
-        $scope.search = function search() {
+        $scope.search = function () {
             console.log('searching... parameters..');
             console.log($scope.searchTerms);
-            console.log($scope.results);
             personService.searchForPerson($scope.searchTerms).success(function (results) {
                 $scope.results = results;
                 console.log('results:');
@@ -29,10 +28,14 @@
             });
         }
 
-        $scope.select= function (){
+        $scope.select = function (){
             $scope.selected = this.person;
-            console.log($scope.selected);
+            personMaintenanceContext.setPerson($scope.selected);
+            console.log('set context to');
+            console.log(personMaintenanceContext.getPerson());
         }
+
+
 
     }
     ]);

@@ -18,5 +18,18 @@
 
 
         }
-    ]);
+    ])
+    .service('personMaintenanceContext', function () {
+        var person = {};
+
+
+        return {
+            getPerson: function () { return person; },
+            setPerson: function (input) { person = input;}
+        }
+    });;
+
+
+
+
 })();
