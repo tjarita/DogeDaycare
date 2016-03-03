@@ -13,19 +13,21 @@
                     &nbsp;User Maintenance
                 </h3>
             </div>
-            <br />
-            <div class="panel panel-default" ng-controller="app.views.person as vm">
-                <nav id="person_nav" role="navigation">
-                    <ul class="nav nav-tabs nav-justified" role="tablist">
-                        <li role="presentation"><a href="#/person">         <i class="glyphicon glyphicon-home">  </i> Home</a></li>
-                        <li role="presentation"><a href="#/person/new">     <i class="glyphicon glyphicon-plus">  </i> Register</a></li>
-                        <li role="presentation"><a href="#/person/search">  <i class="glyphicon glyphicon-search"></i> Search</a></li>
-                    </ul>
-                </nav>
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div ui-view></div>
-                    </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-12" ng-controller="app.views.person as vm">
+            <nav id="person_nav" role="navigation">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" id="person_home">  <a href="#/person/home">    <i class="glyphicon glyphicon-home">  </i> Home</a></li>
+                    <li role="presentation" id="person_new">   <a href="#/person/new">     <i class="glyphicon glyphicon-plus">  </i> Register</a></li>
+                    <li role="presentation" id="person_search"><a href="#/person/search">  <i class="glyphicon glyphicon-search"></i> Search</a></li>
+                </ul>
+            </nav>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div ui-view></div>
                 </div>
             </div>
         </div>

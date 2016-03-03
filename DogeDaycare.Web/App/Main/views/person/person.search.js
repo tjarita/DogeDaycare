@@ -3,12 +3,13 @@
     var app = angular.module('app');
 
     app.controller(controllerId, [
-    '$scope', '$location', '$filter', 'abp.services.dogedaycare.animal', 'abp.services.dogedaycare.person', 'personMaintenanceContext',
-    function ($scope, $location, $filter, animalService, personService, personMaintenanceContext) {
+             '$scope', '$location', '$filter', '$state', 'abp.services.dogedaycare.animal', 'abp.services.dogedaycare.person', 'person_nav_updater',
+    function ($scope, $location, $filter, $state, animalService, personService, person_nav_updater) {
         var vm = this;
 
         $(document).ready(function () {
-            console.log('document ready...');
+            console.log('search ready...');
+            person_nav_updater.set($state.current.name);
         });
 
         $scope.searchTerms = {
@@ -28,17 +29,24 @@
             });
         }
 
-        $scope.select = function (){
-            $scope.selected = this.person;
-            personMaintenanceContext.setPerson($scope.selected);
-            console.log('set context to');
-            console.log(personMaintenanceContext.getPerson());
+        $scope.selectedID = null;
+
+        $scope.select = function (person) {
+            $state.get('person').data.currentPerson = person;
+            console.log('set current person to');
+            console.log($state.get('person').data.currentPerson);
+            $scope.selectedID = person.id;
         }
 
-
-
+        $scope.load = function () {
+            if ($state.get('person').data.currentPerson != null) {
+                console.log('going to person home');
+                $location.path('/person/home');
+            }
+            else
+                alert('Please select a person to load.');
+        }
     }
     ]);
-
 })();
 

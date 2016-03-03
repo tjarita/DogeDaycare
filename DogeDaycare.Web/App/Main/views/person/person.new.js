@@ -1,9 +1,15 @@
 ﻿(function () {
     var controllerId = 'app.views.person.new';
     angular.module('app').controller(controllerId, [
-        '$scope', '$location', 'abp.services.dogedaycare.person',
-        function ($scope, $location, personService) {
+        '$scope', '$location', '$state', 'abp.services.dogedaycare.person', 'person_nav_updater',
+        function ($scope, $location, $state, personService, person_nav_updater) {
             var vm = this;
+
+            $(document).ready(function () {
+                person_nav_updater.set($state.current.name);
+            });
+
+
             vm.person = {
                 NickName: '',
                 //    Gender: '',

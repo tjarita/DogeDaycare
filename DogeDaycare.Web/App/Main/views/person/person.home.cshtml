@@ -1,0 +1,26 @@
+﻿<div class="container-fluid" ng-controller="app.views.person.home as vm" ng-init="init()">
+
+    <div class="page-header" ng-show="current != null">
+        <h1>{{current.fName + ' ' + current.lName}}</h1>
+    </div>
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Appointments
+            </div>
+            <div class="panel-body">
+                <button class="btn btn-default">Schedule Appointment</button>
+                <button class="btn btn-default">Appointment History</button>
+            </div>
+            <div class="panel-heading">
+                Animals
+            </div>
+            <div class="panel-body">
+                <button class="btn btn-default">View registered animals</button>
+                <button class="btn btn-default">Register new animal</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
