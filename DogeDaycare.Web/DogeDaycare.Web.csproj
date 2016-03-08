@@ -207,6 +207,7 @@
       <DependentUpon>main.css</DependentUpon>
     </Content>
     <Content Include="App\Main\views\admin\admin.js" />
+    <Content Include="App\Main\views\animal\animal.home.js" />
     <Content Include="App\Main\views\animal\animal.search.cshtml" />
     <Content Include="App\Main\views\animal\animal.search.js" />
     <Content Include="App\Main\views\animal\animal.new.js" />
@@ -217,6 +218,8 @@
     <Content Include="App\Main\views\person\person.home.js" />
     <Content Include="App\Main\views\person\person.js" />
     <Content Include="App\Main\views\person\person.search.js" />
+    <Content Include="App\Main\views\user_dashboard\user_dashboard.home.js" />
+    <Content Include="App\Main\views\user_dashboard\user_dashboard.js" />
     <Content Include="Content\bootstrap-cosmo.min.css" />
     <Content Include="Content\bootstrap-cyborg.css" />
     <Content Include="Content\bootstrap-lumen.css" />
@@ -319,6 +322,9 @@
     <Content Include="Scripts\angular-ui\ui-utils.js" />
     <Content Include="Scripts\angular-ui\ui-utils.min.js" />
     <Content Include="App\Main\views\person\person.home.cshtml" />
+    <Content Include="App\Main\views\animal\animal.home.cshtml" />
+    <Content Include="App\Main\views\user_dashboard\user_dashboard.cshtml" />
+    <Content Include="App\Main\views\user_dashboard\user_dashboard.home.cshtml" />
     <None Include="Scripts\angular.intellisense.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />

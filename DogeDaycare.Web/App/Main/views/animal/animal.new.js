@@ -12,19 +12,19 @@
                 //IdOwner: null
             };
 
-            personService.getAllPersons().success(function (data) {
-                vm.persons = data.persons;
-            });
+            //personService.getAllPersons().success(function (data) {
+            //    vm.persons = data.persons;
+            //});
 
-            vm.saveAnimal = function () {
-                abp.ui.setBusy(null,
-                    animalService.createAnimal(
-                        vm.animal
-                        ).success(function () {
-                            abp.notify.info('Animal Registered');
-                            $location.path('/animal');
-                        }));
-            };
+            //vm.saveAnimal = function () {
+            //    abp.ui.setBusy(null,
+            //        animalService.createAnimal(
+            //            vm.animal
+            //            ).success(function () {
+            //                abp.notify.info('Animal Registered');
+            //                $location.path('/animal');
+            //            }));
+            //};
         }
     ]);
 })();

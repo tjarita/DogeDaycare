@@ -3,49 +3,47 @@
     var app = angular.module('app');
 
     app.controller(controllerId, [
-             '$scope', '$location', '$filter', '$state', 'abp.services.dogedaycare.animal', 'abp.services.dogedaycare.person', 'person_nav_updater',
-    function ($scope, $location, $filter, $state, animalService, personService, person_nav_updater) {
+             '$scope', '$location', '$filter', '$state', '$stateParams', 'abp.services.dogedaycare.animal', 'abp.services.dogedaycare.person', 'person_nav_updater',
+    function ($scope, $location, $filter, $state, $stateParams, animalService, personService, person_nav_updater) {
         var vm = this;
 
         $(document).ready(function () {
             console.log('search ready...');
             person_nav_updater.set($state.current.name);
+            
+            console.log($stateParams);
+
+            if($stateParams.fName === null && $stateParams.lName === null)
+                $scope.searchMode = true;
+            else
+                search();
         });
 
-        $scope.searchTerms = {
-            fName: '',
-            lName: ''
-        };
+        //$scope.searchTerms = {
+        //    fName: '',
+        //    lName: ''
+        //};
 
         $scope.results;
 
-        $scope.search = function () {
+        function search() {
             console.log('searching... parameters..');
-            console.log($scope.searchTerms);
-            personService.searchForPerson($scope.searchTerms).success(function (results) {
+            console.log($stateParams);
+            abp.ui.setBusy(null,
+            personService.searchForPerson($stateParams).success(function (results) {
                 $scope.results = results;
                 console.log('results:');
-                console.log($scope.results.persons);
-            });
+                console.log($scope.results.persons.length);
+            }));
         }
 
-        $scope.selectedID = null;
+        $scope.selected = null;
 
         $scope.select = function (person) {
-            $state.get('person').data.currentPerson = person;
             console.log('set current person to');
-            console.log($state.get('person').data.currentPerson);
-            $scope.selectedID = person.id;
+            $scope.selected = person;
         }
 
-        $scope.load = function () {
-            if ($state.get('person').data.currentPerson != null) {
-                console.log('going to person home');
-                $location.path('/person/home');
-            }
-            else
-                alert('Please select a person to load.');
-        }
     }
     ]);
 })();

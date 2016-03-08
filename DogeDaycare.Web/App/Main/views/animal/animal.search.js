@@ -3,12 +3,12 @@
     var app = angular.module('app');
 
     app.controller(controllerId, [
-    '$scope', '$location', '$filter', 'abp.services.dogedaycare.animal', 'abp.services.dogedaycare.person', 
-    function ($scope, $location, $filter, animalService, personService) {
+    '$scope', '$stateParams','$location', '$filter', 'abp.services.dogedaycare.animal', 'abp.services.dogedaycare.person', 
+    function ($scope,$stateParams, $location, $filter, animalService, personService) {
         var vm = this;
 
         
-
+        
         //$scope.filters = {
         //    name: ''
         //};
@@ -57,23 +57,26 @@
         //    });
         //}
 
-        $scope.refresh = function () {
-            console.log('refresh');
+        //$scope.refresh = function () {
+        //    console.log('refresh');
 
-        }
+        //}
 
         $(document).ready(function () {
-            //console.log('document ready...');
-            abp.ui.setBusy(null,
-            animalService.getAllAnimals().success(function (results) {
-                //console.log('get animals..');
-                $scope.animals = results.animals;
-                console.log($scope.animals);
-                //console.log('loading table..');
-                //loadTable();
-                //console.log('finish table..');
-            })
-            );
+            console.log('document ready...');
+            console.log($stateParams.ownerId);
+
+
+            //abp.ui.setBusy(null,
+            //animalService.getAllAnimals().success(function (results) {
+            //    //console.log('get animals..');
+            //    $scope.animals = results.animals;
+            //    console.log($scope.animals);
+            //    //console.log('loading table..');
+            //    //loadTable();
+            //    //console.log('finish table..');
+            //})
+            //);
         });
     }
     ]);

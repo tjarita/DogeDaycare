@@ -31,34 +31,37 @@ namespace DogeDaycare.Web
                         icon: "fa fa-info"
                         )
                 )
-
-                .AddItem(
-                    new MenuItemDefinition(
-                        "Admin",
-                        new LocalizableString("Admin", DogeDaycareConsts.LocalizationSourceName),
-                        url: "#/admin",
-                        icon: "fa fa-gears "
-                        )
-                        //.AddItem(new MenuItemDefinition(
-                        //    "Animals",
-                        //    new LocalizableString("Animal Maintenance", DogeDaycareConsts.LocalizationSourceName),
-                        //    url: "#/animal",
-                        //    icon: "fa fa-paw"
-                        //    //, requiredPermissionName: ""
-                        //    )
-                        //)
-
-                )
-
+                //.AddItem(
+                //    new MenuItemDefinition(
+                //        "Admin",
+                //        new LocalizableString("Admin", DogeDaycareConsts.LocalizationSourceName),
+                //        url: "#/admin",
+                //        icon: "fa fa-gears "
+                //        )
                 .AddItem(new MenuItemDefinition(
-                "Persons",
-                new LocalizableString("User Maintenance", DogeDaycareConsts.LocalizationSourceName),
-                url: "#/person",
-                icon: "fa fa-user"
-                //, requiredPermissionName: ""
+                    "Animals",
+                    new LocalizableString("Animals", DogeDaycareConsts.LocalizationSourceName),
+                    url: "#/animal",
+                    icon: "fa fa-paw"
+                    //, requiredPermissionName: ""
+                    )
                 )
+                .AddItem(new MenuItemDefinition(
+                    "Persons",
+                    new LocalizableString("Users", DogeDaycareConsts.LocalizationSourceName),
+                    url: "#/person/search",
+                    icon: "fa fa-users"
+                    //, requiredPermissionName: ""
+                    )
                 )
-
+                .AddItem(new MenuItemDefinition(
+                    "Dashboard",
+                    new LocalizableString("Dashboard", DogeDaycareConsts.LocalizationSourceName),
+                    url: "#/dashboard/home",
+                    icon: "fa fa-tachometer"
+                    //, requiredPermissionName: ""
+                    )
+                )
 
                 ;
         }

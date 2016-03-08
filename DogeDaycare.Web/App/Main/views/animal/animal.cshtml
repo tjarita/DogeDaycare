@@ -5,20 +5,24 @@
     <title>Animal Dashboard</title>
 </head>
 <body>
-    <div class="col-md-8 col-md-offset-2">
-        <div class="row text-center">
-            <h3>
-                <i class="fa fa-paw fa-lg"></i>
-                &nbsp;Animal Maintenance
-            </h3>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="row text-center">
+                <h3>
+                    <i class="fa fa-paw fa-lg"></i>
+                    &nbsp;Animal Maintenance
+                </h3>
+            </div>
         </div>
-        <br />
-        <div class="panel panel-default" ng-controller="app.views.animal as vm">
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-12" ng-controller="app.views.animal as vm">
             <nav id="animal_nav" role="navigation">
-                <ul class="nav nav-tabs nav-justified" role="tablist">
-                    <li role="presentation"><a href="#/animal">         <i class="glyphicon glyphicon-home"></i> Home</a></li>
-                    <li role="presentation"><a href="#/animal/new">     <i class="glyphicon glyphicon-plus"></i> Register</a></li>
-                    <li role="presentation"><a href="#/animal/search">  <i class="glyphicon glyphicon-search"></i> Search</a></li>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" id="animal_home">   <a href="#/animal">         <i class="glyphicon glyphicon-home"></i> Home</a></li>
+                    <li role="presentation" id="animal_new">    <a href="#/animal/new">     <i class="glyphicon glyphicon-plus"></i> Register</a></li>
+                    <li role="presentation" id="animal_search"> <a href="#/animal/search"> <i class="glyphicon glyphicon-search"></i> Search</a></li>
                 </ul>
             </nav>
             <div class="panel panel-default">

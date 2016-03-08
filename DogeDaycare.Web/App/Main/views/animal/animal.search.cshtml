@@ -7,13 +7,12 @@
     <div class="row">
         <!-- #region SearchParameters -->
         <form id="AnimalSearchForm" class="form-horizontal">
-            @*Animal Name*@
-            @*<div class="form-group form-group-sm">
-                    <label for="AnimalName" class="col-md-2 control-label">Animal Name</label>
-                    <div class="col-md-9">
-                        <input ng-model="searchTerms.name" id="AnimalName" ng-disabled="AnimalNameCheck" type="search" class="form-control" placeholder="Animal Name" />
-                    </div>
-                </div>*@
+            <div class="form-group">
+                <label for="AnimalName" class="col-md-2 control-label">Animal Name</label>
+                <div class="col-md-10">
+                    <input ng-model="searchTerms.animalName" id="AnimalName" type="search" class="form-control" placeholder="Animal Name" />
+                </div>
+            </div>
             @*Owner Name*@
             @*<div class="form-group form-group-sm">
                     <label for="OwnerName" class="col-md-2 control-label">Owner Name</label>

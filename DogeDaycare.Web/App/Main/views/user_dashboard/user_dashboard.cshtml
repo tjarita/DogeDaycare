@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Dashboard</title>
+</head>
+<body ng-controller="app.views.user_dashboard as vm">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="row text-center">
+                <h3>
+                    @*<i class="fa fa-user fa-lg"></i>*@
+                    Welcome <span id="user_dashboard_header_name"></span> to your dashboard!
+                </h3>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            <nav id="user_dashboard_nav" role="navigation">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" id="user_dashboard_home"><a href="#/dashboard/home">       <i class="glyphicon glyphicon-home">  </i> Home</a></li>
+                    <li role="presentation" id="user_dashboard_register_animal"><a href="#/dashboard/animal/register">         <i class="glyphicon glyphicon-plus"></i> Register</a></li>
+                    @*<li role="presentation" id="user_dashboard_home">         <a href="#/person/new">            <i class="glyphicon glyphicon-plus">  </i> Register</a></li>*@
+                    @*<li role="presentation" id="user_dashboard_home"><a href="#/person/appointments">   <i class="glyphicon glyphicon-list">  </i> Appointments</a></li>*@
+                </ul>
+            </nav>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div ui-view></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
