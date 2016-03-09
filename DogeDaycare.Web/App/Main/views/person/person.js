@@ -1,7 +1,7 @@
 ﻿(function () {
     var controllerId = 'app.views.person';
     angular.module('app').controller(controllerId, [
-        '$scope', 
+        '$scope',
         function ($scope) {
             var vm = this;
 

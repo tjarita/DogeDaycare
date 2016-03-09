@@ -52,6 +52,7 @@ namespace DogeDaycare.Web
                         "~/Scripts/angular.js",
                         "~/Scripts/angular-animate.js",
                         "~/Scripts/angular-sanitize.js",
+                        "~/Scripts/angular-cookies.js",
                         "~/Scripts/angular-ui-router.js",
                         "~/Scripts/angular-ui/ui-bootstrap.js",
                         "~/Scripts/angular-ui/ui-bootstrap-tpls.js",

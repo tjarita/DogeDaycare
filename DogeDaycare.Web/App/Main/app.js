@@ -4,6 +4,7 @@
     var app = angular.module('app', [
         'ngAnimate',
         'ngSanitize',
+        'ngCookies',
         'ui.router',
         'ui.bootstrap',
         'ui.jq',
@@ -69,14 +70,14 @@
                             person: null,
                         },
                         templateUrl: '/App/Main/views/user_dashboard/user_dashboard.home.cshtml',
-                        onEnter: function ($state, $stateParams) {
-                            console.log('dash onenter');
-                            console.log($stateParams.person);
-                            if ($.isEmptyObject($stateParams.person) || typeof $stateParams.person === 'undefined') {
-                                console.log('empty stateparams');
-                                $state.go('person.search');
-                            }
-                        }
+                        //onEnter: function ($state, $stateParams) {
+                        //    console.log('dash onenter');
+                        //    console.log($stateParams.person);
+                        //    if ($.isEmptyObject($stateParams.person) || typeof $stateParams.person === 'undefined') {
+                        //        console.log('empty stateparams');
+                        //        $state.go('person.search');
+                        //    }
+                        //}
                     })
                 .state('person', {
                     url: '/person',
