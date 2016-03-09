@@ -37,7 +37,7 @@ namespace DogeDaycare.Web
 
                         "~/Scripts/modernizr-2.8.3.js",
                         
-                        "~/Scripts/jquery-2.1.4.min.js",
+                        "~/Scripts/jquery-2.2.1.js",
                         "~/Scripts/jquery-ui-1.11.4.min.js",
 
                         "~/Scripts/bootstrap.min.js",
