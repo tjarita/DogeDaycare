@@ -1,4 +1,5 @@
 ﻿using Abp.Application.Services;
+using Abp.Authorization;
 using AutoMapper;
 using DogeDaycare.Animals;
 using DogeDaycare.Persons.Dtos;
@@ -15,11 +16,13 @@ namespace DogeDaycare.Persons
     {
         private readonly IAnimalRepository _animalRepository;
         private readonly IPersonRepository _personRepository;
+        private readonly IPermissionManager _permissionManager;
 
-        public PersonAppService(IAnimalRepository animalRepository, IPersonRepository personRepository)
+        public PersonAppService(IAnimalRepository animalRepository, IPersonRepository personRepository, IPermissionManager permissionManager)
         {
             _animalRepository = animalRepository;
             _personRepository = personRepository;
+            _permissionManager = permissionManager;
         }
 
         public GetPersonsOutput GetAllPersons()
@@ -62,6 +65,7 @@ namespace DogeDaycare.Persons
                             
         }
 
+        //[AbpAuthorize("Administration.UserMaintenance")]
 
         public void CreatePerson(CreatePersonInput input)
         {

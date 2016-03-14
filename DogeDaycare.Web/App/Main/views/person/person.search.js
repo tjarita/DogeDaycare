@@ -44,7 +44,10 @@
 
         $scope.load = function () {
             if ($scope.selected != null && typeof $scope.selected != 'undefined') {
-                $cookies.putObject('currentPerson', $scope.selected);
+                var expireDate = new Date();
+                expireDate.setDate(expireDate.getDate() + 1);
+                console.log(expireDate);
+                $cookies.putObject('currentPerson', $scope.selected, {'expires': expireDate});
                 $state.go('user_dashboard.home');
             }
             else

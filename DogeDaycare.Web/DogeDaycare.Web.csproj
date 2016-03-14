@@ -351,6 +351,7 @@
     <None Include=".bin\node.cmd" />
     <Content Include="Abp\Framework\styles\abp.less" />
     <Content Include="Abp\Framework\styles\abp.css.map" />
+    <None Include="Properties\PublishProfiles\DogeDaycareWeb - Web Deploy.pubxml" />
     <None Include="Scripts\angular.intellisense.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />

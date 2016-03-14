@@ -1,4 +1,5 @@
-﻿using Abp.Domain.Entities;
+﻿using Abp.Authorization;
+using Abp.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -21,6 +22,7 @@ namespace DogeDaycare.Persons
         //public virtual DateTime Birthday { get; set; }
         //public Address Address { get; set; }
         public ICollection<Animals.Animal> Pets { get; set; }
+        //public ICollection<Permission> Permissions { get; set; }
 
         public Person()
         {

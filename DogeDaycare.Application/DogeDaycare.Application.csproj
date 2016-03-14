@@ -101,6 +101,7 @@
     <Compile Include="Animals\IAnimalAppService.cs" />
     <Compile Include="DogeDaycareApplicationModule.cs" />
     <Compile Include="DogeDaycareAppServiceBase.cs" />
+    <Compile Include="DogeDaycareAuthorizationProvider.cs" />
     <Compile Include="Persons\Dtos\CreatePersonInput.cs" />
     <Compile Include="Persons\Dtos\GetPersonsOutput.cs" />
     <Compile Include="Persons\Dtos\PersonDto.cs" />
