@@ -9,7 +9,7 @@ namespace DogeDaycare
         public override void PreInitialize()
         {
             //base.PreInitialize();
-            Configuration.Authorization.Providers.Add<DogeDaycareAuthorizationProvider>();
+            //Configuration.Authorization.Providers.Add<DogeDaycareAuthorizationProvider>();
         }
 
         public override void Initialize()

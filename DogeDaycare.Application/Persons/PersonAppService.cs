@@ -65,7 +65,6 @@ namespace DogeDaycare.Persons
                             
         }
 
-        //[AbpAuthorize("Administration.UserMaintenance")]
 
         public void CreatePerson(CreatePersonInput input)
         {
