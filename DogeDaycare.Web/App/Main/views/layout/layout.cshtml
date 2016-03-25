@@ -1,5 +1,7 @@
 ﻿@using System.Threading
 @using System.Web.Optimization
+@using Abp.Timing
+@using Abp.Web.Mvc.Extensions
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,12 +36,16 @@
     </script>
 
     <!-- Dynamic scripts of ABP system (They are created on runtime and can not be bundled) -->
-    <script src="~/api/AbpServiceProxies/GetAll?type=angular"></script>
-    <script src="~/AbpScripts/GetScripts" type="text/javascript"></script>
+    <script src="~/api/AbpServiceProxies/GetAll?v=@(Clock.Now.Ticks)"></script>
+    <script src="~/api/AbpServiceProxies/GetAll?type=angular&v=@(Clock.Now.Ticks)"></script>
+    <script src="~/AbpScripts/GetScripts?v=@(Clock.Now.Ticks)" type="text/javascript"></script>
+
+    <!-- SignalR scripts -->
+    <script src="~/signalr/hubs"></script>
+    @Html.IncludeScript("~/Abp/Framework/scripts/libs/abp.signalr.js")
 
     @Scripts.Render("~/Bundles/App/Main/js")
     
-    <script src="~/Abp/Framework/scripts/libs/abp.sweet-alert.js"></script>
 </head>
 <body>
     <div ng-app="app">

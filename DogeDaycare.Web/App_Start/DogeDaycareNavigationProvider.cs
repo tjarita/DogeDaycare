@@ -1,5 +1,6 @@
 ﻿using Abp.Application.Navigation;
 using Abp.Localization;
+using DogeDaycare.Authorization;
 
 namespace DogeDaycare.Web
 {
@@ -17,13 +18,19 @@ namespace DogeDaycare.Web
                 .AddItem(
                     new MenuItemDefinition(
                         "Home",
-                        new LocalizableString("Home Page", DogeDaycareConsts.LocalizationSourceName),
+                        new LocalizableString("HomePage", DogeDaycareConsts.LocalizationSourceName),
                         url: "#/",
                         icon: "fa fa-home"
                         )
-                )
-
-                .AddItem(
+                ).AddItem(
+                    new MenuItemDefinition(
+                        "Tenants",
+                        L("Tenants"),
+                        url: "#tenants",
+                        icon: "fa fa-globe",
+                        requiredPermissionName: PermissionNames.Pages_Tenants
+                        )
+                ).AddItem(
                     new MenuItemDefinition(
                         "About",
                         new LocalizableString("About", DogeDaycareConsts.LocalizationSourceName),
@@ -31,39 +38,19 @@ namespace DogeDaycare.Web
                         icon: "fa fa-info"
                         )
                 )
-                //.AddItem(
-                //    new MenuItemDefinition(
-                //        "Admin",
-                //        new LocalizableString("Admin", DogeDaycareConsts.LocalizationSourceName),
-                //        url: "#/admin",
-                //        icon: "fa fa-gears "
-                //        )
-                .AddItem(new MenuItemDefinition(
-                    "Animals",
-                    new LocalizableString("Animals", DogeDaycareConsts.LocalizationSourceName),
-                    url: "#/animal",
-                    icon: "fa fa-paw"
-                    //, requiredPermissionName: ""
-                    )
-                )
-                .AddItem(new MenuItemDefinition(
+               .AddItem(new MenuItemDefinition(
                     "Persons",
                     new LocalizableString("Users", DogeDaycareConsts.LocalizationSourceName),
                     url: "#/person/search",
                     icon: "fa fa-users"
-                    //, requiredPermissionName: ""
                     )
                 )
-                .AddItem(new MenuItemDefinition(
-                    "Dashboard",
-                    new LocalizableString("Dashboard", DogeDaycareConsts.LocalizationSourceName),
-                    url: "#/dashboard/home",
-                    icon: "fa fa-tachometer"
-                    //, requiredPermissionName: ""
-                    )
-                )
+                ; // End main menu
+        }
 
-                ;
+        private static ILocalizableString L(string name)
+        {
+            return new LocalizableString(name, DogeDaycareConsts.LocalizationSourceName);
         }
     }
 }

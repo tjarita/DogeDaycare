@@ -13,19 +13,12 @@ namespace DogeDaycare.Web
             //~/Bundles/App/vendor/css
             bundles.Add(
                 new StyleBundle("~/Bundles/App/vendor/css")
-                    .Include(
-                        "~/Content/themes/base/all.css",
-                        "~/Content/bootstrap-lumen.css",
-                        //"~/Content/bootstrap-cyborg.css",
-                        //"~/Content/bootstrap-paper.css",
-                        //"~/Content/bootstrap.min.css",
-                        "~/Content/toastr.min.css",
-                        "~/Scripts/sweetalert/sweet-alert.css",
-                        "~/Content/flags/famfamfam-flags.css",
-                        "~/Content/font-awesome.min.css",
-
-                        "~/Scripts/bower_components/ag-grid/dist/ag-grid.css"
-                    )
+                    .Include("~/Content/themes/base/all.css", new CssRewriteUrlTransform())
+                    .Include("~/Content/bootstrap-lumen.css", new CssRewriteUrlTransform())
+                    .Include("~/Content/toastr.min.css", new CssRewriteUrlTransform())
+                    .Include("~/Scripts/sweetalert/sweet-alert.css", new CssRewriteUrlTransform())
+                    .Include("~/Content/flags/famfamfam-flags.css", new CssRewriteUrlTransform())
+                    .Include("~/Content/font-awesome.min.css", new CssRewriteUrlTransform())
                 );
 
             //~/Bundles/App/vendor/js
@@ -37,10 +30,10 @@ namespace DogeDaycare.Web
 
                         "~/Scripts/modernizr-2.8.3.js",
                         
-                        "~/Scripts/jquery-2.2.1.js",
+                        "~/Scripts/jquery-2.2.0.min.js",
                         "~/Scripts/jquery-ui-1.11.4.min.js",
 
-                        "~/Scripts/bootstrap.min.js",
+                        "~/Scripts/bootstrap.js",
 
                         "~/Scripts/moment-with-locales.min.js",
                         "~/Scripts/jquery.blockUI.js",
@@ -52,28 +45,20 @@ namespace DogeDaycare.Web
                         "~/Scripts/angular.js",
                         "~/Scripts/angular-animate.js",
                         "~/Scripts/angular-sanitize.js",
-                        "~/Scripts/angular-cookies.js",
                         "~/Scripts/angular-ui-router.js",
                         "~/Scripts/angular-ui/ui-bootstrap.js",
                         "~/Scripts/angular-ui/ui-bootstrap-tpls.js",
                         "~/Scripts/angular-ui/ui-utils.js",
-
-                        //"~/Scripts/angular.min.js",
-                        //"~/Scripts/angular-animate.min.js",
-                        //"~/Scripts/angular-sanitize.min.js",
-                        //"~/Scripts/angular-ui-router.min.js",
-                        //"~/Scripts/angular-ui/ui-bootstrap.min.js",
-                        //"~/Scripts/angular-ui/ui-bootstrap-tpls.min.js",
-                        //"~/Scripts/angular-ui/ui-utils.min.js",
 
                         "~/Abp/Framework/scripts/abp.js",
                         "~/Abp/Framework/scripts/libs/abp.jquery.js",
                         "~/Abp/Framework/scripts/libs/abp.toastr.js",
                         "~/Abp/Framework/scripts/libs/abp.blockUI.js",
                         "~/Abp/Framework/scripts/libs/abp.spin.js",
+                        "~/Abp/Framework/scripts/libs/abp.sweet-alert.js",
                         "~/Abp/Framework/scripts/libs/angularjs/abp.ng.js",
 
-                        "~/Scripts/bower_components/ag-grid/dist/ag-grid.js"
+                        "~/Scripts/jquery.signalR-2.2.0.min.js"
                     )
                 );
 
@@ -88,6 +73,7 @@ namespace DogeDaycare.Web
             //~/Bundles/App/Main/js
             bundles.Add(
                 new ScriptBundle("~/Bundles/App/Main/js")
+                    .IncludeDirectory("~/Common/Scripts", "*.js", true)
                     .IncludeDirectory("~/App/Main", "*.js", true)
                 );
         }

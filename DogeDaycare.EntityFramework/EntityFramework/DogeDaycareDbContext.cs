@@ -1,15 +1,17 @@
-﻿using Abp.EntityFramework;
+﻿using System.Data.Common;
+using Abp.Zero.EntityFramework;
+using DogeDaycare.Authorization.Roles;
+using DogeDaycare.MultiTenancy;
+using DogeDaycare.Users;
 using System.Data.Entity;
 
 namespace DogeDaycare.EntityFramework
 {
-    public class DogeDaycareDbContext : AbpDbContext
+    public class DogeDaycareDbContext : AbpZeroDbContext<Tenant, Role, User>
     {
         public virtual IDbSet<Animals.Animal> Animals { get; set; }
         public virtual IDbSet<Appointments.Appointment> Appointments { get; set; }
         public virtual IDbSet<Persons.Person> Persons{ get; set; }
-
-
         /* NOTE: 
          *   Setting "Default" to base class helps us when working migration commands on Package Manager Console.
          *   But it may cause problems when working Migrate.exe of EF. If you will apply migrations on command line, do not
@@ -27,6 +29,13 @@ namespace DogeDaycare.EntityFramework
          */
         public DogeDaycareDbContext(string nameOrConnectionString)
             : base(nameOrConnectionString)
+        {
+
+        }
+
+        //This constructor is used in tests
+        public DogeDaycareDbContext(DbConnection connection)
+            : base(connection, true)
         {
 
         }

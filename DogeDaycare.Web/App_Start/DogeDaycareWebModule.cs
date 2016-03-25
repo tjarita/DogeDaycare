@@ -1,22 +1,40 @@
 ﻿using System.Reflection;
-using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using Abp.Localization;
-using Abp.Localization.Sources.Xml;
+using Abp.Hangfire;
+using Abp.Hangfire.Configuration;
 using Abp.Modules;
-using Abp.Localization.Sources;
+using Abp.Web.Mvc;
+using Abp.Web.SignalR;
+using Abp.Zero.Configuration;
+using DogeDaycare.Api;
+using Hangfire;
 
 namespace DogeDaycare.Web
 {
-    [DependsOn(typeof(DogeDaycareDataModule), typeof(DogeDaycareApplicationModule), typeof(DogeDaycareWebApiModule))]
+    [DependsOn(
+        typeof(DogeDaycareDataModule),
+        typeof(DogeDaycareApplicationModule),
+        typeof(DogeDaycareWebApiModule),
+        typeof(AbpWebSignalRModule),
+        typeof(AbpHangfireModule),
+        typeof(AbpWebMvcModule))]
     public class DogeDaycareWebModule : AbpModule
     {
         public override void PreInitialize()
         {
-            Configuration.Localization.IsEnabled = false;
+            //Enable database based localization
+            Configuration.Modules.Zero().LanguageManagement.EnableDbLocalization();
+
+            //Configure navigation/menu
             Configuration.Navigation.Providers.Add<DogeDaycareNavigationProvider>();
+
+            //Configure Hangfire
+            Configuration.BackgroundJobs.UseHangfire(configuration =>
+            {
+                configuration.GlobalConfiguration.UseSqlServerStorage("Default");
+            });
         }
 
         public override void Initialize()

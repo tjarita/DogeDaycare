@@ -1,17 +1,12 @@
 ﻿using System.Reflection;
+using Abp.AutoMapper;
 using Abp.Modules;
 
 namespace DogeDaycare
 {
-    [DependsOn(typeof(DogeDaycareCoreModule))]
+    [DependsOn(typeof(DogeDaycareCoreModule), typeof(AbpAutoMapperModule))]
     public class DogeDaycareApplicationModule : AbpModule
     {
-        public override void PreInitialize()
-        {
-            //base.PreInitialize();
-            //Configuration.Authorization.Providers.Add<DogeDaycareAuthorizationProvider>();
-        }
-
         public override void Initialize()
         {
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
