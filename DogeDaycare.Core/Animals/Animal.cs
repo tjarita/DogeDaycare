@@ -1,5 +1,6 @@
 ﻿using Abp.Domain.Entities;
-using DogeDaycare.Persons;
+using Abp.Domain.Entities.Auditing;
+using DogeDaycare.Users;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -15,19 +16,47 @@ namespace DogeDaycare.Animals
     /// Core animal model
     /// </summary>
     [Table("Animals")]
-    public class Animal : Entity<Guid>
+    public class Animal : FullAuditedEntity<long>
     {
-        public virtual string Name { get; set; }
-        //Marked JsonIgnore to avoid Entity Framework's lazy load serialization.
-        [JsonIgnore]
-        public Person Owner { get; set; }
-        public virtual DateTime RegisteredTime { get; set; }
+        public const int MaxNameLength = 128;
+
+        public int TenantId { get; set; }
+
+        [Required]
+        [StringLength(MaxNameLength)]
+        public virtual string Name { get; protected set; }
+
+        [Required]
+        public virtual User Owner { get; protected set; }
         
-        public Animal()
+        public virtual float Age { get; protected set; }
+
+        public virtual bool IsActive { get; protected set; }
+
+        /// <summary>
+        /// Necessary for entity. Forces animal creation through <see cref="Create"/>.
+        /// </summary>
+        protected Animal()
         {
-            Id = Guid.NewGuid();
-            RegisteredTime = DateTime.Now;
+
         }
 
+        public static Animal Create(int tenantId, string name, User owner, float age)
+        {
+            var @animal = new Animal
+            {
+                TenantId = tenantId,
+                Name = name,
+                Owner = owner,
+                Age = age
+            };
+            return @animal;
+        }
+
+        internal void Deactivate()
+        {
+            IsActive = false;
+        }
     }
 }
+

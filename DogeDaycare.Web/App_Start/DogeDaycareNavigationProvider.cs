@@ -39,10 +39,10 @@ namespace DogeDaycare.Web
                         )
                 )
                .AddItem(new MenuItemDefinition(
-                    "Persons",
-                    new LocalizableString("Users", DogeDaycareConsts.LocalizationSourceName),
-                    url: "#/person/search",
-                    icon: "fa fa-users"
+                    "Animals",
+                    new LocalizableString("Animals", DogeDaycareConsts.LocalizationSourceName),
+                    url: "#/animals",
+                    icon: "fa fa-paw"
                     )
                 )
                 ; // End main menu

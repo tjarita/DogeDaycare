@@ -1,10 +1,10 @@
 ﻿(function () {
-    var controllerId = 'app.views.animal.search';
+    var controllerId = 'app.views.animals.search';
     var app = angular.module('app');
 
     app.controller(controllerId, [
-    '$scope', '$stateParams','$location', '$filter', 'abp.services.dogedaycare.animal', 'abp.services.dogedaycare.person', 
-    function ($scope,$stateParams, $location, $filter, animalService, personService) {
+    '$scope', '$stateParams','$location', '$filter', 
+    function ($scope,$stateParams, $location, $filter) {
         var vm = this;
 
         
@@ -64,7 +64,7 @@
 
         $(document).ready(function () {
             console.log('document ready...');
-            console.log($stateParams.ownerId);
+            //console.log($stateParams.ownerId);
 
 
             //abp.ui.setBusy(null,

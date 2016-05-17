@@ -1,8 +1,8 @@
 ﻿(function () {
-    var controllerId = 'app.views.animal.new';
+    var controllerId = 'app.views.animals.register';
     angular.module('app').controller(controllerId, [
-        '$scope', '$location', 'abp.services.dogedaycare.animal', 'abp.services.dogedaycare.person',
-        function ($scope, $location, animalService, personService) {
+        '$scope', '$location', 
+        function ($scope, $location) {
             var vm = this;
             //About logic...
 
