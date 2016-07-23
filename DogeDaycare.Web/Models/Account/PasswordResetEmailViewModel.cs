@@ -7,7 +7,7 @@ using System.Web;
 
 namespace DogeDaycare.Web.Models.Account
 {
-    public class ResetPasswordEmailViewModel : IInputDto
+    public class PasswordResetEmailViewModel : IInputDto
     {
         private string _emailAddress;
 

@@ -7,10 +7,13 @@ using System.Web;
 
 namespace DogeDaycare.Web.Models.Account
 {
-    public class ResetPasswordCodeViewModel
+    public class PasswordResetCodeViewModel
     {
         [Required]
+        public long UserId { get; set; }
+
+        [Required]
         [StringLength(User.MaxPasswordResetCodeLength)]
-        public string PasswordResetCode { get; set; }
+        public string PasswordResetToken { get; set; }
     }
 }

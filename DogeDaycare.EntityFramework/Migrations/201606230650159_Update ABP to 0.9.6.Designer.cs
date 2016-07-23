@@ -7,13 +7,13 @@ namespace DogeDaycare.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Updateanimalmodel : IMigrationMetadata
+    public sealed partial class UpdateABPto096 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Updateanimalmodel));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdateABPto096));
         
         string IMigrationMetadata.Id
         {
-            get { return "201603240518339_Update animal model"; }
+            get { return "201606230650159_Update ABP to 0.9.6"; }
         }
         
         string IMigrationMetadata.Source

@@ -2,6 +2,7 @@
 using Abp.UI;
 using Abp.Web.Mvc.Controllers;
 using Microsoft.AspNet.Identity;
+using System.Linq;
 
 namespace DogeDaycare.Web.Controllers
 {
@@ -27,5 +28,8 @@ namespace DogeDaycare.Web.Controllers
         {
             identityResult.CheckErrors(LocalizationManager);
         }
+
+
+        
     }
 }

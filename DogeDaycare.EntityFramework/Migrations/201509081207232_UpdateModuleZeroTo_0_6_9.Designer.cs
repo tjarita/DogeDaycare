@@ -7,13 +7,13 @@ namespace DogeDaycare.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddmoreinformationtoPerson : IMigrationMetadata
+    public sealed partial class UpdateModuleZeroTo_0_6_9 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddmoreinformationtoPerson));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdateModuleZeroTo_0_6_9));
         
         string IMigrationMetadata.Id
         {
-            get { return "201511140524055_Add more information to Person"; }
+            get { return "201509081207232_UpdateModuleZeroTo_0_6_9"; }
         }
         
         string IMigrationMetadata.Source

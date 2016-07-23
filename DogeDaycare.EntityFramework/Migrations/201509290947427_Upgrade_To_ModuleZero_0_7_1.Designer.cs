@@ -7,13 +7,13 @@ namespace DogeDaycare.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Changeanimalfromauditedtoregularentity : IMigrationMetadata
+    public sealed partial class Upgrade_To_ModuleZero_0_7_1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Changeanimalfromauditedtoregularentity));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Upgrade_To_ModuleZero_0_7_1));
         
         string IMigrationMetadata.Id
         {
-            get { return "201603240648374_Change animal from audited to regular entity"; }
+            get { return "201509290947427_Upgrade_To_ModuleZero_0_7_1"; }
         }
         
         string IMigrationMetadata.Source
