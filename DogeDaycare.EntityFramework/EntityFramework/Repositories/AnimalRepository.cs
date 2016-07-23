@@ -7,7 +7,7 @@ using System.Data.Entity;
 
 namespace DogeDaycare.EntityFramework.Repositories
 {
-    public class AnimalRepository : DogeDaycareRepositoryBase<Animal, Guid>, IAnimalRepository
+    public class AnimalRepository : DogeDaycareRepositoryBase<Animal, long>
     {
 
         public AnimalRepository(IDbContextProvider<DogeDaycareDbContext> dbContextProvider)

@@ -1,0 +1,49 @@
+﻿<div class="container-fluid" ng-controller="app.views.person.search as vm">
+    <div class="row" ng-show="searchMode">
+        <!-- #region SearchParameters -->
+        <form id="UserSearchForm" class="form-horizontal">
+            @*First Name*@
+            <div class="form-group">
+                <label for="UserFirstName" class="col-md-2 control-label">First Name</label>
+                <div class="col-md-10">
+                    <input ng-model="searchTerms.fName" id="UserFirstName" type="search" class="form-control" placeholder="First Name" />
+                </div>
+            </div>
+            @*Last Name*@
+            <div class="form-group">
+                <label for="UserLastName" class="col-md-2 control-label">Last Name</label>
+                <div class="col-md-10">
+                    <input ng-model="searchTerms.lName" id="UserLastName" type="search" class="form-control" placeholder="Last Name" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10 col-md-offset-2">
+                    <button type="submit" class="btn btn-primary btn-block" ui-sref="person.search({fName : searchTerms.fName, lName: searchTerms.lName})">Search</button>
+                </div>
+            </div>
+        </form>
+        <!-- #endregion -->
+    </div>
+    <br />
+    <div class="row" ng-show="!searchMode">
+        <div class="col-md-12">
+            <table id="searchResultsTable" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <td>First Name</td>
+                        <td>Last Name</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="person in results.persons" ng-click="select(person)" ng-class="{success: person === selected}">
+                        <td>{{ person.fName}}</td>
+                        <td>{{ person.lName}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-12">
+            <button type="button" class="btn btn-primary btn-block" ng-click="load()" ng-disabled="selectedId === null">Load</button>
+        </div>
+    </div>
+</div>

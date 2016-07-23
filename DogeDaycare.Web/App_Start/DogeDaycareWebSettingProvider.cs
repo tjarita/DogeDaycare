@@ -36,7 +36,7 @@ namespace DogeDaycare.Web.App_Start
                     ),
                 new SettingDefinition(
                     EmailSettingNames.Smtp.Password,
-                    "developeratdogedaycare"
+                    ""
                     ),
                 new SettingDefinition(
                     EmailSettingNames.Smtp.EnableSsl,
