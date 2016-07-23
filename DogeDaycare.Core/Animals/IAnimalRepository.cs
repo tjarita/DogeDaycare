@@ -10,7 +10,7 @@ namespace DogeDaycare.Animals
 {
     public interface IAnimalRepository : IRepository<Animal, Guid>
     {
-        List<Animal> GetAllPetsPerOwner(Guid? IdOwner);
+        //List<Animal> GetAllPetsPerOwner(Guid? IdOwner);
         List<Animal> GetAllAnimals();
     }
 }

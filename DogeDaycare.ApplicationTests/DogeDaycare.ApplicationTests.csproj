@@ -52,7 +52,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Persons\PersonAppServiceTests.cs" />
+    <Compile Include="Animals\AnimalManagerTests.cs" />
+    <Compile Include="Controllers\AccountControllerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,9 +61,20 @@
       <Project>{EDF5D964-4C0F-4F19-B674-58A38A5E5401}</Project>
       <Name>DogeDaycare.Application</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DogeDaycare.Core\DogeDaycare.Core.csproj">
+      <Project>{17298EA0-AF73-4F30-B6F1-2066100D7D74}</Project>
+      <Name>DogeDaycare.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DogeDaycare.Web\DogeDaycare.Web.csproj">
+      <Project>{897F6FD8-6F90-48E4-95A5-B4429B896205}</Project>
+      <Name>DogeDaycare.Web</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Email\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -1,0 +1,38 @@
+﻿@model DogeDaycare.Web.Models.Account.RegisterResultViewModel
+@{
+    ViewBag.Title = "Registration Successful!";
+}
+
+
+<div class="container">
+    <div class="page-header">
+        <h1>Registration Successful!</h1>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Your account information</div>
+                <div class="panel-body">
+                    <dl class="dl-horizontal">
+                        <dt>@L("NameSurname"):</dt>
+                        <dd>@Model.NameAndSurname</dd>
+
+                        <dt>@L("UserName"):</dt>
+                        <dd> @Model.UserName</dd>
+
+                        <dt>@L("EmailAddress"):</dt>
+                        <dd>@Model.EmailAddress</dd>
+                    </dl>
+                    <div>
+                        @if (!Model.IsActive)
+                        {
+                            <div class="alert alert-warning" role="alert">
+                                @L("WaitingForActivationMessage")
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

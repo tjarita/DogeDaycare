@@ -7,7 +7,7 @@ using System.Data.Entity;
 
 namespace DogeDaycare.EntityFramework.Repositories
 {
-    public class AnimalRepository : DogeDaycareRepositoryBase<Animal, Guid>, IAnimalRepository
+    public class AnimalRepository : DogeDaycareRepositoryBase<Animal, long>
     {
 
         public AnimalRepository(IDbContextProvider<DogeDaycareDbContext> dbContextProvider)
@@ -21,23 +21,23 @@ namespace DogeDaycare.EntityFramework.Repositories
         /// </summary>
         /// <param name="owner">nullable Guid of Owner</param>
         /// <returns>All pets for one owner or all animals</returns>
-        public List<Animal> GetAllPetsPerOwner(Guid? owner)
-        {
-            var query = GetAll();
+        //public List<Animal> GetAllPetsPerOwner(Guid? owner)
+        //{
+        //    var query = GetAll();
 
-            if (owner.HasValue)
-                query = query.Where(animal => animal.Owner.Id == owner);
+        //    if (owner.HasValue)
+        //        query = query.Where(animal => animal.Owner.Id == owner);
 
-            return query
-                .OrderByDescending(animal => animal.RegisteredTime)
-                .ToList();
-        }
+        //    return query
+        //        .OrderByDescending(animal => animal.RegisteredTime)
+        //        .ToList();
+        //}
 
         public List<Animal> GetAllAnimals()
         {
             var query = this.Context.Animals.Include(animals => animals.Owner);
 
-            return query.OrderByDescending(animal => animal.RegisteredTime).ToList();
+            return query.ToList();
         }
 
 

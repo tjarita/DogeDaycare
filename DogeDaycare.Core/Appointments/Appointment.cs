@@ -1,5 +1,7 @@
 ﻿using Abp.Domain.Entities;
-using DogeDaycare.Persons;
+using Abp.Domain.Entities.Auditing;
+using DogeDaycare.Animals;
+using DogeDaycare.Users;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -11,16 +13,27 @@ using System.Threading.Tasks;
 namespace DogeDaycare.Appointments
 {
     [Table("Appointments")]
-    public class Appointment : Entity<Guid>
+    public class Appointment : FullAuditedEntity<long>
     {
-        public virtual Person Owner { get; set; }
-        public virtual List<Animals.Animal> Pets { get; set; }
-        public virtual DateTime Start { get; set; }
-        public virtual DateTime End { get; set; }
+        public virtual User Owner { get; set; }
+        public virtual Animal Pet { get; set; }
+        public virtual DateTimeOffset Start { get; set; }
+        public virtual DateTimeOffset End { get; set; }
 
-        public Appointment()
+        protected Appointment()
         {
-            Id = Guid.NewGuid();
+
+        }
+
+        public Appointment Create(User owner, Animal pet, DateTime start, DateTime end )
+        {
+            var @appointment = new Appointment() {
+                Owner = owner,
+                Pet = pet,
+                Start = start, 
+                End = end
+            };
+            return @appointment;
         }
     }
 }

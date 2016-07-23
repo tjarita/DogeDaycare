@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace DogeDaycare.Appointments
 {
-    public interface IAppointmentRepository : IRepository<Appointment,Guid>
+    public interface IAppointmentRepository : IRepository<Appointment,long>
     {
-        List<Appointment> GetAllAppointmentsPerOwner(Guid? IdOwner);
+        List<Appointment> GetAllAppointmentsPerOwner(long? IdOwner);
 
     }
 }

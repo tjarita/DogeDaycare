@@ -1,0 +1,51 @@
+﻿<div class="container-fluid" ng-controller="app.views.animals.search as vm">
+    <div class="row">
+        <h3 class="panel-title" style="margin-bottom:10px">
+            Animal Search
+        </h3>
+    </div>
+    <div class="row">
+        <!-- #region SearchParameters -->
+        <form id="AnimalSearchForm" class="form-horizontal">
+            <div class="form-group">
+                <label for="AnimalName" class="col-md-2 control-label">Animal Name</label>
+                <div class="col-md-10">
+                    <input ng-model="searchTerms.animalName" id="AnimalName" type="search" class="form-control" placeholder="Animal Name" />
+                </div>
+            </div>
+            @*Owner Name*@
+            @*<div class="form-group form-group-sm">
+                    <label for="OwnerName" class="col-md-2 control-label">Owner Name</label>
+                    <div class="col-md-9">
+                        <input ng-model="filters.name" id="OwnerName" ng-disabled="OwnerNameCheck" type="search" class="form-control" placeholder="Owner Name" />
+                    </div>
+                </div>*@
+            <!-- #endregion -->
+        </form>
+    </div>
+    <br />
+    @*<button ng-click="refresh()">refresh table</button>*@
+
+    @*<div ag-grid="gridOptions" class="ag-fresh" style="height: 100%;"></div>*@
+
+
+    @*<div class="row">
+            <table ng-table="animalsTable" class="table table-striped" show-filter="true">
+                <tbody>
+                    <tr ng-repeat="animal in $data">
+                        <td data-title="'Animal Name'"      filter="{name:'text'}" sortable="'name'">
+                            {{animal.name}}
+                        </td>
+                        <td data-title="'Owner First Name'" filter="{'owner.fName':'text'}" sortable="'fName'">
+                            {{animal.owner.fName}}
+                        </td>
+                        @*<td data-title="'Owner Last Name'" filter="{owner.lName:'text'}" sortable="'owner.lName'">
+                            {{animal.owner.lName}}
+                        </td>
+                    </tr>
+            </tbody>
+            </table>
+
+
+        </div>*@
+</div>

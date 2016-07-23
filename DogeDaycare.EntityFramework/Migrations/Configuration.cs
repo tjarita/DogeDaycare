@@ -1,5 +1,7 @@
 using System.Data.Entity.Migrations;
 using DogeDaycare.Migrations.SeedData;
+using System.Linq;
+using Abp.Net.Mail;
 
 namespace DogeDaycare.Migrations
 {
@@ -15,5 +17,7 @@ namespace DogeDaycare.Migrations
         {
             new InitialDataBuilder(context).Build();
         }
+
+
     }
 }

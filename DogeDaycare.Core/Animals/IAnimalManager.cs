@@ -9,7 +9,7 @@ namespace DogeDaycare.Animals
 {
     public interface IAnimalManager : IDomainService
     {
-        Task<Animal> GetAsync(Guid id);
+        Task<Animal> GetAsync(long id);
 
         Task CreateAsync(Animal @animal);
 

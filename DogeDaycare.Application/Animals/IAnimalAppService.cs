@@ -1,4 +1,5 @@
 ﻿using Abp.Application.Services;
+using Abp.Application.Services.Dto;
 using DogeDaycare.Animals.Dtos;
 using System;
 using System.Collections.Generic;
@@ -10,9 +11,8 @@ namespace DogeDaycare.Animals
 {
     public interface IAnimalAppService : IApplicationService
     {
-        GetAnimalsOutput GetAnimals(GetAnimalsInput input);
-        GetAnimalsOutput GetAllAnimals();
-        void CreateAnimal(CreateAnimalInput input);
-        void UpdateAnimal();
+        Task Create(CreateAnimalInput input);
+        Task Deactivate(EntityRequestInput<long> input);
+        Task<AnimalDetailOutput> GetDetail(EntityRequestInput<long> input);
     }
 }

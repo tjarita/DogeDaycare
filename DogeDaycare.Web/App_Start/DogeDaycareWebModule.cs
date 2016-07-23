@@ -10,6 +10,7 @@ using Abp.Web.SignalR;
 using Abp.Zero.Configuration;
 using DogeDaycare.Api;
 using Hangfire;
+using DogeDaycare.Web.App_Start;
 
 namespace DogeDaycare.Web
 {
@@ -19,7 +20,10 @@ namespace DogeDaycare.Web
         typeof(DogeDaycareWebApiModule),
         typeof(AbpWebSignalRModule),
         typeof(AbpHangfireModule),
-        typeof(AbpWebMvcModule))]
+        typeof(AbpWebMvcModule)
+
+        )]
+
     public class DogeDaycareWebModule : AbpModule
     {
         public override void PreInitialize()
@@ -29,6 +33,9 @@ namespace DogeDaycare.Web
 
             //Configure navigation/menu
             Configuration.Navigation.Providers.Add<DogeDaycareNavigationProvider>();
+
+            //Add Setting Provider
+            Configuration.Settings.Providers.Add<DogeDaycareWebSettingProvider>();
 
             //Configure Hangfire
             Configuration.BackgroundJobs.UseHangfire(configuration =>

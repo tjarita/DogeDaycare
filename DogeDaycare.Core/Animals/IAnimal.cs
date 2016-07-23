@@ -9,6 +9,6 @@ namespace DogeDaycare.Animals
     public interface IAnimal
     {
         string Name { get; set; }
-        Persons.Person Owner{ get; set; }
+        Users.User Owner{ get; set; }
     }
 }
