@@ -4,6 +4,7 @@ namespace DogeDaycare.Web.Models.Account
 {
     public class LoginViewModel
     {
+        //[Required(AllowEmptyStrings = true)]
         public string TenancyName { get; set; }
 
         [Required]

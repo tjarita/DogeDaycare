@@ -17,9 +17,8 @@ namespace DogeDaycare.Web.App_Start
             {
                 new SettingDefinition(
                     AbpZeroSettingNames.UserManagement.IsEmailConfirmationRequiredForLogin,
-                    "true"),
-
-
+                    "true"
+                    ),
                 // Email SMTP Settings
                 new SettingDefinition(
                     EmailSettingNames.Smtp.Host,
@@ -36,7 +35,7 @@ namespace DogeDaycare.Web.App_Start
                     ),
                 new SettingDefinition(
                     EmailSettingNames.Smtp.Password,
-                    ""
+                    "7DVGN&rdfSJUcRnP4kLt0Gki@Magc1$6jS9$jVPqs$TCFt@ugkcQIKk85OE1GC3z"
                     ),
                 new SettingDefinition(
                     EmailSettingNames.Smtp.EnableSsl,

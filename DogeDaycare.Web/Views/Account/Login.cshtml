@@ -9,90 +9,97 @@
 {
     @Html.IncludeScript("~/Views/Account/Login.js")
 }
-<div class="container">
-    <div id="LoginArea" class="row">
-        <div class="col-lg-12">
-            <div class="well bs-component">
-                <form id="LoginForm" class="form-horizontal" action="@(Url.Action("Login", "Account"))?returnUrl=@(Model.ReturnUrl)" method="POST">
-                    <fieldset>
-                        <legend>@L("LogIn")</legend>
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div id="LoginArea" class="row">
+            <div class="col-lg-12">
+                <div class="well bs-component">
+                    <form id="LoginForm" class="form-horizontal" action="@(Url.Action("Login", "Account"))?returnUrl=@(Model.ReturnUrl)" method="POST">
+                        <fieldset>
+                            <legend>@L("LogIn")</legend>
 
-                        @*@if (Model.IsMultiTenancyEnabled)
-                        {
+                            @Html.AntiForgeryToken()
+
+                            <input id="TenancyName" name="TenancyName" type="hidden" value="">
+
+                            <input id="ReturnUrlHash" name="returnUrlHash" type="hidden"  />
+
                             <div class="form-group">
                                 <div class="col-lg-12">
-                                    <input type="text" class="form-control" id="TenancyName" placeholder="Tenancy name" required maxlength="@DogeDaycare.MultiTenancy.Tenant.MaxTenancyNameLength">
-                                    <span class="text-muted">@L("CanBeEmptyToLoginAsHost")</span>
+                                    <label for="EmailAddressInput">@L("EmailAddress")</label>
+                                    <input type="text" class="form-control" id="EmailAddressInput" required maxlength="@DogeDaycare.Users.User.MaxEmailAddressLength">
                                 </div>
                             </div>
-                        }
-                        else
-                        {
-                            <input type="hidden" id="TenancyName" value="">
-                        }*@
 
-                        <div class="form-group">
-                            <div class="col-lg-12">
-                                <input type="text" class="form-control" id="EmailAddressInput" placeholder="User name or email" required maxlength="@DogeDaycare.Users.User.MaxEmailAddressLength">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-lg-12">
-                                <input type="password" class="form-control" id="PasswordInput" placeholder="Password" required maxlength="@DogeDaycare.Users.User.MaxPlainPasswordLength">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" id="RememberMeInput">
-                                        <span class="ripple"></span>
-                                        <span class="check"></span> @L("RememberMe")
-                                    </label>
-                                    <label class="pull-right">
-                                        <a href="@Url.Action("PasswordResetEmail")">Forgot Password?</a>
-                                    </label>
+                            <div class="form-group">
+                                <div class="col-lg-12">
+                                    <label for="PasswordInput">@L("Password")</label>
+                                    <input type="password" class="form-control" id="PasswordInput" required maxlength="@DogeDaycare.Users.User.MaxPlainPasswordLength">
                                 </div>
                             </div>
-                        </div>
 
-                        <input id="ReturnUrlHash" type="hidden" name="returnUrlHash" />
-
-                        <div class="form-group">
-                            <div class="col-lg-12">
-                                <button id="LoginButton" type="submit" class="btn btn-success"><i class="fa fa-sign-in"></i> @L("LogIn")</button>
-                                <a class="btn btn-primary pull-right" href="@Url.Action("Register")"><i class="fa fa-sign-in"></i> @L("Register")</a>
+                            <div class="form-group">
+                                <div class="col-lg-12">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" id="RememberMeInput"> @L("RememberMe")
+                                            <span class="ripple"></span>
+                                            <span class="check"></span>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                    </fieldset>
-                </form>
+                            <div class="form-group">
+                                <div class="col-lg-12">
+                                    <button id="LoginButton" type="submit" class="btn btn-block btn-primary"><i class="fa fa-sign-in"></i> @L("LogIn")</button>
+                                    @*<a class="btn btn-primary pull-right" href="@Url.Action("Register")"><i class="fa fa-sign-in"></i> @L("Register")</a>*@
+                                </div>
+                            </div>
 
-                @{
-                    var loginProviders = Context.GetOwinContext().Authentication.GetExternalAuthenticationTypes().ToList();
-                }
+                            <div class="col-lg-12 text-center">
+                                <a href="@Url.Action("Register")">Create account</a> or <a href="@Url.Action("PasswordResetEmail")">reset password</a>
+                            </div>
+                            
+                        </fieldset>
+                    </form>
 
-                @if (loginProviders.Count > 0)
-                {
-                    <p>@L("OrLoginWith"):</p>
+                    @{
+                        var loginProviders = Context.GetOwinContext().Authentication.GetExternalAuthenticationTypes().ToList();
+                    }
+
+                    @if (loginProviders.Count > 0)
+            {
+                        <p>@L("OrLoginWith"):</p>
 
 
-                    using (Html.BeginForm("ExternalLogin", "Account", method: FormMethod.Post))
-                    {
-                        @Html.AntiForgeryToken()
-
-                        <input type="hidden" name="returnUrl" value="@ViewBag.ReturnUrl" />
-                        <input type="hidden" name="provider" value="" />
-
-                        foreach (var provider in loginProviders)
+                        using (Html.BeginForm("ExternalLogin", "Account", method: FormMethod.Post))
                         {
-                            <a class="btn btn-default btn-sm social-login-link" title="@provider.AuthenticationType"
-                               data-provider="@provider.AuthenticationType"
-                               href="javascript:;">
-                                <i class="fa fa-@(provider.AuthenticationType.ToLower())"></i> @provider.AuthenticationType
-                            </a>
+                            @Html.AntiForgeryToken()
+
+                            <input type="hidden" name="returnUrl" value="@ViewBag.ReturnUrl" />
+                            <input type="hidden" name="provider" value="" />
+
+                            foreach (var provider in loginProviders)
+                            {
+                                <a class="btn btn-default btn-sm social-login-link" title="@provider.AuthenticationType"
+                                   data-provider="@provider.AuthenticationType"
+                                   href="javascript:;">
+                                    <i class="fa fa-@(provider.AuthenticationType.ToLower())"></i> @provider.AuthenticationType
+                                </a>
+                            }
                         }
                     }
-                }
 
+                </div>
             </div>
         </div>
     </div>
-</div>
+</body>
+</html>

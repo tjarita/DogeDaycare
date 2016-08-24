@@ -3,20 +3,21 @@
     $(function () {
         $('#LoginButton').click(function (e) {
             e.preventDefault();
+            var data = JSON.stringify({
+                tenancyName: $('#TenancyName').val(),
+                usernameOrEmailAddress: $('#EmailAddressInput').val(),
+                password: $('#PasswordInput').val(),
+                rememberMe: $('#RememberMeInput').is(':checked'),
+                returnUrlHash: $('#ReturnUrlHash').val()
+            });
             abp.ui.setBusy(
                 $('#LoginArea'),
                 abp.ajax({
                     url: abp.appPath + 'Account/Login',
                     type: 'POST',
-                    data: JSON.stringify({
-                        tenancyName: $('#TenancyName').val(),
-                        usernameOrEmailAddress: $('#EmailAddressInput').val(),
-                        password: $('#PasswordInput').val(),
-                        rememberMe: $('#RememberMeInput').is(':checked'),
-                        returnUrlHash: $('#ReturnUrlHash').val()
-                    }),
+                    data: data,
                     error: function (error) {
-                        console.log('there was an error.');
+                        console.log('Error logging in.');
                     }
                 })
             );

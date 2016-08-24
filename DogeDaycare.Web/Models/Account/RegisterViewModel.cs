@@ -5,7 +5,7 @@ using DogeDaycare.Users;
 
 namespace DogeDaycare.Web.Models.Account
 {
-    public class RegisterViewModel : IInputDto
+    public class RegisterViewModel
     {
         /// <summary>
         /// Not required for single-tenant applications.
@@ -15,7 +15,7 @@ namespace DogeDaycare.Web.Models.Account
 
         [Required]
         [StringLength(User.MaxNameLength)]
-        public string Name { get; set; }
+        public string FirstName { get; set; }
 
         [Required]
         [StringLength(User.MaxSurnameLength)]

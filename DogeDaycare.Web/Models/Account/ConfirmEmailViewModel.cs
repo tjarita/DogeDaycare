@@ -8,7 +8,7 @@ using System.Web;
 
 namespace DogeDaycare.Web.Models.Account
 {
-    public class ConfirmEmailViewModel : IInputDto
+    public class ConfirmEmailViewModel
     {
         [Required]
         public long UserId { get; set; }

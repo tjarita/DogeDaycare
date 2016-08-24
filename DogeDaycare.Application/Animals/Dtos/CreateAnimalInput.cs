@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DogeDaycare.Animals.Dtos
 {
-    public class CreateAnimalInput : IInputDto
+    public class CreateAnimalInput
     {
         [Required]
         public User Owner { get; set; }

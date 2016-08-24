@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace DogeDaycare.Animals.Dtos
 {
     [AutoMapFrom(typeof(Animal))]
-    public class AnimalDetailOutput : EntityDto<Guid>, IOutputDto
+    public class AnimalDetailOutput : EntityDto<Guid>
     {
         public int TenantId { get; set; }
 

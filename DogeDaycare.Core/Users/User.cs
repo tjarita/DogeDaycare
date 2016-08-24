@@ -9,6 +9,7 @@ namespace DogeDaycare.Users
     public class User : AbpUser<User>
     {
         public const string DefaultPassword = "123qwe";
+        public const int MinPlainPasswordLength = 10;
 
         public static string CreateRandomPassword()
         {

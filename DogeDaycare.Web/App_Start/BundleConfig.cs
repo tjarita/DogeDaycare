@@ -30,8 +30,8 @@ namespace DogeDaycare.Web
 
                         "~/Scripts/modernizr-2.8.3.js",
                         
-                        "~/Scripts/jquery-2.2.4.js",
-                        "~/Scripts/jquery-ui-1.11.4.js",
+                        "~/Scripts/jquery-3.1.0.js",
+                        "~/Scripts/jquery-ui-1.12.0.js",
 
                         "~/Scripts/bootstrap.js",
 
@@ -58,7 +58,7 @@ namespace DogeDaycare.Web
                         "~/Abp/Framework/scripts/libs/abp.sweet-alert.js",
                         "~/Abp/Framework/scripts/libs/angularjs/abp.ng.js",
 
-                        "~/Scripts/jquery.signalR-2.2.0.js"
+                        "~/Scripts/jquery.signalR-2.2.1.js"
                     )
                 );
 

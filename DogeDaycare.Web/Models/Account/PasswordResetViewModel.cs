@@ -7,7 +7,7 @@ using System.Web;
 
 namespace DogeDaycare.Web.Models.Account
 {
-    public class PasswordResetViewModel : IInputDto
+    public class PasswordResetViewModel
     {
         [Required]
         public string PasswordResetToken { get; set; }

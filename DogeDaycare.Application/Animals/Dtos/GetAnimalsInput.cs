@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DogeDaycare.Animals.Dtos
 {
-    public class GetAnimalsInput : IInputDto
+    public class GetAnimalsInput
     {
         [Required]
         public Guid IdOwner { get; set; }

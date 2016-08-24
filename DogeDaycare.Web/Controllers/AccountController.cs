@@ -32,6 +32,7 @@ using System.Web.UI.WebControls;
 using System.Collections.Specialized;
 using Microsoft.Owin.Security.DataProtection;
 using Abp.Web.Models;
+using Abp.Runtime.Validation;
 
 namespace DogeDaycare.Web.Controllers
 {
@@ -73,7 +74,7 @@ namespace DogeDaycare.Web.Controllers
         }
 
         #region Login / Logout
-
+        
         public ActionResult Login(string returnUrl = "")
         {
             if (string.IsNullOrWhiteSpace(returnUrl))
@@ -91,6 +92,8 @@ namespace DogeDaycare.Web.Controllers
 
         [HttpPost]
         [DisableAuditing]
+        [DisableValidation]
+        //[ValidateAntiForgeryToken]
         public async Task<JsonResult> Login(LoginViewModel loginModel, string returnUrl = "", string returnUrlHash = "")
         {
             try
@@ -115,12 +118,12 @@ namespace DogeDaycare.Web.Controllers
                     returnUrl = returnUrl + returnUrlHash;
                 }
 
-                return Json(new MvcAjaxResponse { TargetUrl = returnUrl });
+                return Json(new AjaxResponse { TargetUrl = returnUrl });
             }
             catch (UserFriendlyException ex)
             {
                 var error = new ErrorInfo(ex.Message);
-                return Json(new MvcAjaxResponse { Success = false, Error = error });
+                return Json(new AjaxResponse { Success = false, Error = error });
             }
         }
 
@@ -195,6 +198,8 @@ namespace DogeDaycare.Web.Controllers
 
         [HttpPost]
         [UnitOfWork]
+        [DisableValidation]
+        [ValidateAntiForgeryToken]
         public virtual async Task<ActionResult> Register(RegisterViewModel model)
         {
             try
@@ -217,10 +222,10 @@ namespace DogeDaycare.Web.Controllers
                 var user = new User
                 {
                     TenantId = tenant.Id,
-                    Name = model.Name,
+                    Name = model.FirstName,
                     Surname = model.Surname,
                     EmailAddress = model.EmailAddress.ToLower().Trim(),
-                    IsActive = false,
+                    IsActive = true,
                     IsEmailConfirmed = false
                 };
 
@@ -278,11 +283,9 @@ namespace DogeDaycare.Web.Controllers
                     user.Roles.Add(new UserRole { RoleId = defaultRole.Id });
                 }
 
-
                 //Save user
                 CheckErrors(await _userManager.CreateAsync(user));
                 await _unitOfWorkManager.Current.SaveChangesAsync();
-
 
                 // Send confirmation email
                 var dataProtectionProvider = Startup.DataProtectionProvider;
@@ -291,11 +294,12 @@ namespace DogeDaycare.Web.Controllers
                 code = HttpUtility.UrlEncode(code);
                 await SendConfirmationEmail(user.EmailAddress, code, user.Name, user.Id);
 
-                //If can not login, show a register result page
+                //Show a register result page
                 return View("RegisterResult", new RegisterResultViewModel
                 {
                     TenancyName = tenant.TenancyName,
-                    NameAndSurname = user.Name + " " + user.Surname,
+                    FirstName = user.Name,
+                    LastName = user.Surname,
                     UserName = user.UserName,
                     EmailAddress = user.EmailAddress,
                     IsActive = user.IsActive
@@ -499,7 +503,7 @@ namespace DogeDaycare.Web.Controllers
             {
                 TenancyName = tenancyName,
                 EmailAddress = loginInfo.Email,
-                Name = name,
+                FirstName = name,
                 Surname = surname,
                 IsExternalLogin = true
             };

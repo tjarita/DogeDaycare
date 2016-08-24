@@ -26,7 +26,7 @@
 
     <text name="Users" value="Users"/>
     <text name="NameSurname" value="Name Surname" />
-    <text name="UserName" value="User Name" />
+    <text name="UserName" value="Username" />
     <text name="Name" value="First Name" />
     <text name="Surname" value="Last Name" />
     <text name="EmailAddress" value="Email address" />

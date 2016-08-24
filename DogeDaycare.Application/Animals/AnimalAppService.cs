@@ -20,11 +20,11 @@ namespace DogeDaycare.Animals
     public class AnimalAppService : ApplicationService, IAnimalAppService
     {
         private readonly IAnimalManager _animalManager;
-        private readonly IRepository<Animal,long> _animalRepository;
+        private readonly IRepository<Animal, long> _animalRepository;
 
         public AnimalAppService(
             IAnimalManager animalManager,
-            IRepository<Animal,long> animalRepository)
+            IRepository<Animal, long> animalRepository)
         {
             _animalManager = animalManager;
             _animalRepository = animalRepository;
@@ -36,7 +36,7 @@ namespace DogeDaycare.Animals
             var @animal = Animal.Create(AbpSession.GetTenantId(), input.Name, input.Owner, input.Age);
             await _animalManager.CreateAsync(@animal);
         }
-        
+
         public async Task Deactivate(EntityRequestInput<long> input)
         {
             var @animal = await _animalManager.GetAsync(input.Id);
@@ -51,7 +51,7 @@ namespace DogeDaycare.Animals
                 .Where(a => a.Id == input.Id)
                 .FirstOrDefaultAsync();
 
-            if(@animal == null)
+            if (@animal == null)
             {
                 throw new UserFriendlyException("Couldn't find that animal");
             }

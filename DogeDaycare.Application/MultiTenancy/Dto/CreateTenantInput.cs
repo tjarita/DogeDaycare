@@ -4,7 +4,7 @@ using DogeDaycare.Users;
 
 namespace DogeDaycare.MultiTenancy.Dto
 {
-    public class CreateTenantInput : IInputDto
+    public class CreateTenantInput
     {
         [Required]
         [StringLength(Tenant.MaxTenancyNameLength)]

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DogeDaycare.Animals.Dtos
 {
-    public class SearchAnimalsInput : IInputDto
+    public class SearchAnimalsInput
     {
         public string NameAnimal { get; set; }
         public string NameOwner { get; set; }

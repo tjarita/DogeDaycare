@@ -19,7 +19,7 @@ namespace DogeDaycare.Web.Controllers.Tests
             {
                 EmailAddress = "test.com",
                 IsExternalLogin = false,
-                Name = "testmethod",
+                FirstName = "testmethod",
                 Password = "123",
                 Surname = "last",
                 UserName = "testermethod"
