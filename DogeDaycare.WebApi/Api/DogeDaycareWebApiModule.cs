@@ -5,6 +5,8 @@ using Abp.Configuration.Startup;
 using Abp.Modules;
 using Abp.WebApi;
 using Abp.WebApi.Controllers.Dynamic.Builders;
+using Swashbuckle.Application;
+using System.Linq;
 
 namespace DogeDaycare.Api
 {
@@ -20,6 +22,19 @@ namespace DogeDaycare.Api
                 .Build();
 
             Configuration.Modules.AbpWebApi().HttpConfiguration.Filters.Add(new HostAuthenticationFilter("Bearer"));
+
+            ConfigureSwaggerUi();
+        }
+
+        private void ConfigureSwaggerUi()
+        {
+            Configuration.Modules.AbpWebApi().HttpConfiguration
+                .EnableSwagger(c =>
+                {
+                    c.SingleApiVersion("v1", "DogeDaycare.WebApi");
+                    c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+                })
+                .EnableSwaggerUi();
         }
     }
 }

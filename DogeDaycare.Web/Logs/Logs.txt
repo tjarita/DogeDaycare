@@ -5957,3 +5957,92 @@ DEBUG 2016-08-23 22:08:01,565 [1    ] Abp.Logging.LogHelper                    -
 DEBUG 2016-08-23 22:08:01,565 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DogeDaycare.Roles.IRoleAppService' with service name 'app/role'.
 DEBUG 2016-08-23 22:08:01,566 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DogeDaycare.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
 DEBUG 2016-08-23 22:08:01,567 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DogeDaycare.Animals.IAnimalAppService' with service name 'app/animal'.
+DEBUG 2016-08-23 23:18:47,185 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-08-23 23:18:47,193 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2016-08-23 23:18:47,196 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.Web.DogeDaycareWebModule, DogeDaycare.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-23 23:18:47,198 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.DogeDaycareDataModule, DogeDaycare.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-23 23:18:47,198 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.10.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-23 23:18:47,198 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.10.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-23 23:18:47,198 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.10.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-23 23:18:47,198 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.10.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-23 23:18:47,198 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.DogeDaycareCoreModule, DogeDaycare.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-23 23:18:47,199 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.DogeDaycareApplicationModule, DogeDaycare.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-23 23:18:47,199 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.10.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-23 23:18:47,199 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.Api.DogeDaycareWebApiModule, DogeDaycare.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-23 23:18:47,199 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.10.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-23 23:18:47,199 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.10.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-23 23:18:47,199 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.10.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-23 23:18:47,199 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=0.10.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-23 23:18:47,199 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=0.10.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-23 23:18:47,199 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.10.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-23 23:18:47,201 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2016-08-23 23:18:47,244 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-08-23 23:18:47,244 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-08-23 23:18:47,244 [1    ] o.Configuration.LanguageManagementConfig - Converted DogeDaycare (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-08-23 23:18:47,244 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+INFO  2016-08-23 23:18:47,297 [1    ] Hangfire.SqlServer.SqlServerStorage      - Start installing Hangfire SQL objects...
+INFO  2016-08-23 23:18:47,348 [1    ] Hangfire.SqlServer.SqlServerStorage      - Hangfire SQL objects installed.
+DEBUG 2016-08-23 23:18:47,570 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: DogeDaycare.EntityFramework.DogeDaycareDbContext, DogeDaycare.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-23 23:18:48,538 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-08-23 23:18:48,543 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-08-23 23:18:48,543 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-08-23 23:18:48,544 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: DogeDaycare
+DEBUG 2016-08-23 23:18:48,544 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-08-23 23:18:48,548 [1    ] bp.Hangfire.HangfireBackgroundJobManager - Start background worker: Abp.Hangfire.HangfireBackgroundJobManager
+INFO  2016-08-23 23:18:48,556 [1    ] Hangfire.BackgroundJobServer             - Starting Hangfire Server
+INFO  2016-08-23 23:18:48,558 [1    ] Hangfire.BackgroundJobServer             - Using job storage: 'SQL Server: TOSHIKI-W10-D@DogeDaycare'
+INFO  2016-08-23 23:18:48,559 [1    ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage:
+INFO  2016-08-23 23:18:48,559 [1    ] Hangfire.BackgroundJobServer             -     Queue poll interval: 00:00:15.
+INFO  2016-08-23 23:18:48,559 [1    ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+INFO  2016-08-23 23:18:48,559 [1    ] Hangfire.BackgroundJobServer             -     Worker count: 20
+INFO  2016-08-23 23:18:48,559 [1    ] Hangfire.BackgroundJobServer             -     Listening queues: 'default'
+INFO  2016-08-23 23:18:48,559 [1    ] Hangfire.BackgroundJobServer             -     Shutdown timeout: 00:00:15
+INFO  2016-08-23 23:18:48,559 [1    ] Hangfire.BackgroundJobServer             -     Schedule polling interval: 00:00:15
+DEBUG 2016-08-23 23:18:48,572 [erver] ngfire.Server.BackgroundProcessingServer - Background process 'BackgroundProcessingServer' started.
+DEBUG 2016-08-23 23:18:48,580 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 6 classes defines auto mapping attributes
+DEBUG 2016-08-23 23:18:48,580 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DogeDaycare.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-08-23 23:18:48,693 [tbeat] Hangfire.Server.ServerHeartbeat          - Background process 'ServerHeartbeat' started.
+DEBUG 2016-08-23 23:18:48,699 [chdog] Hangfire.Server.ServerWatchdog           - Background process 'ServerWatchdog' started.
+INFO  2016-08-23 23:18:48,707 [chdog] Hangfire.Server.ServerWatchdog           - 1 servers were removed due to timeout
+DEBUG 2016-08-23 23:18:48,711 [nager] Hangfire.SqlServer.ExpirationManager     - Background process 'Hangfire.SqlServer.ExpirationManager' started.
+DEBUG 2016-08-23 23:18:48,713 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'AggregatedCounter'...
+DEBUG 2016-08-23 23:18:48,718 [gator] Hangfire.SqlServer.CountersAggregator    - Background process 'Hangfire.SqlServer.CountersAggregator' started.
+DEBUG 2016-08-23 23:18:48,719 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-08-23 23:18:48,723 [773be] Hangfire.Server.Worker                   - Background process 'Worker #0f9773be' started.
+DEBUG 2016-08-23 23:18:48,729 [8704d] Hangfire.Server.Worker                   - Background process 'Worker #1368704d' started.
+DEBUG 2016-08-23 23:18:48,730 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'Job'...
+DEBUG 2016-08-23 23:18:48,773 [4d2c8] Hangfire.Server.Worker                   - Background process 'Worker #02f4d2c8' started.
+DEBUG 2016-08-23 23:18:48,780 [79be7] Hangfire.Server.Worker                   - Background process 'Worker #c4179be7' started.
+DEBUG 2016-08-23 23:18:48,785 [1fc75] Hangfire.Server.Worker                   - Background process 'Worker #5a11fc75' started.
+DEBUG 2016-08-23 23:18:48,788 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DogeDaycare.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-08-23 23:18:48,789 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'List'...
+DEBUG 2016-08-23 23:18:48,792 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DogeDaycare.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-08-23 23:18:48,792 [b5298] Hangfire.Server.Worker                   - Background process 'Worker #ebfb5298' started.
+DEBUG 2016-08-23 23:18:48,793 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'Set'...
+DEBUG 2016-08-23 23:18:48,796 [e36c2] Hangfire.Server.Worker                   - Background process 'Worker #b98e36c2' started.
+DEBUG 2016-08-23 23:18:48,797 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'Hash'...
+DEBUG 2016-08-23 23:18:48,801 [66ac5] Hangfire.Server.Worker                   - Background process 'Worker #20766ac5' started.
+DEBUG 2016-08-23 23:18:48,802 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DogeDaycare.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-08-23 23:18:48,803 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DogeDaycare.Animals.Dtos.AnimalDetailOutput
+DEBUG 2016-08-23 23:18:48,803 [161d9] Hangfire.Server.Worker                   - Background process 'Worker #d71161d9' started.
+DEBUG 2016-08-23 23:18:48,806 [92b94] Hangfire.Server.Worker                   - Background process 'Worker #07992b94' started.
+DEBUG 2016-08-23 23:18:48,808 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DogeDaycare.Animals.Dtos.AnimalDto
+DEBUG 2016-08-23 23:18:48,808 [c6823] Hangfire.Server.Worker                   - Background process 'Worker #07ec6823' started.
+DEBUG 2016-08-23 23:18:48,812 [1da6c] Hangfire.Server.Worker                   - Background process 'Worker #4e41da6c' started.
+DEBUG 2016-08-23 23:18:48,813 [a7b93] Hangfire.Server.Worker                   - Background process 'Worker #980a7b93' started.
+DEBUG 2016-08-23 23:18:48,816 [b9b5e] Hangfire.Server.Worker                   - Background process 'Worker #0fcb9b5e' started.
+DEBUG 2016-08-23 23:18:48,819 [0c5db] Hangfire.Server.Worker                   - Background process 'Worker #8da0c5db' started.
+DEBUG 2016-08-23 23:18:48,821 [d4927] Hangfire.Server.Worker                   - Background process 'Worker #ea9d4927' started.
+DEBUG 2016-08-23 23:18:48,824 [179e1] Hangfire.Server.Worker                   - Background process 'Worker #fe7179e1' started.
+DEBUG 2016-08-23 23:18:48,826 [6ecf7] Hangfire.Server.Worker                   - Background process 'Worker #e7f6ecf7' started.
+DEBUG 2016-08-23 23:18:48,851 [d10c2] Hangfire.Server.Worker                   - Background process 'Worker #bded10c2' started.
+DEBUG 2016-08-23 23:18:48,853 [da002] Hangfire.Server.Worker                   - Background process 'Worker #38dda002' started.
+DEBUG 2016-08-23 23:18:48,854 [duler] Hangfire.Server.DelayedJobScheduler      - Background process 'DelayedJobScheduler' started.
+DEBUG 2016-08-23 23:18:48,863 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' started.
+DEBUG 2016-08-23 23:18:50,151 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DogeDaycare.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-08-23 23:18:50,152 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DogeDaycare.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-08-23 23:18:50,152 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DogeDaycare.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-08-23 23:18:50,153 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DogeDaycare.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-08-23 23:18:50,154 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DogeDaycare.Animals.IAnimalAppService' with service name 'app/animal'.
+INFO  2016-08-23 23:19:58,491 [37   ] aycare.Web.Controllers.AccountController - Sent confirmation code 6K21ag1d7AoWV499LBul7VSE1kmLlFsrZofI9txkjrUS0eVATvfbcZxyH2Y%2bCljd1AlIn57IZmNBvrkNfOpkr6tUH90lAxECQ5YTmfw6Zko%3d to email ta@tata.com
+WARN  2016-08-23 23:19:59,629 [37   ] Abp.Logging.LogHelper                    - Can not find 'SurName' in localization source 'DogeDaycare'!
