@@ -70,6 +70,11 @@
     <script src="~/AbpScripts/GetScripts?v=@(Clock.Now.Ticks)" type="text/javascript"></script>
 
     @RenderSection("Scripts", false)
+    
+    <!-- Enable access to anti forgery token through AJAX -->
+    @{
+        SetAntiForgeryCookie();
+    }
 </head>
 <body>
     @RenderBody()

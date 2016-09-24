@@ -1,15 +1,16 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DogeDaycare.Animals;
+﻿using DogeDaycare.Animals;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NUnit.Framework;
 
 namespace DogeDaycare.Animals.Tests
 {
-    [TestClass()]
-    public class AnimalManagerTests
+    [TestFixture]
+    public class Animal_App_Service
     {
+
     }
 }

@@ -1,18 +1,24 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DogeDaycare.Web.Controllers;
+﻿using DogeDaycare.Web.Controllers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DogeDaycare.Web.Models.Account;
+using NUnit.Framework;
 
 namespace DogeDaycare.Web.Controllers.Tests
 {
-    [TestClass()]
+    [TestFixture]
     public class AccountControllerTests
     {
-        [TestMethod()]
+        [SetUp]
+        protected void Setup()
+        {
+
+        }
+
+        [Test]
         public void RegisterTest()
         {
             RegisterViewModel input = new RegisterViewModel

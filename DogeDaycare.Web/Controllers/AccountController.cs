@@ -33,6 +33,7 @@ using System.Collections.Specialized;
 using Microsoft.Owin.Security.DataProtection;
 using Abp.Web.Models;
 using Abp.Runtime.Validation;
+using DogeDaycare.Emails;
 
 namespace DogeDaycare.Web.Controllers
 {
@@ -45,6 +46,7 @@ namespace DogeDaycare.Web.Controllers
         private readonly IMultiTenancyConfig _multiTenancyConfig;
         private readonly ISmtpEmailSender _smtpEmailSender;
         private readonly ISmtpEmailSenderConfiguration _smtpEmailSenderConfiguration;
+        private readonly IEmailAppService _emailAppService;
 
         private IAuthenticationManager AuthenticationManager
         {
@@ -61,7 +63,8 @@ namespace DogeDaycare.Web.Controllers
             IUnitOfWorkManager unitOfWorkManager,
             IMultiTenancyConfig multiTenancyConfig,
             ISmtpEmailSender stmpEmailSender,
-            ISmtpEmailSenderConfiguration smtpEmailSenderConfiguration
+            ISmtpEmailSenderConfiguration smtpEmailSenderConfiguration,
+            IEmailAppService emailAppService
             )
         {
             _tenantManager = tenantManager;
@@ -71,6 +74,7 @@ namespace DogeDaycare.Web.Controllers
             _multiTenancyConfig = multiTenancyConfig;
             _smtpEmailSender = stmpEmailSender;
             _smtpEmailSenderConfiguration = smtpEmailSenderConfiguration;
+            _emailAppService = emailAppService;
         }
 
         #region Login / Logout

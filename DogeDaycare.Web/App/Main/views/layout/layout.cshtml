@@ -45,6 +45,11 @@
     @Html.IncludeScript("~/Abp/Framework/scripts/libs/abp.signalr.js")
 
     @Scripts.Render("~/Bundles/App/Main/js")
+
+    <!-- Enable access to anti forgery token through AJAX -->
+    @{
+        SetAntiForgeryCookie();
+    }
     
 </head>
 <body>
