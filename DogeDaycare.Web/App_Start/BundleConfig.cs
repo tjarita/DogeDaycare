@@ -32,6 +32,7 @@ namespace DogeDaycare.Web
                         
                         "~/Scripts/jquery-3.1.0.js",
                         "~/Scripts/jquery-ui-1.12.0.js",
+                        "~/Scripts/jquery.signalR-2.2.1.js",
 
                         "~/Scripts/bootstrap.js",
 
@@ -41,6 +42,8 @@ namespace DogeDaycare.Web
                         "~/Scripts/sweetalert/sweet-alert.min.js",
                         "~/Scripts/others/spinjs/spin.js",
                         "~/Scripts/others/spinjs/jquery.spin.js",
+                        "~/Scripts/ckeditor/ckeditor.js",
+
 
                         "~/Scripts/angular.js",
                         "~/Scripts/angular-animate.js",
@@ -56,9 +59,8 @@ namespace DogeDaycare.Web
                         "~/Abp/Framework/scripts/libs/abp.blockUI.js",
                         "~/Abp/Framework/scripts/libs/abp.spin.js",
                         "~/Abp/Framework/scripts/libs/abp.sweet-alert.js",
-                        "~/Abp/Framework/scripts/libs/angularjs/abp.ng.js",
+                        "~/Abp/Framework/scripts/libs/angularjs/abp.ng.js"
 
-                        "~/Scripts/jquery.signalR-2.2.1.js"
                     )
                 );
 
