@@ -183,9 +183,14 @@
     <Compile Include="Migrations\201609140518558_Update_ABP_To_0.12.0.Designer.cs">
       <DependentUpon>201609140518558_Update_ABP_To_0.12.0.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609270353525_Add EmailTemplates.cs" />
+    <Compile Include="Migrations\201609270353525_Add EmailTemplates.Designer.cs">
+      <DependentUpon>201609270353525_Add EmailTemplates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DogeDaycareDataModule.cs" />
     <Compile Include="Migrations\SeedData\DefaultEditionsBuilder.cs" />
+    <Compile Include="Migrations\SeedData\DefaultEmailTemplatesBuilder.cs" />
     <Compile Include="Migrations\SeedData\DefaultLanguagesBuilder.cs" />
     <Compile Include="Migrations\SeedData\DefaultTenantRoleAndUserBuilder.cs" />
     <Compile Include="Migrations\SeedData\InitialDataBuilder.cs" />
@@ -243,6 +248,15 @@
     <EmbeddedResource Include="Migrations\201609140518558_Update_ABP_To_0.12.0.resx">
       <DependentUpon>201609140518558_Update_ABP_To_0.12.0.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609270353525_Add EmailTemplates.resx">
+      <DependentUpon>201609270353525_Add EmailTemplates.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Migrations\SeedData\EmailConfirmationTemplate.html" />
+    <Content Include="Migrations\SeedData\EmailConfirmationTemplateInline.html" />
+    <Content Include="Migrations\SeedData\PasswordResetTemplate.html" />
+    <Content Include="Migrations\SeedData\PasswordResetTemplateInline.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

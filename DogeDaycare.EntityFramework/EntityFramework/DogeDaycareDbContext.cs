@@ -11,6 +11,7 @@ namespace DogeDaycare.EntityFramework
     {
         public virtual IDbSet<Animals.Animal> Animals { get; set; }
         public virtual IDbSet<Appointments.Appointment> Appointments { get; set; }
+        public virtual IDbSet<Emails.EmailTemplate> EmailTemplates { get; set; }
         //public virtual IDbSet<Persons.Person> Persons{ get; set; }
         /* NOTE: 
          *   Setting "Default" to base class helps us when working migration commands on Package Manager Console.

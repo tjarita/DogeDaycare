@@ -106,6 +106,10 @@
     <Compile Include="Authorization\Roles\AppRoleConfig.cs" />
     <Compile Include="Authorization\Roles\StaticRoleNames.cs" />
     <Compile Include="Editions\EditionManager.cs" />
+    <Compile Include="Emails\EmailBodyReplacement.cs" />
+    <Compile Include="Emails\EmailTemplate.cs" />
+    <Compile Include="Emails\EmailTemplateManager.cs" />
+    <Compile Include="Emails\IEmailTemplateManager.cs" />
     <Compile Include="Features\FeatureValueStore.cs" />
     <Compile Include="MultiTenancy\Tenant.cs" />
     <Compile Include="MultiTenancy\TenantManager.cs" />

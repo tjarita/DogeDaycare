@@ -61,10 +61,23 @@ namespace DogeDaycare.Emails
                 }
             }
         }
+        /// <summary>
+        /// Sent after a user registers for an account to confirm they own the email.
+        /// </summary>
+        /// <param name="email">Recipient</param>
+        /// <param name="confirmationCode">Confirmation code</param>
+        /// <param name="name">Their name</param>
+        /// <returns></returns>
         public async Task<bool> SendEmailAddressConfirmationEmail(string email, string confirmationCode, string name)
         {
             throw new NotImplementedException();
         }
+        /// <summary>
+        /// Sent when a user requests a password change.
+        /// </summary>
+        /// <param name="email">Email to send to</param>
+        /// <param name="confirmationCode">Confirmation code</param>
+        /// <returns></returns>
         public async Task<bool> SendPasswordResetEmail(string email, string confirmationCode)
         {
             throw new NotImplementedException();

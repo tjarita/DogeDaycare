@@ -19,6 +19,7 @@ namespace DogeDaycare.Migrations.SeedData
             new DefaultEditionsBuilder(_context).Build();
             new DefaultTenantRoleAndUserBuilder(_context).Build();
             new DefaultLanguagesBuilder(_context).Build();
+            new DefaultEmailTemplatesBuilder(_context).Build();
         }
     }
 }
