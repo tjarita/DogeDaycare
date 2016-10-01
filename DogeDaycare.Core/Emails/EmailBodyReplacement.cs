@@ -16,7 +16,7 @@ namespace DogeDaycare.Emails
         public EmailTemplate EmailTemplate { get; set; }
 
         [Required]
-        public string Key { get; set; }
+        public string Identifier { get; set; }
 
         [Required]
         public string Description { get; set; }

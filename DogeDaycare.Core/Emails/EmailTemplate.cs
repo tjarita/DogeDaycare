@@ -66,11 +66,11 @@ namespace DogeDaycare.Emails
             return @emailTemplate;
         }
 
-        public void AddEmailBodyReplacement(string key, string description)
+        public void AddEmailBodyReplacement(string identifier, string description)
         {
             var replacement = new EmailBodyReplacement
             {
-                Key = key,
+                Identifier = identifier,
                 Description = description,
                 EmailTemplate = this
             };

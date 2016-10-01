@@ -1,5 +1,7 @@
 ﻿using Abp.Application.Services;
+using DogeDaycare.Users;
 using Google.Apis.Gmail.v1;
+using Google.Apis.Gmail.v1.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +12,7 @@ namespace DogeDaycare.Emails
 {
     public interface IEmailAppService : IApplicationService
     {
-        Task<bool> SendEmailAddressConfirmationEmail(string email, string confirmationCode, string name);
+        Task SendRegistrationConfirmationEmail(User user, string confirmationCode);
         Task<bool> SendPasswordResetEmail(string email, string confirmationCode);
         
     }

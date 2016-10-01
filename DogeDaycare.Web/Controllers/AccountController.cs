@@ -78,7 +78,7 @@ namespace DogeDaycare.Web.Controllers
         }
 
         #region Login / Logout
-        
+
         public ActionResult Login(string returnUrl = "")
         {
             if (string.IsNullOrWhiteSpace(returnUrl))
@@ -292,11 +292,9 @@ namespace DogeDaycare.Web.Controllers
                 await _unitOfWorkManager.Current.SaveChangesAsync();
 
                 // Send confirmation email
-                var dataProtectionProvider = Startup.DataProtectionProvider;
-                _userManager.UserTokenProvider = new DataProtectorTokenProvider<User, long>(dataProtectionProvider.Create("EmailConfirmation")) { TokenLifespan = TimeSpan.FromDays(1) };
-                var code = await _userManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                code = HttpUtility.UrlEncode(code);
-                await SendConfirmationEmail(user.EmailAddress, code, user.Name, user.Id);
+                var code = await GenerateEmailConfirmationCodeLink(user);
+                await _emailAppService.SendRegistrationConfirmationEmail(user, code);
+                //await SendConfirmationEmail(user.EmailAddress, code, user.Name, user.Id);
 
                 //Show a register result page
                 return View("RegisterResult", new RegisterResultViewModel
@@ -612,6 +610,16 @@ namespace DogeDaycare.Web.Controllers
         #endregion
 
         #region Email Methods
+
+        private async Task<string> GenerateEmailConfirmationCodeLink(User user)
+        {
+            var dataProtectionProvider = Startup.DataProtectionProvider;
+            _userManager.UserTokenProvider = new DataProtectorTokenProvider<User, long>(dataProtectionProvider.Create("EmailConfirmation")) { TokenLifespan = TimeSpan.FromDays(1) };
+            var code = await _userManager.GenerateEmailConfirmationTokenAsync(user.Id);
+            code = HttpUtility.UrlEncode(code);
+            var confirmURL = Url.Action("ConfirmEmail", "Account", new ConfirmEmailViewModel { EmailConfirmationCode = code, UserId = user.Id }, protocol: Request.Url.Scheme);
+            return confirmURL;
+        }
 
         private async Task SendConfirmationEmail(string clientEmail, string code, string clientName, long clientId)
         {

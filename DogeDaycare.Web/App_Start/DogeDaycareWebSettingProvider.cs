@@ -34,10 +34,6 @@ namespace DogeDaycare.Web.App_Start
                     "dogedaycaredev@gmail.com"
                     ),
                 new SettingDefinition(
-                    EmailSettingNames.Smtp.Password,
-                    "7DVGN&rdfSJUcRnP4kLt0Gki@Magc1$6jS9$jVPqs$TCFt@ugkcQIKk85OE1GC3z"
-                    ),
-                new SettingDefinition(
                     EmailSettingNames.Smtp.EnableSsl,
                     "true"
                     ),

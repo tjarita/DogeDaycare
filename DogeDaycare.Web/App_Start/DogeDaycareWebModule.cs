@@ -35,7 +35,7 @@ namespace DogeDaycare.Web
             Configuration.Navigation.Providers.Add<DogeDaycareNavigationProvider>();
 
             //Add Setting Provider
-            Configuration.Settings.Providers.Add<DogeDaycareWebSettingProvider>();
+            //Configuration.Settings.Providers.Add<DogeDaycareWebSettingProvider>();
 
             //Configure Hangfire
             Configuration.BackgroundJobs.UseHangfire(configuration =>

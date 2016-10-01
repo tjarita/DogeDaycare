@@ -53,6 +53,10 @@
       <HintPath>..\packages\Abp.Zero.EntityFramework.0.11.2.0\lib\net452\Abp.Zero.EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.7.4137.9688, Culture=neutral, PublicKeyToken=a4292a325f69b123, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.1.7.0\lib\Net40-Client\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <HintPath>..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
       <Private>True</Private>
@@ -187,6 +191,10 @@
     <Compile Include="Migrations\201609270353525_Add EmailTemplates.Designer.cs">
       <DependentUpon>201609270353525_Add EmailTemplates.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610010424087_Change EmailBodyReplacement Key to Identifier.cs" />
+    <Compile Include="Migrations\201610010424087_Change EmailBodyReplacement Key to Identifier.Designer.cs">
+      <DependentUpon>201610010424087_Change EmailBodyReplacement Key to Identifier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DogeDaycareDataModule.cs" />
     <Compile Include="Migrations\SeedData\DefaultEditionsBuilder.cs" />
@@ -200,7 +208,9 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DogeDaycare.Core\DogeDaycare.Core.csproj">
@@ -251,10 +261,12 @@
     <EmbeddedResource Include="Migrations\201609270353525_Add EmailTemplates.resx">
       <DependentUpon>201609270353525_Add EmailTemplates.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610010424087_Change EmailBodyReplacement Key to Identifier.resx">
+      <DependentUpon>201610010424087_Change EmailBodyReplacement Key to Identifier.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Migrations\SeedData\EmailConfirmationTemplate.html" />
-    <Content Include="Migrations\SeedData\EmailConfirmationTemplateInline.html" />
     <Content Include="Migrations\SeedData\PasswordResetTemplate.html" />
     <Content Include="Migrations\SeedData\PasswordResetTemplateInline.html" />
   </ItemGroup>
