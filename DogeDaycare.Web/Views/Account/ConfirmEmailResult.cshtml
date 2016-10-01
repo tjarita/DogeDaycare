@@ -2,29 +2,35 @@
 @{
     if (Model.Success)
     {
-        ViewBag.Title = "Confirmation succes!";
+        ViewBag.Title = "Confirmation successful!";
+        ViewBag.PanelHeaderText = "Thank you for confirming your account!";
     }
     else
     {
         ViewBag.Title = "Confirmation failed";
+        ViewBag.PanelHeaderText = "Sorry! We weren't able to confirm your account.";
     }
 }
 
 <div class="container">
+    <div class="page-header">
+        <h1>@ViewBag.Title</h1>
+    </div>
     <div class="row">
         <div class="col-lg-12">
-            @if (Model.Success)
-            {
-                <h1>Thank you for confirming your account! </h1>
-                <h2>You can now log into DogeDaycare.</h2>
-
-                <h3><a href="@(Url.Action("Login","Account"))">Click here to log in</a></h3>
-            }
-            else
-            {
-                <h1>Confirmation failed ...</h1>
-                <h3>Contact us at DogeDaycareDev@gmail.com</h3>
-            }
+            <div class="panel panel-default">
+                <div class="panel-heading"><h4>@ViewBag.PanelHeaderText</h4></div>
+                <div class="panel-body">
+                    @if (Model.Success)
+                    {
+                        <a href="@(Url.Action("Login","Account"))">Click here to log in</a>
+                    }
+                    else
+                    {
+                        <p>Contact us at DogeDaycareDev@gmail.com</p>
+                    }
+                </div>
+            </div>
         </div>
     </div>
 </div>

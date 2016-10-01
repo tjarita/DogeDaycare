@@ -621,32 +621,32 @@ namespace DogeDaycare.Web.Controllers
             return confirmURL;
         }
 
-        private async Task SendConfirmationEmail(string clientEmail, string code, string clientName, long clientId)
-        {
-            var confirmURL = Url.Action("ConfirmEmail", "Account", new ConfirmEmailViewModel { EmailConfirmationCode = code, UserId = clientId }, protocol: Request.Url.Scheme);
+        //private async Task SendConfirmationEmail(string clientEmail, string code, string clientName, long clientId)
+        //{
+        //    var confirmURL = Url.Action("ConfirmEmail", "Account", new ConfirmEmailViewModel { EmailConfirmationCode = code, UserId = clientId }, protocol: Request.Url.Scheme);
 
-            MailDefinition mailDef = new MailDefinition();
-            mailDef.From = "dogedaycaredev@gmail.com";
-            mailDef.Subject = "Welcome to DogeDaycare!";
-            mailDef.IsBodyHtml = true;
+        //    MailDefinition mailDef = new MailDefinition();
+        //    mailDef.From = "dogedaycaredev@gmail.com";
+        //    mailDef.Subject = "Welcome to DogeDaycare!";
+        //    mailDef.IsBodyHtml = true;
 
-            ListDictionary replacements = new ListDictionary();
-            replacements.Add("{EmailTitle}", mailDef.Subject);
-            replacements.Add("{CustomerName}", clientName);
-            replacements.Add("{ConfirmationLink}", confirmURL);
-            replacements.Add("{ContactUsEmail}", mailDef.From);
+        //    ListDictionary replacements = new ListDictionary();
+        //    replacements.Add("{EmailTitle}", mailDef.Subject);
+        //    replacements.Add("{CustomerName}", clientName);
+        //    replacements.Add("{ConfirmationLink}", confirmURL);
+        //    replacements.Add("{ContactUsEmail}", mailDef.From);
 
-            var body = System.IO.File.ReadAllText(Server.MapPath("~/Controllers/EmailTemplates/Inline/EmailConfirmationTemplateInline.html"));
+        //    var body = System.IO.File.ReadAllText(Server.MapPath("~/Controllers/EmailTemplates/Inline/EmailConfirmationTemplateInline.html"));
 
-            MailMessage message = mailDef.CreateMailMessage(clientEmail, replacements, body, new System.Web.UI.Control());
+        //    MailMessage message = mailDef.CreateMailMessage(clientEmail, replacements, body, new System.Web.UI.Control());
 
-            using (var client = _smtpEmailSender.BuildClient())
-            {
-                await client.SendMailAsync(message);
-            }
+        //    using (var client = _smtpEmailSender.BuildClient())
+        //    {
+        //        await client.SendMailAsync(message);
+        //    }
 
-            Logger.Info(string.Format("Sent confirmation code {0} to email {1}", code, clientEmail));
-        }
+        //    Logger.Info(string.Format("Sent confirmation code {0} to email {1}", code, clientEmail));
+        //}
 
         private async Task SendPasswordResetEmail(string clientEmail, string code, string clientName, long id)
         {
