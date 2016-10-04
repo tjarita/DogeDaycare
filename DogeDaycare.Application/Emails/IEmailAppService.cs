@@ -13,7 +13,7 @@ namespace DogeDaycare.Emails
     public interface IEmailAppService : IApplicationService
     {
         Task SendRegistrationConfirmationEmail(User user, string confirmationCode);
-        Task<bool> SendPasswordResetEmail(string email, string confirmationCode);
+        Task SendPasswordResetEmail(User user, string confirmationCode);
         
     }
 }

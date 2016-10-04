@@ -19582,3 +19582,316 @@ DEBUG 2016-09-30 21:51:41,801 [erver] ngfire.Server.BackgroundProcessingServer -
 INFO  2016-09-30 21:51:41,801 [54   ] Hangfire.BackgroundJobServer             - Hangfire Server stopped.
 DEBUG 2016-09-30 21:51:41,801 [54   ] bp.Hangfire.HangfireBackgroundJobManager - WaitToStop background worker: Abp.Hangfire.HangfireBackgroundJobManager
 DEBUG 2016-09-30 21:51:41,801 [54   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2016-10-03 20:07:03,708 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-10-03 20:07:03,735 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2016-10-03 20:07:03,739 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.Web.DogeDaycareWebModule, DogeDaycare.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 20:07:03,741 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.DogeDaycareDataModule, DogeDaycare.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 20:07:03,741 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.11.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 20:07:03,741 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.11.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 20:07:03,742 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.11.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 20:07:03,742 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.11.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 20:07:03,742 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.DogeDaycareCoreModule, DogeDaycare.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 20:07:03,742 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.DogeDaycareApplicationModule, DogeDaycare.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 20:07:03,742 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.11.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 20:07:03,742 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.Api.DogeDaycareWebApiModule, DogeDaycare.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 20:07:03,742 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.11.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 20:07:03,743 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.11.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 20:07:03,743 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.11.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 20:07:03,743 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=0.11.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 20:07:03,743 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=0.11.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 20:07:03,743 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.11.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 20:07:03,745 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2016-10-03 20:07:03,813 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-10-03 20:07:03,813 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-10-03 20:07:03,813 [1    ] o.Configuration.LanguageManagementConfig - Converted DogeDaycare (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-10-03 20:07:03,813 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+INFO  2016-10-03 20:07:03,896 [1    ] Hangfire.SqlServer.SqlServerStorage      - Start installing Hangfire SQL objects...
+INFO  2016-10-03 20:07:03,986 [1    ] Hangfire.SqlServer.SqlServerStorage      - Hangfire SQL objects installed.
+DEBUG 2016-10-03 20:07:04,213 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: DogeDaycare.EntityFramework.DogeDaycareDbContext, DogeDaycare.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 20:07:05,382 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-10-03 20:07:05,391 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-10-03 20:07:05,392 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-10-03 20:07:05,392 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: DogeDaycare
+DEBUG 2016-10-03 20:07:05,393 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-10-03 20:07:05,399 [1    ] bp.Hangfire.HangfireBackgroundJobManager - Start background worker: Abp.Hangfire.HangfireBackgroundJobManager
+INFO  2016-10-03 20:07:05,409 [1    ] Hangfire.BackgroundJobServer             - Starting Hangfire Server
+INFO  2016-10-03 20:07:05,412 [1    ] Hangfire.BackgroundJobServer             - Using job storage: 'SQL Server: TOSHIKI-W10-D@DogeDaycare'
+INFO  2016-10-03 20:07:05,413 [1    ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage:
+INFO  2016-10-03 20:07:05,413 [1    ] Hangfire.BackgroundJobServer             -     Queue poll interval: 00:00:15.
+INFO  2016-10-03 20:07:05,413 [1    ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+INFO  2016-10-03 20:07:05,413 [1    ] Hangfire.BackgroundJobServer             -     Worker count: 20
+INFO  2016-10-03 20:07:05,413 [1    ] Hangfire.BackgroundJobServer             -     Listening queues: 'default'
+INFO  2016-10-03 20:07:05,413 [1    ] Hangfire.BackgroundJobServer             -     Shutdown timeout: 00:00:15
+INFO  2016-10-03 20:07:05,413 [1    ] Hangfire.BackgroundJobServer             -     Schedule polling interval: 00:00:15
+DEBUG 2016-10-03 20:07:05,423 [erver] ngfire.Server.BackgroundProcessingServer - Background process 'BackgroundProcessingServer' started.
+DEBUG 2016-10-03 20:07:05,599 [tbeat] Hangfire.Server.ServerHeartbeat          - Background process 'ServerHeartbeat' started.
+DEBUG 2016-10-03 20:07:05,599 [chdog] Hangfire.Server.ServerWatchdog           - Background process 'ServerWatchdog' started.
+DEBUG 2016-10-03 20:07:05,603 [nager] Hangfire.SqlServer.ExpirationManager     - Background process 'Hangfire.SqlServer.ExpirationManager' started.
+DEBUG 2016-10-03 20:07:05,604 [gator] Hangfire.SqlServer.CountersAggregator    - Background process 'Hangfire.SqlServer.CountersAggregator' started.
+DEBUG 2016-10-03 20:07:05,605 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'AggregatedCounter' table...
+DEBUG 2016-10-03 20:07:05,605 [dd76b] Hangfire.Server.Worker                   - Background process 'Worker #66ddd76b' started.
+DEBUG 2016-10-03 20:07:05,606 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-10-03 20:07:05,608 [b88d3] Hangfire.Server.Worker                   - Background process 'Worker #399b88d3' started.
+DEBUG 2016-10-03 20:07:05,611 [094a0] Hangfire.Server.Worker                   - Background process 'Worker #89f094a0' started.
+DEBUG 2016-10-03 20:07:05,612 [c436c] Hangfire.Server.Worker                   - Background process 'Worker #cf3c436c' started.
+DEBUG 2016-10-03 20:07:05,613 [6527b] Hangfire.Server.Worker                   - Background process 'Worker #aab6527b' started.
+DEBUG 2016-10-03 20:07:05,613 [9e1e6] Hangfire.Server.Worker                   - Background process 'Worker #6cb9e1e6' started.
+DEBUG 2016-10-03 20:07:05,616 [ae018] Hangfire.Server.Worker                   - Background process 'Worker #e6aae018' started.
+DEBUG 2016-10-03 20:07:05,618 [c2b87] Hangfire.Server.Worker                   - Background process 'Worker #aa3c2b87' started.
+DEBUG 2016-10-03 20:07:05,620 [eb8e7] Hangfire.Server.Worker                   - Background process 'Worker #d5deb8e7' started.
+DEBUG 2016-10-03 20:07:05,622 [25eb2] Hangfire.Server.Worker                   - Background process 'Worker #5e825eb2' started.
+DEBUG 2016-10-03 20:07:05,628 [6a67d] Hangfire.Server.Worker                   - Background process 'Worker #aa46a67d' started.
+DEBUG 2016-10-03 20:07:05,628 [2c2f2] Hangfire.Server.Worker                   - Background process 'Worker #11f2c2f2' started.
+DEBUG 2016-10-03 20:07:05,630 [8c1be] Hangfire.Server.Worker                   - Background process 'Worker #7168c1be' started.
+DEBUG 2016-10-03 20:07:05,635 [63ae5] Hangfire.Server.Worker                   - Background process 'Worker #59663ae5' started.
+DEBUG 2016-10-03 20:07:05,644 [adb5f] Hangfire.Server.Worker                   - Background process 'Worker #fadadb5f' started.
+DEBUG 2016-10-03 20:07:05,645 [ba22b] Hangfire.Server.Worker                   - Background process 'Worker #c78ba22b' started.
+DEBUG 2016-10-03 20:07:05,655 [f7120] Hangfire.Server.Worker                   - Background process 'Worker #8a1f7120' started.
+DEBUG 2016-10-03 20:07:05,657 [f3138] Hangfire.Server.Worker                   - Background process 'Worker #0c3f3138' started.
+DEBUG 2016-10-03 20:07:05,659 [f62bd] Hangfire.Server.Worker                   - Background process 'Worker #215f62bd' started.
+DEBUG 2016-10-03 20:07:05,659 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'AggregatedCounter' table.
+DEBUG 2016-10-03 20:07:05,659 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Job' table...
+DEBUG 2016-10-03 20:07:05,660 [7cdbe] Hangfire.Server.Worker                   - Background process 'Worker #f0e7cdbe' started.
+DEBUG 2016-10-03 20:07:05,661 [duler] Hangfire.Server.DelayedJobScheduler      - Background process 'DelayedJobScheduler' started.
+DEBUG 2016-10-03 20:07:05,663 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' started.
+DEBUG 2016-10-03 20:07:05,674 [gator] Hangfire.SqlServer.CountersAggregator    - Records from the 'Counter' table aggregated.
+DEBUG 2016-10-03 20:07:05,679 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Job' table.
+DEBUG 2016-10-03 20:07:05,679 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'List' table...
+DEBUG 2016-10-03 20:07:05,681 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'List' table.
+DEBUG 2016-10-03 20:07:05,681 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Set' table...
+DEBUG 2016-10-03 20:07:05,683 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Set' table.
+DEBUG 2016-10-03 20:07:05,683 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Hash' table...
+DEBUG 2016-10-03 20:07:05,685 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Hash' table.
+DEBUG 2016-10-03 20:07:05,705 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 6 classes defines auto mapping attributes
+DEBUG 2016-10-03 20:07:05,705 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DogeDaycare.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-10-03 20:07:05,710 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DogeDaycare.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-10-03 20:07:05,710 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DogeDaycare.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-10-03 20:07:05,710 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DogeDaycare.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-10-03 20:07:05,710 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DogeDaycare.Animals.Dtos.AnimalDetailOutput
+DEBUG 2016-10-03 20:07:05,710 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DogeDaycare.Animals.Dtos.AnimalDto
+DEBUG 2016-10-03 20:07:06,536 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DogeDaycare.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-10-03 20:07:06,537 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DogeDaycare.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-10-03 20:07:06,537 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DogeDaycare.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-10-03 20:07:06,538 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DogeDaycare.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-10-03 20:07:06,539 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DogeDaycare.Emails.IEmailAppService' with service name 'app/email'.
+DEBUG 2016-10-03 20:07:06,539 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DogeDaycare.Animals.IAnimalAppService' with service name 'app/animal'.
+DEBUG 2016-10-03 20:07:13,391 [10   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"38223305-dba8-40b7-b32e-67c717a1d0d5","IpAddress":"192.168.0.123","TenantId":1,"UserId":18,"ConnectTime":"2016-10-03T20:07:13.3845639-07:00","Properties":{}}
+DEBUG 2016-10-03 20:07:13,434 [11   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 38223305-dba8-40b7-b32e-67c717a1d0d5
+DEBUG 2016-10-03 20:12:05,674 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-10-03 20:12:05,684 [gator] Hangfire.SqlServer.CountersAggregator    - Records from the 'Counter' table aggregated.
+DEBUG 2016-10-03 20:15:08,770 [78   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 38223305-dba8-40b7-b32e-67c717a1d0d5
+DEBUG 2016-10-03 20:17:05,684 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-10-03 20:17:05,694 [gator] Hangfire.SqlServer.CountersAggregator    - Records from the 'Counter' table aggregated.
+DEBUG 2016-10-03 20:22:05,694 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-10-03 20:22:05,696 [gator] Hangfire.SqlServer.CountersAggregator    - Records from the 'Counter' table aggregated.
+DEBUG 2016-10-03 20:27:05,697 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-10-03 20:27:05,699 [gator] Hangfire.SqlServer.CountersAggregator    - Records from the 'Counter' table aggregated.
+DEBUG 2016-10-03 20:32:05,699 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-10-03 20:32:05,700 [gator] Hangfire.SqlServer.CountersAggregator    - Records from the 'Counter' table aggregated.
+DEBUG 2016-10-03 20:35:54,904 [143  ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2016-10-03 20:35:54,905 [143  ] bp.Hangfire.HangfireBackgroundJobManager - Stop background worker: Abp.Hangfire.HangfireBackgroundJobManager
+DEBUG 2016-10-03 20:35:54,906 [duler] Hangfire.Server.DelayedJobScheduler      - Background process 'DelayedJobScheduler' stopped.
+DEBUG 2016-10-03 20:35:54,906 [chdog] Hangfire.Server.ServerWatchdog           - Background process 'ServerWatchdog' stopped.
+DEBUG 2016-10-03 20:35:54,906 [gator] Hangfire.SqlServer.CountersAggregator    - Background process 'Hangfire.SqlServer.CountersAggregator' stopped.
+DEBUG 2016-10-03 20:35:54,906 [tbeat] Hangfire.Server.ServerHeartbeat          - Background process 'ServerHeartbeat' stopped.
+DEBUG 2016-10-03 20:35:54,906 [nager] Hangfire.SqlServer.ExpirationManager     - Background process 'Hangfire.SqlServer.ExpirationManager' stopped.
+DEBUG 2016-10-03 20:35:54,907 [b88d3] Hangfire.Server.Worker                   - Background process 'Worker #399b88d3' was stopped due to a shutdown request.
+DEBUG 2016-10-03 20:35:54,907 [b88d3] Hangfire.Server.Worker                   - Background process 'Worker #399b88d3' stopped.
+DEBUG 2016-10-03 20:35:54,907 [2c2f2] Hangfire.Server.Worker                   - Background process 'Worker #11f2c2f2' was stopped due to a shutdown request.
+DEBUG 2016-10-03 20:35:54,907 [6527b] Hangfire.Server.Worker                   - Background process 'Worker #aab6527b' was stopped due to a shutdown request.
+DEBUG 2016-10-03 20:35:54,907 [2c2f2] Hangfire.Server.Worker                   - Background process 'Worker #11f2c2f2' stopped.
+DEBUG 2016-10-03 20:35:54,907 [6527b] Hangfire.Server.Worker                   - Background process 'Worker #aab6527b' stopped.
+DEBUG 2016-10-03 20:35:54,907 [9e1e6] Hangfire.Server.Worker                   - Background process 'Worker #6cb9e1e6' was stopped due to a shutdown request.
+DEBUG 2016-10-03 20:35:54,907 [25eb2] Hangfire.Server.Worker                   - Background process 'Worker #5e825eb2' was stopped due to a shutdown request.
+DEBUG 2016-10-03 20:35:54,907 [9e1e6] Hangfire.Server.Worker                   - Background process 'Worker #6cb9e1e6' stopped.
+DEBUG 2016-10-03 20:35:54,907 [25eb2] Hangfire.Server.Worker                   - Background process 'Worker #5e825eb2' stopped.
+DEBUG 2016-10-03 20:35:54,907 [ba22b] Hangfire.Server.Worker                   - Background process 'Worker #c78ba22b' was stopped due to a shutdown request.
+DEBUG 2016-10-03 20:35:54,907 [c2b87] Hangfire.Server.Worker                   - Background process 'Worker #aa3c2b87' was stopped due to a shutdown request.
+DEBUG 2016-10-03 20:35:54,907 [f3138] Hangfire.Server.Worker                   - Background process 'Worker #0c3f3138' was stopped due to a shutdown request.
+DEBUG 2016-10-03 20:35:54,907 [ba22b] Hangfire.Server.Worker                   - Background process 'Worker #c78ba22b' stopped.
+DEBUG 2016-10-03 20:35:54,907 [c2b87] Hangfire.Server.Worker                   - Background process 'Worker #aa3c2b87' stopped.
+DEBUG 2016-10-03 20:35:54,907 [f3138] Hangfire.Server.Worker                   - Background process 'Worker #0c3f3138' stopped.
+DEBUG 2016-10-03 20:35:54,907 [eb8e7] Hangfire.Server.Worker                   - Background process 'Worker #d5deb8e7' was stopped due to a shutdown request.
+DEBUG 2016-10-03 20:35:54,907 [eb8e7] Hangfire.Server.Worker                   - Background process 'Worker #d5deb8e7' stopped.
+DEBUG 2016-10-03 20:35:54,907 [094a0] Hangfire.Server.Worker                   - Background process 'Worker #89f094a0' was stopped due to a shutdown request.
+DEBUG 2016-10-03 20:35:54,907 [63ae5] Hangfire.Server.Worker                   - Background process 'Worker #59663ae5' was stopped due to a shutdown request.
+DEBUG 2016-10-03 20:35:54,907 [094a0] Hangfire.Server.Worker                   - Background process 'Worker #89f094a0' stopped.
+DEBUG 2016-10-03 20:35:54,907 [63ae5] Hangfire.Server.Worker                   - Background process 'Worker #59663ae5' stopped.
+DEBUG 2016-10-03 20:35:54,907 [dd76b] Hangfire.Server.Worker                   - Background process 'Worker #66ddd76b' was stopped due to a shutdown request.
+DEBUG 2016-10-03 20:35:54,907 [dd76b] Hangfire.Server.Worker                   - Background process 'Worker #66ddd76b' stopped.
+DEBUG 2016-10-03 20:35:54,907 [8c1be] Hangfire.Server.Worker                   - Background process 'Worker #7168c1be' was stopped due to a shutdown request.
+DEBUG 2016-10-03 20:35:54,907 [c436c] Hangfire.Server.Worker                   - Background process 'Worker #cf3c436c' was stopped due to a shutdown request.
+DEBUG 2016-10-03 20:35:54,907 [8c1be] Hangfire.Server.Worker                   - Background process 'Worker #7168c1be' stopped.
+DEBUG 2016-10-03 20:35:54,907 [c436c] Hangfire.Server.Worker                   - Background process 'Worker #cf3c436c' stopped.
+DEBUG 2016-10-03 20:35:54,908 [7cdbe] Hangfire.Server.Worker                   - Background process 'Worker #f0e7cdbe' was stopped due to a shutdown request.
+DEBUG 2016-10-03 20:35:54,908 [7cdbe] Hangfire.Server.Worker                   - Background process 'Worker #f0e7cdbe' stopped.
+DEBUG 2016-10-03 20:35:54,908 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' was stopped due to a shutdown request.
+DEBUG 2016-10-03 20:35:54,908 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' stopped.
+DEBUG 2016-10-03 20:35:54,908 [ae018] Hangfire.Server.Worker                   - Background process 'Worker #e6aae018' was stopped due to a shutdown request.
+DEBUG 2016-10-03 20:35:54,908 [6a67d] Hangfire.Server.Worker                   - Background process 'Worker #aa46a67d' was stopped due to a shutdown request.
+DEBUG 2016-10-03 20:35:54,908 [ae018] Hangfire.Server.Worker                   - Background process 'Worker #e6aae018' stopped.
+DEBUG 2016-10-03 20:35:54,908 [6a67d] Hangfire.Server.Worker                   - Background process 'Worker #aa46a67d' stopped.
+DEBUG 2016-10-03 20:35:54,908 [adb5f] Hangfire.Server.Worker                   - Background process 'Worker #fadadb5f' was stopped due to a shutdown request.
+DEBUG 2016-10-03 20:35:54,908 [f7120] Hangfire.Server.Worker                   - Background process 'Worker #8a1f7120' was stopped due to a shutdown request.
+DEBUG 2016-10-03 20:35:54,908 [adb5f] Hangfire.Server.Worker                   - Background process 'Worker #fadadb5f' stopped.
+DEBUG 2016-10-03 20:35:54,908 [f7120] Hangfire.Server.Worker                   - Background process 'Worker #8a1f7120' stopped.
+DEBUG 2016-10-03 20:35:54,908 [f62bd] Hangfire.Server.Worker                   - Background process 'Worker #215f62bd' was stopped due to a shutdown request.
+DEBUG 2016-10-03 20:35:54,908 [f62bd] Hangfire.Server.Worker                   - Background process 'Worker #215f62bd' stopped.
+DEBUG 2016-10-03 20:35:54,910 [erver] ngfire.Server.BackgroundProcessingServer - Background process 'BackgroundProcessingServer' stopped.
+INFO  2016-10-03 20:35:54,911 [143  ] Hangfire.BackgroundJobServer             - Hangfire Server stopped.
+DEBUG 2016-10-03 20:35:54,911 [143  ] bp.Hangfire.HangfireBackgroundJobManager - WaitToStop background worker: Abp.Hangfire.HangfireBackgroundJobManager
+DEBUG 2016-10-03 20:35:54,911 [143  ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2016-10-03 21:02:34,034 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-10-03 21:02:34,051 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2016-10-03 21:02:34,055 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.Web.DogeDaycareWebModule, DogeDaycare.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 21:02:34,058 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.DogeDaycareDataModule, DogeDaycare.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 21:02:34,058 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.11.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 21:02:34,058 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.11.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 21:02:34,058 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.11.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 21:02:34,058 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.11.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 21:02:34,058 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.DogeDaycareCoreModule, DogeDaycare.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 21:02:34,058 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.DogeDaycareApplicationModule, DogeDaycare.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 21:02:34,059 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.11.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 21:02:34,059 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DogeDaycare.Api.DogeDaycareWebApiModule, DogeDaycare.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 21:02:34,059 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.11.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 21:02:34,059 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.11.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 21:02:34,059 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.11.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 21:02:34,059 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=0.11.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 21:02:34,059 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=0.11.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 21:02:34,059 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.11.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 21:02:34,062 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2016-10-03 21:02:34,154 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-10-03 21:02:34,154 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-10-03 21:02:34,154 [1    ] o.Configuration.LanguageManagementConfig - Converted DogeDaycare (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-10-03 21:02:34,154 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+INFO  2016-10-03 21:02:34,270 [1    ] Hangfire.SqlServer.SqlServerStorage      - Start installing Hangfire SQL objects...
+INFO  2016-10-03 21:02:34,353 [1    ] Hangfire.SqlServer.SqlServerStorage      - Hangfire SQL objects installed.
+DEBUG 2016-10-03 21:02:34,597 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: DogeDaycare.EntityFramework.DogeDaycareDbContext, DogeDaycare.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-10-03 21:02:35,895 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-10-03 21:02:35,908 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-10-03 21:02:35,910 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-10-03 21:02:35,910 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: DogeDaycare
+DEBUG 2016-10-03 21:02:35,911 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-10-03 21:02:35,916 [1    ] bp.Hangfire.HangfireBackgroundJobManager - Start background worker: Abp.Hangfire.HangfireBackgroundJobManager
+INFO  2016-10-03 21:02:35,926 [1    ] Hangfire.BackgroundJobServer             - Starting Hangfire Server
+INFO  2016-10-03 21:02:35,931 [1    ] Hangfire.BackgroundJobServer             - Using job storage: 'SQL Server: TOSHIKI-W10-D@DogeDaycare'
+INFO  2016-10-03 21:02:35,931 [1    ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage:
+INFO  2016-10-03 21:02:35,931 [1    ] Hangfire.BackgroundJobServer             -     Queue poll interval: 00:00:15.
+INFO  2016-10-03 21:02:35,931 [1    ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+INFO  2016-10-03 21:02:35,931 [1    ] Hangfire.BackgroundJobServer             -     Worker count: 20
+INFO  2016-10-03 21:02:35,931 [1    ] Hangfire.BackgroundJobServer             -     Listening queues: 'default'
+INFO  2016-10-03 21:02:35,931 [1    ] Hangfire.BackgroundJobServer             -     Shutdown timeout: 00:00:15
+INFO  2016-10-03 21:02:35,931 [1    ] Hangfire.BackgroundJobServer             -     Schedule polling interval: 00:00:15
+DEBUG 2016-10-03 21:02:35,942 [erver] ngfire.Server.BackgroundProcessingServer - Background process 'BackgroundProcessingServer' started.
+DEBUG 2016-10-03 21:02:36,162 [tbeat] Hangfire.Server.ServerHeartbeat          - Background process 'ServerHeartbeat' started.
+DEBUG 2016-10-03 21:02:36,173 [chdog] Hangfire.Server.ServerWatchdog           - Background process 'ServerWatchdog' started.
+DEBUG 2016-10-03 21:02:36,178 [nager] Hangfire.SqlServer.ExpirationManager     - Background process 'Hangfire.SqlServer.ExpirationManager' started.
+DEBUG 2016-10-03 21:02:36,180 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'AggregatedCounter' table...
+DEBUG 2016-10-03 21:02:36,182 [gator] Hangfire.SqlServer.CountersAggregator    - Background process 'Hangfire.SqlServer.CountersAggregator' started.
+DEBUG 2016-10-03 21:02:36,183 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-10-03 21:02:36,191 [019bf] Hangfire.Server.Worker                   - Background process 'Worker #8d3019bf' started.
+DEBUG 2016-10-03 21:02:36,196 [3a7b9] Hangfire.Server.Worker                   - Background process 'Worker #9c23a7b9' started.
+DEBUG 2016-10-03 21:02:36,198 [804b6] Hangfire.Server.Worker                   - Background process 'Worker #f6f804b6' started.
+DEBUG 2016-10-03 21:02:36,199 [042b7] Hangfire.Server.Worker                   - Background process 'Worker #569042b7' started.
+DEBUG 2016-10-03 21:02:36,201 [e107a] Hangfire.Server.Worker                   - Background process 'Worker #71de107a' started.
+DEBUG 2016-10-03 21:02:36,206 [79dd8] Hangfire.Server.Worker                   - Background process 'Worker #3d379dd8' started.
+DEBUG 2016-10-03 21:02:36,210 [48098] Hangfire.Server.Worker                   - Background process 'Worker #01648098' started.
+DEBUG 2016-10-03 21:02:36,215 [242bc] Hangfire.Server.Worker                   - Background process 'Worker #b94242bc' started.
+DEBUG 2016-10-03 21:02:36,217 [c0a92] Hangfire.Server.Worker                   - Background process 'Worker #b07c0a92' started.
+DEBUG 2016-10-03 21:02:36,220 [92fa0] Hangfire.Server.Worker                   - Background process 'Worker #bdf92fa0' started.
+DEBUG 2016-10-03 21:02:36,223 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'AggregatedCounter' table.
+DEBUG 2016-10-03 21:02:36,223 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Job' table...
+DEBUG 2016-10-03 21:02:36,224 [bbbaa] Hangfire.Server.Worker                   - Background process 'Worker #2febbbaa' started.
+DEBUG 2016-10-03 21:02:36,225 [68149] Hangfire.Server.Worker                   - Background process 'Worker #5e568149' started.
+DEBUG 2016-10-03 21:02:36,230 [a7954] Hangfire.Server.Worker                   - Background process 'Worker #372a7954' started.
+DEBUG 2016-10-03 21:02:36,231 [a3a79] Hangfire.Server.Worker                   - Background process 'Worker #6ada3a79' started.
+DEBUG 2016-10-03 21:02:36,237 [6b2de] Hangfire.Server.Worker                   - Background process 'Worker #de86b2de' started.
+DEBUG 2016-10-03 21:02:36,239 [6a280] Hangfire.Server.Worker                   - Background process 'Worker #36d6a280' started.
+DEBUG 2016-10-03 21:02:36,241 [a2527] Hangfire.Server.Worker                   - Background process 'Worker #37da2527' started.
+DEBUG 2016-10-03 21:02:36,245 [97257] Hangfire.Server.Worker                   - Background process 'Worker #52e97257' started.
+DEBUG 2016-10-03 21:02:36,251 [0d0e1] Hangfire.Server.Worker                   - Background process 'Worker #0ff0d0e1' started.
+DEBUG 2016-10-03 21:02:36,251 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 6 classes defines auto mapping attributes
+DEBUG 2016-10-03 21:02:36,251 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DogeDaycare.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-10-03 21:02:36,255 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DogeDaycare.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-10-03 21:02:36,255 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DogeDaycare.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-10-03 21:02:36,255 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DogeDaycare.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-10-03 21:02:36,255 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DogeDaycare.Animals.Dtos.AnimalDetailOutput
+DEBUG 2016-10-03 21:02:36,255 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DogeDaycare.Animals.Dtos.AnimalDto
+DEBUG 2016-10-03 21:02:36,268 [0b82a] Hangfire.Server.Worker                   - Background process 'Worker #2090b82a' started.
+DEBUG 2016-10-03 21:02:36,297 [duler] Hangfire.Server.DelayedJobScheduler      - Background process 'DelayedJobScheduler' started.
+DEBUG 2016-10-03 21:02:36,304 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' started.
+DEBUG 2016-10-03 21:02:36,319 [gator] Hangfire.SqlServer.CountersAggregator    - Records from the 'Counter' table aggregated.
+DEBUG 2016-10-03 21:02:36,341 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Job' table.
+DEBUG 2016-10-03 21:02:36,341 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'List' table...
+DEBUG 2016-10-03 21:02:36,362 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'List' table.
+DEBUG 2016-10-03 21:02:36,362 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Set' table...
+DEBUG 2016-10-03 21:02:36,364 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Set' table.
+DEBUG 2016-10-03 21:02:36,364 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Hash' table...
+DEBUG 2016-10-03 21:02:36,366 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Hash' table.
+DEBUG 2016-10-03 21:02:37,246 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DogeDaycare.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-10-03 21:02:37,247 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DogeDaycare.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-10-03 21:02:37,248 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DogeDaycare.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-10-03 21:02:37,249 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DogeDaycare.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-10-03 21:02:37,250 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DogeDaycare.Emails.IEmailAppService' with service name 'app/email'.
+DEBUG 2016-10-03 21:02:37,250 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DogeDaycare.Animals.IAnimalAppService' with service name 'app/animal'.
+DEBUG 2016-10-03 21:07:36,320 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-10-03 21:07:36,329 [gator] Hangfire.SqlServer.CountersAggregator    - Records from the 'Counter' table aggregated.
+DEBUG 2016-10-03 21:12:36,329 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-10-03 21:12:36,338 [gator] Hangfire.SqlServer.CountersAggregator    - Records from the 'Counter' table aggregated.
+DEBUG 2016-10-03 21:17:36,339 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-10-03 21:17:36,347 [gator] Hangfire.SqlServer.CountersAggregator    - Records from the 'Counter' table aggregated.
+DEBUG 2016-10-03 21:22:36,349 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-10-03 21:22:36,360 [gator] Hangfire.SqlServer.CountersAggregator    - Records from the 'Counter' table aggregated.
+DEBUG 2016-10-03 21:23:29,836 [64   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2016-10-03 21:23:29,837 [64   ] bp.Hangfire.HangfireBackgroundJobManager - Stop background worker: Abp.Hangfire.HangfireBackgroundJobManager
+DEBUG 2016-10-03 21:23:29,837 [duler] Hangfire.Server.DelayedJobScheduler      - Background process 'DelayedJobScheduler' stopped.
+DEBUG 2016-10-03 21:23:29,838 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' was stopped due to a shutdown request.
+DEBUG 2016-10-03 21:23:29,838 [0b82a] Hangfire.Server.Worker                   - Background process 'Worker #2090b82a' was stopped due to a shutdown request.
+DEBUG 2016-10-03 21:23:29,838 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' stopped.
+DEBUG 2016-10-03 21:23:29,838 [0b82a] Hangfire.Server.Worker                   - Background process 'Worker #2090b82a' stopped.
+DEBUG 2016-10-03 21:23:29,838 [c0a92] Hangfire.Server.Worker                   - Background process 'Worker #b07c0a92' was stopped due to a shutdown request.
+DEBUG 2016-10-03 21:23:29,838 [0d0e1] Hangfire.Server.Worker                   - Background process 'Worker #0ff0d0e1' was stopped due to a shutdown request.
+DEBUG 2016-10-03 21:23:29,838 [bbbaa] Hangfire.Server.Worker                   - Background process 'Worker #2febbbaa' was stopped due to a shutdown request.
+DEBUG 2016-10-03 21:23:29,838 [0d0e1] Hangfire.Server.Worker                   - Background process 'Worker #0ff0d0e1' stopped.
+DEBUG 2016-10-03 21:23:29,838 [bbbaa] Hangfire.Server.Worker                   - Background process 'Worker #2febbbaa' stopped.
+DEBUG 2016-10-03 21:23:29,838 [e107a] Hangfire.Server.Worker                   - Background process 'Worker #71de107a' was stopped due to a shutdown request.
+DEBUG 2016-10-03 21:23:29,838 [c0a92] Hangfire.Server.Worker                   - Background process 'Worker #b07c0a92' stopped.
+DEBUG 2016-10-03 21:23:29,838 [e107a] Hangfire.Server.Worker                   - Background process 'Worker #71de107a' stopped.
+DEBUG 2016-10-03 21:23:29,838 [6a280] Hangfire.Server.Worker                   - Background process 'Worker #36d6a280' was stopped due to a shutdown request.
+DEBUG 2016-10-03 21:23:29,838 [042b7] Hangfire.Server.Worker                   - Background process 'Worker #569042b7' was stopped due to a shutdown request.
+DEBUG 2016-10-03 21:23:29,838 [6a280] Hangfire.Server.Worker                   - Background process 'Worker #36d6a280' stopped.
+DEBUG 2016-10-03 21:23:29,838 [042b7] Hangfire.Server.Worker                   - Background process 'Worker #569042b7' stopped.
+DEBUG 2016-10-03 21:23:29,838 [a2527] Hangfire.Server.Worker                   - Background process 'Worker #37da2527' was stopped due to a shutdown request.
+DEBUG 2016-10-03 21:23:29,838 [a3a79] Hangfire.Server.Worker                   - Background process 'Worker #6ada3a79' was stopped due to a shutdown request.
+DEBUG 2016-10-03 21:23:29,838 [a3a79] Hangfire.Server.Worker                   - Background process 'Worker #6ada3a79' stopped.
+DEBUG 2016-10-03 21:23:29,838 [019bf] Hangfire.Server.Worker                   - Background process 'Worker #8d3019bf' was stopped due to a shutdown request.
+DEBUG 2016-10-03 21:23:29,838 [a2527] Hangfire.Server.Worker                   - Background process 'Worker #37da2527' stopped.
+DEBUG 2016-10-03 21:23:29,838 [a7954] Hangfire.Server.Worker                   - Background process 'Worker #372a7954' was stopped due to a shutdown request.
+DEBUG 2016-10-03 21:23:29,838 [019bf] Hangfire.Server.Worker                   - Background process 'Worker #8d3019bf' stopped.
+DEBUG 2016-10-03 21:23:29,838 [a7954] Hangfire.Server.Worker                   - Background process 'Worker #372a7954' stopped.
+DEBUG 2016-10-03 21:23:29,838 [79dd8] Hangfire.Server.Worker                   - Background process 'Worker #3d379dd8' was stopped due to a shutdown request.
+DEBUG 2016-10-03 21:23:29,838 [79dd8] Hangfire.Server.Worker                   - Background process 'Worker #3d379dd8' stopped.
+DEBUG 2016-10-03 21:23:29,838 [68149] Hangfire.Server.Worker                   - Background process 'Worker #5e568149' was stopped due to a shutdown request.
+DEBUG 2016-10-03 21:23:29,838 [6b2de] Hangfire.Server.Worker                   - Background process 'Worker #de86b2de' was stopped due to a shutdown request.
+DEBUG 2016-10-03 21:23:29,838 [68149] Hangfire.Server.Worker                   - Background process 'Worker #5e568149' stopped.
+DEBUG 2016-10-03 21:23:29,838 [92fa0] Hangfire.Server.Worker                   - Background process 'Worker #bdf92fa0' was stopped due to a shutdown request.
+DEBUG 2016-10-03 21:23:29,838 [6b2de] Hangfire.Server.Worker                   - Background process 'Worker #de86b2de' stopped.
+DEBUG 2016-10-03 21:23:29,838 [92fa0] Hangfire.Server.Worker                   - Background process 'Worker #bdf92fa0' stopped.
+DEBUG 2016-10-03 21:23:29,838 [804b6] Hangfire.Server.Worker                   - Background process 'Worker #f6f804b6' was stopped due to a shutdown request.
+DEBUG 2016-10-03 21:23:29,838 [tbeat] Hangfire.Server.ServerHeartbeat          - Background process 'ServerHeartbeat' stopped.
+DEBUG 2016-10-03 21:23:29,838 [804b6] Hangfire.Server.Worker                   - Background process 'Worker #f6f804b6' stopped.
+DEBUG 2016-10-03 21:23:29,838 [gator] Hangfire.SqlServer.CountersAggregator    - Background process 'Hangfire.SqlServer.CountersAggregator' stopped.
+DEBUG 2016-10-03 21:23:29,838 [chdog] Hangfire.Server.ServerWatchdog           - Background process 'ServerWatchdog' stopped.
+DEBUG 2016-10-03 21:23:29,838 [48098] Hangfire.Server.Worker                   - Background process 'Worker #01648098' was stopped due to a shutdown request.
+DEBUG 2016-10-03 21:23:29,838 [nager] Hangfire.SqlServer.ExpirationManager     - Background process 'Hangfire.SqlServer.ExpirationManager' stopped.
+DEBUG 2016-10-03 21:23:29,838 [48098] Hangfire.Server.Worker                   - Background process 'Worker #01648098' stopped.
+DEBUG 2016-10-03 21:23:29,838 [3a7b9] Hangfire.Server.Worker                   - Background process 'Worker #9c23a7b9' was stopped due to a shutdown request.
+DEBUG 2016-10-03 21:23:29,838 [242bc] Hangfire.Server.Worker                   - Background process 'Worker #b94242bc' was stopped due to a shutdown request.
+DEBUG 2016-10-03 21:23:29,838 [3a7b9] Hangfire.Server.Worker                   - Background process 'Worker #9c23a7b9' stopped.
+DEBUG 2016-10-03 21:23:29,838 [242bc] Hangfire.Server.Worker                   - Background process 'Worker #b94242bc' stopped.
+DEBUG 2016-10-03 21:23:29,838 [97257] Hangfire.Server.Worker                   - Background process 'Worker #52e97257' was stopped due to a shutdown request.
+DEBUG 2016-10-03 21:23:29,838 [97257] Hangfire.Server.Worker                   - Background process 'Worker #52e97257' stopped.
+DEBUG 2016-10-03 21:23:29,841 [erver] ngfire.Server.BackgroundProcessingServer - Background process 'BackgroundProcessingServer' stopped.
+INFO  2016-10-03 21:23:29,841 [64   ] Hangfire.BackgroundJobServer             - Hangfire Server stopped.
+DEBUG 2016-10-03 21:23:29,841 [64   ] bp.Hangfire.HangfireBackgroundJobManager - WaitToStop background worker: Abp.Hangfire.HangfireBackgroundJobManager
+DEBUG 2016-10-03 21:23:29,841 [64   ] Abp.Modules.AbpModuleManager             - Shutting down completed.

@@ -58,7 +58,7 @@ namespace DogeDaycare.Emails
         {
             try
             {
-                const int CONFIRMATION_EMAIL_PK = 2;
+                const int CONFIRMATION_EMAIL_PK = 1;
                 const string CUSTOMER_NAME_KEY = "(%~CustomerName~%)";
                 const string CONFIRMATION_LINK_KEY = "(%~ConfirmationLink~%)";
 
@@ -89,22 +89,65 @@ namespace DogeDaycare.Emails
 
                 //Send!
                 await _smtpClient.SendMailAsync(mail);
+
+                Logger.Info(string.Format("Sent mail to {0} - {1}", user.FullName, user.EmailAddress));
             }
             catch (Exception e)
             {
-                throw e;
+                Logger.Error("Failed to send account confirmation email!", e);
+                throw;
             }
         }
 
         /// <summary>
         /// Sent when a user requests a password change.
         /// </summary>
-        /// <param name="email">Email to send to</param>
+        /// <param name="user">User to send to</param>
         /// <param name="confirmationCode">Confirmation code</param>
         /// <returns></returns>
-        public async Task<bool> SendPasswordResetEmail(string email, string confirmationCode)
+        public async Task SendPasswordResetEmail(User user, string confirmationCode)
         {
-            throw new NotImplementedException();
+            try
+            {
+                const int CONFIRMATION_EMAIL_PK = 2;
+                const string CUSTOMER_NAME_KEY = "(%~CustomerName~%)";
+                const string CONFIRMATION_LINK_KEY = "(%~ConfirmationLink~%)";
+
+                // Get the template..
+                var template = await _emailTemplateManager.GetAsync(CONFIRMATION_EMAIL_PK);
+
+                // Move CSS inline
+                var inline = PreMailer.Net.PreMailer.MoveCssInline(template.BodyHTML);
+
+                // Log any errors from moving CSS inline
+                foreach (var error in inline.Warnings)
+                {
+                    Logger.Error(error);
+                }
+
+                //Perform replacements.
+                var final = inline.Html;
+                final = final.Replace(CUSTOMER_NAME_KEY, user.FullName);
+                final = final.Replace(CONFIRMATION_LINK_KEY, confirmationCode);
+
+                //Create the actual email
+                var mail = new MailMessage();
+                mail.IsBodyHtml = true;
+                mail.To.Add(new MailAddress(user.EmailAddress));
+                mail.From = new MailAddress(_smtpEmailSenderConfiguration.DefaultFromAddress, _smtpEmailSenderConfiguration.DefaultFromDisplayName);
+                mail.Subject = template.Subject;
+                mail.Body = final;
+
+                //Send!
+                await _smtpClient.SendMailAsync(mail);
+
+                Logger.Info(string.Format("Sent mail to {0} - {1}", user.FullName, user.EmailAddress));
+            }
+            catch (Exception e)
+            {
+                Logger.Error("Failed to send password reset email!", e);
+                throw;
+            }
 
         }
     }

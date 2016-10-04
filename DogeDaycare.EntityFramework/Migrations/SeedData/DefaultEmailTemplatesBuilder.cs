@@ -22,11 +22,35 @@ namespace DogeDaycare.Migrations.SeedData
 
         public void Build()
         {
-            CreateEmailConfirmationTemplate();
+            if (!_context.EmailTemplates.Any(e => e.Subject.Contains("Welcome to DogeDaycare!")))
+            {
+                CreateEmailConfirmationTemplate();
+            }
+            if (!_context.EmailTemplates.Any(e => e.Subject.Contains("Reset your DogeDaycare password")))
+            {
+                CreatePasswordResetTemplate();
+            }
             if (!_context.Settings.Any(s => s.Name.Contains(EmailSettingNames.Smtp.Host)))
             {
                 CreateSmtpSettings();
             }
+        }
+
+        private void CreatePasswordResetTemplate()
+        {
+            var sender = "dogedaycaredev@gmail.com";
+            var subject = "Reset your DogeDaycare password";
+            var body = File.ReadAllText(@"Y:\Repo\DogeDaycare\DogeDaycare.EntityFramework\Migrations\SeedData\PasswordResetTemplate.html");
+
+            var template = EmailTemplate.Create(
+                sender, subject, body
+                );
+
+            template.AddEmailBodyReplacement("(%~CustomerName~%)", "Name of the customer.");
+            template.AddEmailBodyReplacement("(%~ConfirmationLink~%)", "Confirmation code.");
+
+            _context.EmailTemplates.Add(template);
+            _context.SaveChanges();
         }
 
         private void CreateEmailConfirmationTemplate()
@@ -42,11 +66,8 @@ namespace DogeDaycare.Migrations.SeedData
             template.AddEmailBodyReplacement("{CustomerName}", "Name of the customer.");
             template.AddEmailBodyReplacement("{ConfirmationLink}", "Confirmation code.");
 
-            if (!_context.EmailTemplates.Any(e => e.Subject.Contains("Welcome to DogeDaycare!")))
-            {
-                _context.EmailTemplates.Add(template);
-                _context.SaveChanges();
-            }
+            _context.EmailTemplates.Add(template);
+            _context.SaveChanges();
         }
 
         private void CreateSmtpSettings()
@@ -93,11 +114,6 @@ namespace DogeDaycare.Migrations.SeedData
                 Name = EmailSettingNames.Smtp.UseDefaultCredentials,
                 Value = "false"
             });
-        }
-
-        private void CreatePasswordResetTemplate()
-        {
-            throw new NotImplementedException();
         }
     }
 }

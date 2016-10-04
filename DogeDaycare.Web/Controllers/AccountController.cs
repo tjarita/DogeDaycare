@@ -385,10 +385,12 @@ namespace DogeDaycare.Web.Controllers
                         return View("PasswordResetEmailResult");
                     }
 
-                    var dataProtectionProvider = Startup.DataProtectionProvider;
-                    _userManager.UserTokenProvider = new DataProtectorTokenProvider<User, long>(dataProtectionProvider.Create("PasswordResetConfirmation")) { TokenLifespan = TimeSpan.FromDays(1) };
-                    var resetCode = _userManager.GeneratePasswordResetTokenAsync(user.Id);
-                    await SendPasswordResetEmail(user.EmailAddress, HttpUtility.HtmlEncode(resetCode), user.Name, user.Id);
+                    //var dataProtectionProvider = Startup.DataProtectionProvider;
+                    //_userManager.UserTokenProvider = new DataProtectorTokenProvider<User, long>(dataProtectionProvider.Create("PasswordResetConfirmation")) { TokenLifespan = TimeSpan.FromDays(1) };
+                    //var resetCode = _userManager.GeneratePasswordResetTokenAsync(user.Id);
+                    //await SendPasswordResetEmail(user.EmailAddress, HttpUtility.HtmlEncode(resetCode), user.Name, user.Id);
+                    var code = await GeneratePasswordResetCodeLink(user);
+                    await _emailAppService.SendPasswordResetEmail(user, code);
 
                     return View("PasswordResetEmailResult");
                 }
@@ -621,6 +623,17 @@ namespace DogeDaycare.Web.Controllers
             return confirmURL;
         }
 
+        private async Task<string> GeneratePasswordResetCodeLink(User user)
+        {
+            var dataProtectionProvider = Startup.DataProtectionProvider;
+            _userManager.UserTokenProvider = new DataProtectorTokenProvider<User, long>(dataProtectionProvider.Create("PasswordResetConfirmation")) { TokenLifespan = TimeSpan.FromDays(1) };
+            var code = await _userManager.GeneratePasswordResetTokenAsync(user.Id);
+            code = HttpUtility.UrlEncode(code);
+            var confirmURL = Url.Action("PasswordReset", "Account", new PasswordResetCodeViewModel { UserId = user.Id, PasswordResetToken = code }, Request.Url.Scheme);
+            return confirmURL;
+
+        }
+
         //private async Task SendConfirmationEmail(string clientEmail, string code, string clientName, long clientId)
         //{
         //    var confirmURL = Url.Action("ConfirmEmail", "Account", new ConfirmEmailViewModel { EmailConfirmationCode = code, UserId = clientId }, protocol: Request.Url.Scheme);
@@ -648,32 +661,32 @@ namespace DogeDaycare.Web.Controllers
         //    Logger.Info(string.Format("Sent confirmation code {0} to email {1}", code, clientEmail));
         //}
 
-        private async Task SendPasswordResetEmail(string clientEmail, string code, string clientName, long id)
-        {
-            var confirmURL = Url.Action("PasswordReset", "Account", new PasswordResetCodeViewModel { UserId = id, PasswordResetToken = code }, Request.Url.Scheme);
+        //private async Task SendPasswordResetEmail(string clientEmail, string code, string clientName, long id)
+        //{
+        //    var confirmURL = Url.Action("PasswordReset", "Account", new PasswordResetCodeViewModel { UserId = id, PasswordResetToken = code }, Request.Url.Scheme);
 
-            MailDefinition mailDef = new MailDefinition();
-            mailDef.From = "dogedaycaredev@gmail.com";
-            mailDef.Subject = "Reset your DogeDaycare password";
-            mailDef.IsBodyHtml = true;
+        //    MailDefinition mailDef = new MailDefinition();
+        //    mailDef.From = "dogedaycaredev@gmail.com";
+        //    mailDef.Subject = "Reset your DogeDaycare password";
+        //    mailDef.IsBodyHtml = true;
 
-            ListDictionary replacements = new ListDictionary();
-            replacements.Add("{EmailTitle}", mailDef.Subject);
-            replacements.Add("{CustomerName}", clientName);
-            replacements.Add("{ConfirmationLink}", confirmURL);
-            replacements.Add("{ContactUsEmail}", mailDef.From);
+        //    ListDictionary replacements = new ListDictionary();
+        //    replacements.Add("{EmailTitle}", mailDef.Subject);
+        //    replacements.Add("{CustomerName}", clientName);
+        //    replacements.Add("{ConfirmationLink}", confirmURL);
+        //    replacements.Add("{ContactUsEmail}", mailDef.From);
 
-            var body = System.IO.File.ReadAllText(Server.MapPath("~/Controllers/EmailTemplates/Inline/PasswordResetTemplateInline.html"));
+        //    var body = System.IO.File.ReadAllText(Server.MapPath("~/Controllers/EmailTemplates/Inline/PasswordResetTemplateInline.html"));
 
-            MailMessage message = mailDef.CreateMailMessage(clientEmail, replacements, body, new System.Web.UI.Control());
+        //    MailMessage message = mailDef.CreateMailMessage(clientEmail, replacements, body, new System.Web.UI.Control());
 
-            using (var client = _smtpEmailSender.BuildClient())
-            {
-                await client.SendMailAsync(message);
-            }
+        //    using (var client = _smtpEmailSender.BuildClient())
+        //    {
+        //        await client.SendMailAsync(message);
+        //    }
 
-            Logger.Info(string.Format("Sent password reset code {0} to email {1}", code, clientEmail));
-        }
+        //    Logger.Info(string.Format("Sent password reset code {0} to email {1}", code, clientEmail));
+        //}
 
         #endregion
 
