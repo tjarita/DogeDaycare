@@ -14,6 +14,7 @@ using Abp.Domain.Uow;
 using Abp.Extensions;
 using Abp.Threading;
 using Abp.UI;
+using Abp.Zero;
 using Abp.Web.Mvc.Models;
 using DogeDaycare.Authorization.Roles;
 using DogeDaycare.MultiTenancy;
@@ -34,6 +35,7 @@ using Microsoft.Owin.Security.DataProtection;
 using Abp.Web.Models;
 using Abp.Runtime.Validation;
 using DogeDaycare.Emails;
+using DogeDaycare.Authorization;
 
 namespace DogeDaycare.Web.Controllers
 {
@@ -42,6 +44,7 @@ namespace DogeDaycare.Web.Controllers
         private readonly TenantManager _tenantManager;
         private readonly UserManager _userManager;
         private readonly RoleManager _roleManager;
+        private readonly LogInManager _logInManager;
         private readonly IUnitOfWorkManager _unitOfWorkManager;
         private readonly IMultiTenancyConfig _multiTenancyConfig;
         private readonly ISmtpEmailSender _smtpEmailSender;
@@ -60,6 +63,7 @@ namespace DogeDaycare.Web.Controllers
             TenantManager tenantManager,
             UserManager userManager,
             RoleManager roleManager,
+            LogInManager loginManager,
             IUnitOfWorkManager unitOfWorkManager,
             IMultiTenancyConfig multiTenancyConfig,
             ISmtpEmailSender stmpEmailSender,
@@ -131,9 +135,9 @@ namespace DogeDaycare.Web.Controllers
             }
         }
 
-        private async Task<AbpUserManager<Tenant, Role, User>.AbpLoginResult> GetLoginResultAsync(string usernameOrEmailAddress, string password, string tenancyName)
+        private async Task<AbpLoginResult<Tenant, User>> GetLoginResultAsync(string usernameOrEmailAddress, string password, string tenancyName)
         {
-            var loginResult = await _userManager.LoginAsync(usernameOrEmailAddress, password, tenancyName);
+            var loginResult = await _logInManager.LoginAsync(usernameOrEmailAddress, password, tenancyName);
 
             switch (loginResult.Result)
             {
@@ -326,28 +330,20 @@ namespace DogeDaycare.Web.Controllers
             try
             {
                 CheckModelState();
-                model.EmailConfirmationCode = HttpUtility.UrlDecode(model.EmailConfirmationCode);
 
-                // {"No IUserTokenProvider is registered."}
-                var dataProtectionProvider = Startup.DataProtectionProvider;
-                _userManager.UserTokenProvider = new DataProtectorTokenProvider<User, long>(dataProtectionProvider.Create("EmailConfirmation")) { TokenLifespan = TimeSpan.FromDays(1) };
-                var result = await _userManager.ConfirmEmailAsync(model.UserId, model.EmailConfirmationCode);
+                var result = await ConfirmEmailConfirmationCodeLink(model.UserId, model.EmailConfirmationCode);
                 if (result.Succeeded)
                 {
                     Logger.Info(string.Format("Email Confirmed for userId: {0} , Confirmation Code {1}", model.UserId, model.EmailConfirmationCode));
-                    return View("ConfirmEmailResult", new ConfirmEmailResultViewModel
-                    {
-                        Success = true
-                    });
                 }
                 else
                 {
                     Logger.Warn(string.Format("Failed attempt to confirm email for userId: {0} with code: {1}", model.UserId, model.EmailConfirmationCode));
-                    return View("ConfirmEmailResult", new ConfirmEmailResultViewModel
-                    {
-                        Success = false
-                    });
                 }
+                return View("ConfirmEmailResult", new ConfirmEmailResultViewModel
+                {
+                    Success = result.Succeeded
+                });
             }
             catch (Exception ex)
             {
@@ -369,7 +365,9 @@ namespace DogeDaycare.Web.Controllers
 
         [HttpPost]
         [UnitOfWork]
-        public virtual async Task<ActionResult> PasswordResetEmail(PasswordResetEmailViewModel model)
+        [DisableValidation]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> PasswordResetEmail(PasswordResetEmailViewModel model)
         {
             try
             {
@@ -385,10 +383,6 @@ namespace DogeDaycare.Web.Controllers
                         return View("PasswordResetEmailResult");
                     }
 
-                    //var dataProtectionProvider = Startup.DataProtectionProvider;
-                    //_userManager.UserTokenProvider = new DataProtectorTokenProvider<User, long>(dataProtectionProvider.Create("PasswordResetConfirmation")) { TokenLifespan = TimeSpan.FromDays(1) };
-                    //var resetCode = _userManager.GeneratePasswordResetTokenAsync(user.Id);
-                    //await SendPasswordResetEmail(user.EmailAddress, HttpUtility.HtmlEncode(resetCode), user.Name, user.Id);
                     var code = await GeneratePasswordResetCodeLink(user);
                     await _emailAppService.SendPasswordResetEmail(user, code);
 
@@ -406,23 +400,47 @@ namespace DogeDaycare.Web.Controllers
 
         #region PasswordReset
 
-        public ActionResult PasswordReset(PasswordResetCodeViewModel input)
+        public ActionResult PasswordReset(PasswordResetCodeViewModel model)
         {
-            return View("PasswordReset", new PasswordResetViewModel() { UserId = input.UserId, PasswordResetToken = input.PasswordResetToken });
+            // Prefill the token and user ID.
+            return View("PasswordReset", new PasswordResetViewModel() { UserId = model.UserId, PasswordResetToken = model.PasswordResetToken });
+        }
 
-            //try
-            //{
-            //    var user = await _userManager.Users.FirstOrDefaultAsync(u => u.PasswordResetCode == input.PasswordResetCode);
-            //    if (user == null)
-            //    {
-            //        return View("PasswordReset", new PasswordResetViewModel { CodeExists = false });
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    Logger.Info("Reset password exception", ex);
-            //    return View("PasswordReset", new PasswordResetViewModel { CodeExists = false });
-            //}
+        [HttpPost]
+        [UnitOfWork]
+        [DisableValidation]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> PasswordReset(PasswordResetViewModel model)
+        {
+            try
+            {
+                CheckModelState();
+
+                var result = await ConfirmPasswordResetCodeLink(model.UserId, model.PasswordResetToken);
+                if (result.Succeeded)
+                {
+                    Logger.Info(string.Format("Resseting password for userId: {0};", model.UserId));
+                    var user = await _userManager.FindByIdAsync(model.UserId);
+                    user.Password = new PasswordHasher().HashPassword(model.Password);
+                    await UnitOfWorkManager.Current.SaveChangesAsync();
+                }
+                else
+                {
+                    Logger.Warn(string.Format("Failed attempt to reset password for userId: {0};", model.UserId));
+                }
+                return View("PasswordResetResult", new ConfirmEmailResultViewModel
+                {
+                    Success = result.Succeeded
+                });
+            }
+            catch (Exception ex)
+            {
+                Logger.Info(ex.ToString());
+                return View("ConfirmEmailResult", new ConfirmEmailResultViewModel
+                {
+                    Success = false
+                });
+            }
         }
 
 
@@ -476,7 +494,7 @@ namespace DogeDaycare.Web.Controllers
                 }
             }
 
-            var loginResult = await _userManager.LoginAsync(loginInfo.Login, tenancyName);
+            var loginResult = await _logInManager.LoginAsync(loginInfo.Login, tenancyName);
 
             switch (loginResult.Result)
             {
@@ -632,6 +650,22 @@ namespace DogeDaycare.Web.Controllers
             var confirmURL = Url.Action("PasswordReset", "Account", new PasswordResetCodeViewModel { UserId = user.Id, PasswordResetToken = code }, Request.Url.Scheme);
             return confirmURL;
 
+        }
+
+        private async Task<IdentityResult> ConfirmEmailConfirmationCodeLink(long userId, string code)
+        {
+            var decoded = HttpUtility.UrlDecode(code);
+            var dataProtectionProvider = Startup.DataProtectionProvider;
+            _userManager.UserTokenProvider = new DataProtectorTokenProvider<User, long>(dataProtectionProvider.Create("EmailConfirmation")) { TokenLifespan = TimeSpan.FromDays(1) };
+            return await _userManager.ConfirmEmailAsync(userId, decoded);
+        }
+
+        private async Task<IdentityResult> ConfirmPasswordResetCodeLink(long userId, string code)
+        {
+            var decoded =  HttpUtility.UrlDecode(code);
+            var dataProtectionProvider = Startup.DataProtectionProvider;
+            _userManager.UserTokenProvider = new DataProtectorTokenProvider<User, long>(dataProtectionProvider.Create("PasswordResetConfirmation")) { TokenLifespan = TimeSpan.FromDays(1) };
+            return await _userManager.ConfirmEmailAsync(userId, decoded);
         }
 
         //private async Task SendConfirmationEmail(string clientEmail, string code, string clientName, long clientId)

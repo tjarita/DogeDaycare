@@ -58,18 +58,17 @@ namespace DogeDaycare.Emails
         {
             try
             {
-                const int CONFIRMATION_EMAIL_PK = 1;
                 const string CUSTOMER_NAME_KEY = "(%~CustomerName~%)";
                 const string CONFIRMATION_LINK_KEY = "(%~ConfirmationLink~%)";
 
                 // Get the template..
-                var template = await _emailTemplateManager.GetAsync(CONFIRMATION_EMAIL_PK);
+                var template = await _emailTemplateManager.GetAsync(EmailTemplateKey.Welcome);
 
                 // Move CSS inline
                 var inline = PreMailer.Net.PreMailer.MoveCssInline(template.BodyHTML);
 
                 // Log any errors from moving CSS inline
-                foreach(var error in inline.Warnings)
+                foreach (var error in inline.Warnings)
                 {
                     Logger.Error(error);
                 }
@@ -109,12 +108,11 @@ namespace DogeDaycare.Emails
         {
             try
             {
-                const int CONFIRMATION_EMAIL_PK = 2;
                 const string CUSTOMER_NAME_KEY = "(%~CustomerName~%)";
                 const string CONFIRMATION_LINK_KEY = "(%~ConfirmationLink~%)";
 
                 // Get the template..
-                var template = await _emailTemplateManager.GetAsync(CONFIRMATION_EMAIL_PK);
+                var template = await _emailTemplateManager.GetAsync(EmailTemplateKey.ResetPassword);
 
                 // Move CSS inline
                 var inline = PreMailer.Net.PreMailer.MoveCssInline(template.BodyHTML);

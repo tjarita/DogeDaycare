@@ -10,6 +10,6 @@ namespace DogeDaycare.Emails
     public interface IEmailTemplateManager : IDomainService
     {
         Task CreateAsync(EmailTemplate emailTemplate);
-        Task<EmailTemplate> GetAsync(int pk);
+        Task<EmailTemplate> GetAsync(EmailTemplateKey key);
     }
 }

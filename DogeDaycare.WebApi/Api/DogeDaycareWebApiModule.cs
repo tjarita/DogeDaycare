@@ -17,7 +17,7 @@ namespace DogeDaycare.Api
         {
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
 
-            DynamicApiControllerBuilder
+            Configuration.Modules.AbpWebApi().DynamicApiControllerBuilder
                 .ForAll<IApplicationService>(typeof(DogeDaycareApplicationModule).Assembly, "app")
                 .Build();
 

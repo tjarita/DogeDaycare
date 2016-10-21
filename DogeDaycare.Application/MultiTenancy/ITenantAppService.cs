@@ -7,7 +7,7 @@ namespace DogeDaycare.MultiTenancy
 {
     public interface ITenantAppService : IApplicationService
     {
-        ListResultOutput<TenantListDto> GetTenants();
+        //ListResultOutput<TenantListDto> GetTenants();
 
         Task CreateTenant(CreateTenantInput input);
     }

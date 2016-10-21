@@ -12,6 +12,7 @@ using DogeDaycare.Users;
 using Microsoft.Owin.Infrastructure;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.OAuth;
+using DogeDaycare.Authorization;
 
 namespace DogeDaycare.Api.Controllers
 {
@@ -20,15 +21,19 @@ namespace DogeDaycare.Api.Controllers
         public static OAuthBearerAuthenticationOptions OAuthBearerOptions { get; private set; }
 
         private readonly UserManager _userManager;
+        private readonly LogInManager _loginManager;
 
         static AccountController()
         {
             OAuthBearerOptions = new OAuthBearerAuthenticationOptions();
         }
 
-        public AccountController(UserManager userManager)
+        public AccountController(UserManager userManager,
+            LogInManager loginManager
+            )
         {
             _userManager = userManager;
+            _loginManager = loginManager;
         }
 
         [HttpPost]
@@ -51,9 +56,9 @@ namespace DogeDaycare.Api.Controllers
             return new AjaxResponse(OAuthBearerOptions.AccessTokenFormat.Protect(ticket));
         }
 
-        private async Task<AbpUserManager<Tenant, Role, User>.AbpLoginResult> GetLoginResultAsync(string usernameOrEmailAddress, string password, string tenancyName)
+        private async Task<AbpLoginResult<Tenant, User>> GetLoginResultAsync(string usernameOrEmailAddress, string password, string tenancyName)
         {
-            var loginResult = await _userManager.LoginAsync(usernameOrEmailAddress, password, tenancyName);
+            var loginResult = await _loginManager.LoginAsync(usernameOrEmailAddress, password, tenancyName);
 
             switch (loginResult.Result)
             {

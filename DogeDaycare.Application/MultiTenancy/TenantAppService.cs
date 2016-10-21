@@ -24,15 +24,15 @@ namespace DogeDaycare.MultiTenancy
             _editionManager = editionManager;
         }
 
-        public ListResultOutput<TenantListDto> GetTenants()
-        {
-            return new ListResultOutput<TenantListDto>(
-                _tenantManager.Tenants
-                    .OrderBy(t => t.TenancyName)
-                    .ToList()
-                    .MapTo<List<TenantListDto>>()
-                );
-        }
+        //public ListResultOutput<TenantListDto> GetTenants()
+        //{
+        //    return new ListResultOutput<TenantListDto>(
+        //        _tenantManager.Tenants
+        //            .OrderBy(t => t.TenancyName)
+        //            .ToList()
+        //            .MapTo<List<TenantListDto>>()
+        //        );
+        //}
 
         public async Task CreateTenant(CreateTenantInput input)
         {

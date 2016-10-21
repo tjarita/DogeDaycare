@@ -37,27 +37,27 @@ namespace DogeDaycare.Animals
             await _animalManager.CreateAsync(@animal);
         }
 
-        public async Task Deactivate(EntityRequestInput<long> input)
-        {
-            var @animal = await _animalManager.GetAsync(input.Id);
-            _animalManager.Deactivate(@animal);
-        }
+        //public async Task Deactivate(EntityRequestInput<long> input)
+        //{
+        //    var @animal = await _animalManager.GetAsync(input.Id);
+        //    _animalManager.Deactivate(@animal);
+        //}
 
-        public async Task<AnimalDetailOutput> GetDetail(EntityRequestInput<long> input)
-        {
-            var @animal = await _animalRepository
-                .GetAll()
-                .Include(a => a.Owner)
-                .Where(a => a.Id == input.Id)
-                .FirstOrDefaultAsync();
+        //public async Task<AnimalDetailOutput> GetDetail(EntityRequestInput<long> input)
+        //{
+        //    var @animal = await _animalRepository
+        //        .GetAll()
+        //        .Include(a => a.Owner)
+        //        .Where(a => a.Id == input.Id)
+        //        .FirstOrDefaultAsync();
 
-            if (@animal == null)
-            {
-                throw new UserFriendlyException("Couldn't find that animal");
-            }
+        //    if (@animal == null)
+        //    {
+        //        throw new UserFriendlyException("Couldn't find that animal");
+        //    }
 
-            return @animal.MapTo<AnimalDetailOutput>();
-        }
+        //    return @animal.MapTo<AnimalDetailOutput>();
+        //}
 
 
 

@@ -42,19 +42,19 @@ namespace DogeDaycare.Migrations.SeedData
                     .Where(p => p.MultiTenancySides.HasFlag(MultiTenancySides.Host))
                     .ToList();
 
-                foreach (var permission in permissions)
-                {
-                    if (!permission.IsGrantedByDefault)
-                    {
-                        _context.Permissions.Add(
-                            new RolePermissionSetting
-                            {
-                                Name = permission.Name,
-                                IsGranted = true,
-                                RoleId = adminRoleForHost.Id
-                            });
-                    }
-                }
+                //foreach (var permission in permissions)
+                //{
+                //    if (!permission.IsGrantedByDefault)
+                //    {
+                //        _context.Permissions.Add(
+                //            new RolePermissionSetting
+                //            {
+                //                Name = permission.Name,
+                //                IsGranted = true,
+                //                RoleId = adminRoleForHost.Id
+                //            });
+                //    }
+                //}
 
                 _context.SaveChanges();
             }
@@ -106,19 +106,19 @@ namespace DogeDaycare.Migrations.SeedData
                     .Where(p => p.MultiTenancySides.HasFlag(MultiTenancySides.Tenant))
                     .ToList();
 
-                foreach (var permission in permissions)
-                {
-                    if (!permission.IsGrantedByDefault)
-                    {
-                        _context.Permissions.Add(
-                            new RolePermissionSetting
-                            {
-                                Name = permission.Name,
-                                IsGranted = true,
-                                RoleId = adminRoleForDefaultTenant.Id
-                            });
-                    }
-                }
+                //foreach (var permission in permissions)
+                //{
+                //    if (!permission.IsGrantedByDefault)
+                //    {
+                //        _context.Permissions.Add(
+                //            new RolePermissionSetting
+                //            {
+                //                Name = permission.Name,
+                //                IsGranted = true,
+                //                RoleId = adminRoleForDefaultTenant.Id
+                //            });
+                //    }
+                //}
 
                 _context.SaveChanges();
             }

@@ -24,10 +24,11 @@ namespace DogeDaycare.Emails
             await _emailTemplateRepository.InsertAsync(@emailTemplate);
         }
 
-        public async Task<EmailTemplate> GetAsync(int pk)
+        public async Task<EmailTemplate> GetAsync(EmailTemplateKey key)
         {
+            var pk = (int)key;
             var template = await _emailTemplateRepository.GetAsync(pk);
-            if(template == null)
+            if (template == null)
             {
                 throw new UserFriendlyException("This email template was not found!");
             }

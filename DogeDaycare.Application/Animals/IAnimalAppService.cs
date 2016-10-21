@@ -12,7 +12,7 @@ namespace DogeDaycare.Animals
     public interface IAnimalAppService : IApplicationService
     {
         Task Create(CreateAnimalInput input);
-        Task Deactivate(EntityRequestInput<long> input);
-        Task<AnimalDetailOutput> GetDetail(EntityRequestInput<long> input);
+        //Task Deactivate(EntityRequestInput<long> input);
+        //Task<AnimalDetailOutput> GetDetail(EntityRequestInput<long> input);
     }
 }
